@@ -1,0 +1,30 @@
+# --- OS・エディタ系 (誰の環境でも発生する不要なファイル) ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- 開発ツール系 (ビルド用ファイルはGit管理しない) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.sass-cache/
+*.map
+
+# --- WordPress / Local 固有のファイル ---
+# ログファイルや一時ファイル
+*.log
+wp-config.php
+.htaccess
+
+# --- DB同期用のバックアップファイル ---
+# WP Migrate Liteなどで書き出したSQLファイルなどを入れるフォルダを無視
+/db-sync/*.sql
+
+# --- テーマ制作物以外 (誤って上の階層でGitを初期化した場合の保険) ---
+wp-admin/
+wp-includes/
+upgrade/
+uploads/
+plugins/
