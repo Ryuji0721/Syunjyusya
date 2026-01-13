@@ -112,25 +112,50 @@ get_header(); ?>
             </div>
         </section>
 
-        <!-- Example Photos -->
+        <!-- Example Photos (Swiper Slider) -->
         <section class="funeral-examples">
             <h2 class="company-section-title">実例写真</h2>
-            <div class="example-scroll-container">
-                <!-- Example 1 -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="Example 1" class="example-img">
-                <!-- Example 2 -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="Example 2" class="example-img">
-                <!-- Example 3 -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="Example 3" class="example-img">
+            
+            <div class="swiper funeral-examples-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaibu1.jpg" alt="Funeral Example 1" class="example-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaibu2.jpg" alt="Funeral Example 2" class="example-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaibu3.jpg" alt="Funeral Example 3" class="example-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaibu4.jpg" alt="Funeral Example 4" class="example-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaibu5.jpg" alt="Funeral Example 5" class="example-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaibu6.png" alt="Funeral Example 6" class="example-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaibu7.jpg" alt="Funeral Example 7" class="example-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaibu8.jpg" alt="Funeral Example 8" class="example-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaibu9.jpg" alt="Funeral Example 9" class="example-img">
+                    </div>
+                </div>
             </div>
-            <p class="example-note">写真を横にスクロールすると他の写真が見られます</p>
+
+            <p class="example-note">写真を左右にスワイプしてご覧いただけます</p>
         </section>
 
         <!-- Client List -->
         <section class="funeral-clients">
             <h2 class="company-section-title">お取引葬儀社様一覧</h2>
             <ul class="client-list">
-                <li class="list-note">(敬称略、順序不同/2022年現在)</li>
+                <li class="list-note">(敬称略、順序不可/2022年現在)</li>
                 <li>茨城ひたちサービス</li>
                 <li>多賀農協協同組合</li>
                 <li>日立平和台霊園</li>
@@ -154,5 +179,22 @@ get_header(); ?>
         </section>
     </div>
 </main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.funeral-examples-swiper', {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        breakpoints: {
+            768: {
+               slidesPerView: 1.5,
+               spaceBetween: 40
+            }
+        }
+    });
+});
+</script>
 
 <?php get_footer(); ?>

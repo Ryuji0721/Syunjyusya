@@ -56,18 +56,20 @@ body {
 .site-header {
     height: var(--header-height);
     padding: 0 20px;
-    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Ensure background for stickiness */
+    backdrop-filter: blur(5px);
+    /* Premium feel */
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    /* High z-index to stay above content */
     width: 100%;
     margin: 0 auto;
     max-width: 100%;
-    /* Center Header content */
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); Removed for flat design */
 }
 
 /* Common Content Width (Smartphone Fixed) */
@@ -360,7 +362,8 @@ body {
 
 .hero-visual-wrapper {
     width: 375px;
-    height: 600px;
+    height: 550px;
+    /* Drastically reduced to match tight margins in mockup */
     margin: 0 auto;
     line-height: 0;
     overflow: hidden;
@@ -371,53 +374,70 @@ body {
     align-items: center;
 }
 
-.hero-visual-wrapper iframe {
+.hero-visual-wrapper iframe,
+.hero-visual-wrapper video,
+.hero-video-link {
     position: absolute;
-    top: 50%;
+    top: 48%;
+    /* Preserving user's manual vertical shift */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    aspect-ratio: 16 / 9;
-    /* Ensure 16:9 ratio */
-    height: auto;
+    height: 100%;
+    display: block;
 }
 
 .scroll-indicator {
+    position: absolute;
+    bottom: 15%;
+    /* Narrowed position as requested */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
     display: flex;
-    flex-direction: column;
     align-items: center;
     color: var(--white);
-    gap: 15px;
-    padding: 40px 0;
-    background-color: var(--black);
-    width: 100%;
 }
 
 .scroll-text {
     font-family: serif;
-    font-size: 14px;
-    letter-spacing: 0.3em;
+    font-size: 12px;
+    letter-spacing: 0.1em;
     writing-mode: vertical-rl;
-    margin: 0;
+    text-transform: lowercase;
+    opacity: 0.9;
+}
+
+.scroll-line-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
 }
 
 .scroll-line {
     width: 1px;
-    height: 80px;
+    height: 70px;
     background-color: var(--white);
     position: relative;
 }
 
-.scroll-line::after {
+.scroll-arrow {
+    width: 1px;
+    height: 1px;
+    position: relative;
+}
+
+.scroll-arrow::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: -4px;
-    width: 8px;
-    height: 8px;
-    border-bottom: 2px solid var(--white);
-    border-right: 2px solid var(--white);
-    transform: rotate(45deg);
+    top: -2px;
+    left: 50%;
+    width: 7px;
+    height: 7px;
+    border-bottom: 1px solid var(--white);
+    border-right: 1px solid var(--white);
+    transform: translateX(-50%) rotate(45deg);
 }
 
 /* Omoi Section */
@@ -587,6 +607,21 @@ body {
     height: auto;
     z-index: 0;
     opacity: 0.8;
+}
+
+/* PC adjustment for .deco-img.top-left */
+@media screen and (min-width: 768px) {
+    .delivery-section {
+        overflow: hidden;
+        /* Ensure it doesn't spill out of 375px body onto background */
+    }
+
+    .deco-img.top-left {
+        width: 250px;
+        /* Bigger as requested */
+        top: -40px;
+        left: -50px;
+    }
 }
 
 .deco-img.bottom-right {
@@ -1375,32 +1410,48 @@ body {
     margin-bottom: 20px;
 }
 
-.example-scroll-container {
+/* Funeral Examples Swiper */
+.funeral-examples-swiper {
+    width: 100%;
+    padding: 20px 0 60px;
+    /* Space for pagination */
+}
+
+.funeral-examples-swiper .swiper-slide {
     display: flex;
-    overflow-x: auto;
-    padding: 0 20px;
-    gap: 15px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
 }
 
-.example-scroll-container::-webkit-scrollbar {
-    display: none;
+.funeral-examples-swiper .swiper-slide-active {
+    transform: scale(1.05);
 }
 
-.example-img {
-    height: 220px;
-    width: auto;
-    border-radius: 4px;
-    flex-shrink: 0;
+.funeral-examples-swiper .example-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Pagination Customization */
+.funeral-examples-swiper .swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+}
+
+.funeral-examples-swiper .swiper-pagination-bullet-active {
+    background: #A6192E;
 }
 
 .example-note {
-    text-align: right;
+    text-align: center;
     font-size: 0.8rem;
-    color: #A6192E;
-    padding-right: 20px;
-    margin-top: 10px;
+    color: #888;
+    margin-top: -15px;
+    display: block;
 }
 
 .funeral-clients {
@@ -2039,79 +2090,84 @@ textarea.form-control {
         margin: 0 auto;
         padding: 0;
         position: relative;
-        /* Unified Background for PC */
+        /* Unified Background for PC using generated asset */
         background-color: #fff;
-        background-image:
-            url('assets/images/placeholder.png'),
-            /* Wood texture/wash layer */
-            url('assets/images/placeholder.png');
-        /* Scattered petals layer */
-        background-repeat: repeat, no-repeat;
-        background-position: top center, top center;
-        background-size: auto, cover;
+        background-image: url('assets/images/pc_petal_bg.png');
+        background-repeat: repeat;
+        background-position: top center;
+        background-size: 800px;
+        /* Adjust scale of background */
         background-attachment: fixed;
     }
 
     /* Left Column (Logo & Decoration Container) */
     .global-pc-left {
         display: block;
-        width: 300px;
-        flex-shrink: 0;
+        width: calc((100vw - 375px) / 2);
+        /* Dynamic width filling half the remaining space */
+        min-width: 200px;
+        flex-shrink: 1;
         position: relative;
-        height: 100%;
+        height: 100vh;
         background: transparent;
-        /* Show background beneath */
     }
 
     /* Center Column */
     .global-pc-center {
-        width: 100%;
-        max-width: 375px;
-        /* Smartphone size on PC */
+        width: 375px;
         flex-shrink: 0;
-        background-color: #fff;
+        background-color: #000;
+        /* Match mockup central column color */
         z-index: 10;
-        /* Floating effect with pronounced shadow */
-        box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
     }
 
     /* Right Column (Decoration) */
     .global-pc-right {
         display: block;
-        width: 300px;
-        flex-shrink: 0;
+        width: calc((100vw - 375px) / 2);
+        min-width: 200px;
+        flex-shrink: 1;
         position: relative;
+        height: 100vh;
         background: transparent;
     }
 
     /* Sticky Behavior */
+    /* Sticky Behavior */
     .global-sticky-item {
         position: sticky;
-        top: 100px;
+        top: 50%;
+        /* Initial and follow position at vertical center */
+        transform: translateY(-50%);
+        /* Center based on its own height */
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     /* Logo Styles */
     .global-side-logo {
-        width: 100%;
-        max-width: 180px;
+        width: 120px;
+        /* Slightly smaller for elegance */
         height: auto;
         margin-bottom: 20px;
         display: block;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
     }
 
     .global-side-logo-text {
         font-family: serif;
-        font-weight: bold;
-        letter-spacing: 0.25em;
+        font-weight: 400;
+        letter-spacing: 0.3em;
         color: #333;
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+        text-transform: uppercase;
     }
 
     .global-sticky-item.logo-area {
-        top: 150px;
+        /* top: calc(50% - 100px); Handled by global-sticky-item's top: 50% */
     }
 
 }
@@ -2149,21 +2205,25 @@ textarea.form-control {
     height: auto;
     background-color: transparent;
     border-radius: 0;
-    gap: 5px;
+    gap: 4px;
     padding: 5px 10px;
 }
 
 .menu-button .menu-line {
     background-color: #A6192E;
-    width: 30px;
-    height: 3px;
+    width: 26px;
+    /* Slightly shorter */
+    height: 1.5px;
+    /* Thinner lines */
 }
 
 .menu-label {
     display: block;
     color: #A6192E;
-    letter-spacing: 0.1em;
-    font-weight: bold;
+    letter-spacing: 0.15em;
+    font-weight: 400;
+    /* Regular weight for elegance */
+    font-size: 0.75rem;
 }
 
 

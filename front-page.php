@@ -8,21 +8,25 @@ Template Name: Top page
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-visual-wrapper">
-                <iframe 
-                    width="375" 
-                    height="600" 
-                    src="https://www.youtube.com/embed/MjIt5399Rhg?autoplay=1&mute=1&loop=1&playlist=MjIt5399Rhg&controls=0&rel=0&modestbranding=1" 
-                    title="Home Hero Video" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+                <a href="https://www.youtube.com/watch?v=MjIt5399Rhg" target="_blank" class="hero-video-link">
+                    <video 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                        class="hero-video">
+                        <source src="<?php echo get_template_directory_uri(); ?>/assets/movie/TOPFV1.mp4" type="video/mp4">
+                        お使いのブラウザは動画タグをサポートしていません。
+                    </video>
+                </a>
             </div>
             
             <div class="scroll-indicator">
-                <span class="scroll-text">PICK UP</span>
-                <div class="scroll-line"></div>
-                <div class="scroll-arrow"></div>
+                <span class="scroll-text">scroll</span>
+                <div class="scroll-line-wrapper">
+                    <div class="scroll-line"></div>
+                    <div class="scroll-arrow"></div>
+                </div>
             </div>
         </section>
         

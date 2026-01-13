@@ -43,17 +43,15 @@ get_header(); ?>
         <section class="recruit-movie">
             <h2 class="company-section-title">イメージビデオ</h2>
             <div class="movie-container">
-                 <div class="movie-placeholder">
-                     <div class="movie-black-bar top"></div>
-                     <div class="movie-content-inner">
-                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.svg" alt="SHUNJUSHA" class="brand-logo-video">
-                         <div class="play-trigger">
-                             <div class="play-circle"></div>
-                         </div>
-                         <p class="brand-name-video">SHUNJUSHA<br>HITACHI 1929</p>
-                     </div>
-                     <div class="movie-black-bar bottom"></div>
-                 </div>
+                 <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/MjIt5399Rhg?autoplay=1&mute=0&loop=1&playlist=MjIt5399Rhg&controls=0&rel=0&modestbranding=1" 
+                    title="Recruit Image Video" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </section>
 
