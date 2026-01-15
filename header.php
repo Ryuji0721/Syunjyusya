@@ -4,6 +4,9 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php bloginfo( 'name' ); ?></title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.svg">
+    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.svg">
     <?php wp_head(); ?>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -73,7 +76,6 @@
         <div class="global-pc-left">
             <div class="global-sticky-item logo-area">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.svg" alt="SHUNJUSHA" class="global-side-logo">
-                <p class="global-side-logo-text">SHUNJUSHA</p>
             </div>
         </div>
 

@@ -45,6 +45,8 @@ body {
     position: relative;
     /* box-shadow removed for cleaner design */
     overflow-x: hidden;
+    padding-top: var(--header-height);
+    /* Offset for fixed header */
 }
 
 /* =========================================
@@ -63,13 +65,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
+    /* Universal stickiness */
     top: 0;
-    z-index: 1000;
-    /* High z-index to stay above content */
+    left: 0;
+    z-index: 2000;
+    /* Highest z-index to stay above content */
     width: 100%;
     margin: 0 auto;
-    max-width: 100%;
 }
 
 /* Common Content Width (Smartphone Fixed) */
@@ -1436,22 +1439,19 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Pagination Customization */
-.funeral-examples-swiper .swiper-pagination-bullet {
-    background: #ccc;
-    opacity: 1;
-}
-
-.funeral-examples-swiper .swiper-pagination-bullet-active {
-    background: #A6192E;
-}
-
 .example-note {
     text-align: center;
     font-size: 0.8rem;
     color: #888;
     margin-top: -15px;
     display: block;
+}
+
+/* Hide swipe note on PC since it autoplays */
+@media screen and (min-width: 768px) {
+    .example-note {
+        display: none;
+    }
 }
 
 .funeral-clients {
@@ -1849,8 +1849,14 @@ body {
 .footer-contact-area {
     margin-top: 40px;
     padding-top: 40px;
-    border-top: 1px solid rgba(166, 25, 46, 0.1);
+    border-top: 1px solid rgba(139, 26, 26, 0.1);
+    /* Match reddish brown */
     text-align: center;
+}
+
+.contact-title {
+    color: #8B1A1A !important;
+    margin-bottom: 25px !important;
 }
 
 .footer-sns-section {
@@ -1863,39 +1869,103 @@ body {
 
 .footer-insta-box {
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 25px;
     padding: 15px 25px;
     display: flex;
     align-items: center;
     gap: 15px;
     width: 100%;
     max-width: 335px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    /* Softer, deeper shadow */
+    text-align: left;
 }
 
 .insta-icon-circle {
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
+    background: transparent;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.insta-icon-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.insta-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.insta-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #8B1A1A;
+    margin: 0;
+    font-family: serif;
+    /* Closer to mockup's elegant feel */
+}
+
+.insta-note {
+    font-size: 0.85rem;
+    color: #8B1A1A;
+    margin: 0;
+}
+
+.footer-facebook-link {
+    width: 65px;
+    height: 65px;
+    background: transparent;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    margin-bottom: 10px;
+}
+
+.footer-facebook-link:hover {
+    transform: scale(1.05);
 }
 
 .footer-facebook-link img {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .footer-legal-links {
-    margin-bottom: 30px;
-    font-size: 0.8rem;
+    margin-bottom: 25px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #8B1A1A;
 }
 
 .footer-legal-links a {
-    color: #A6192E;
+    color: #8B1A1A;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-legal-links .sep {
+    color: #8B1A1A;
+    opacity: 0.5;
 }
 
 .copyright {
-    font-size: 0.75rem;
-    color: #A6192E;
+    font-size: 0.8rem;
+    color: #8B1A1A;
+    font-weight: bold;
 }
 
 /* =========================================
@@ -2155,15 +2225,6 @@ textarea.form-control {
         margin-bottom: 20px;
         display: block;
         filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
-    }
-
-    .global-side-logo-text {
-        font-family: serif;
-        font-weight: 400;
-        letter-spacing: 0.3em;
-        color: #333;
-        font-size: 0.9rem;
-        text-transform: uppercase;
     }
 
     .global-sticky-item.logo-area {

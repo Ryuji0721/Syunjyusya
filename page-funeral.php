@@ -187,10 +187,24 @@ document.addEventListener('DOMContentLoaded', function() {
         centeredSlides: true,
         slidesPerView: 1.2,
         spaceBetween: 20,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
         breakpoints: {
             768: {
                slidesPerView: 1.5,
-               spaceBetween: 40
+               spaceBetween: 40,
+            },
+            // Explicitly disable for mobile if needed, though breakpoints usually override
+            0: {
+               autoplay: false
+            },
+            768: {
+               autoplay: {
+                   delay: 3000,
+                   disableOnInteraction: false,
+               }
             }
         }
     });

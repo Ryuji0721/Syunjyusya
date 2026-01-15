@@ -5,8 +5,7 @@
                 <!-- Logo & Main Info -->
                 <div class="footer-brand">
                     <div class="footer-logo-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footer_rogo.png" alt="SHUNJUSHA" class="footer-logo-img">
-                        <p class="footer-logo-text">SHUNJUSHA</p>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.svg" alt="SHUNJUSHA" class="footer-logo-img">
                     </div>
                     <div class="footer-company-info">
                         <p class="company-name">株式会社 春秋舎</p>
@@ -85,7 +84,7 @@
                     <!-- Instagram Box -->
                     <div class="footer-insta-box">
                         <div class="insta-icon-circle">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="Instagram">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerinst.svg" alt="Instagram">
                         </div>
                         <div class="insta-info">
                             <p class="insta-name">Instagram</p>
@@ -95,7 +94,7 @@
                     
                     <!-- Facebook Icon -->
                     <a href="#" class="footer-facebook-link">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="Facebook">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerfacebook.svg" alt="Facebook">
                     </a>
                 </div>
 
