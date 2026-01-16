@@ -41,8 +41,8 @@
                         <ul class="sitemap-list">
                             <li><a href="<?php echo home_url('/store'); ?>">各店舗概要</a></li>
                             <li><a href="<?php echo home_url('/store'); ?>">MAP</a></li>
-                            <li><a href="#" target="_blank">花キューピット ➚</a></li>
-                            <li><a href="#" target="_blank">公式Instagram ➚</a></li>
+                            <li><a href="https://shunjusha.hanatown.net/" target="_blank">花キューピット ➚</a></li>
+                            <li><a href="https://www.instagram.com/shunjusha/" target="_blank" rel="noopener noreferrer">公式Instagram ➚</a></li>
                             <li><a href="#" target="_blank">オンラインショップ<br>bloemen ➚</a></li>
                         </ul>
                     </div>
@@ -82,15 +82,17 @@
                 
                 <div class="footer-sns-section">
                     <!-- Instagram Box -->
-                    <div class="footer-insta-box">
-                        <div class="insta-icon-circle">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerinst.svg" alt="Instagram">
+                    <a href="https://www.instagram.com/shunjusha/" target="_blank" rel="noopener noreferrer">
+                        <div class="footer-insta-box">
+                            <div class="insta-icon-circle">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerinst.svg" alt="Instagram">
+                            </div>
+                            <div class="insta-info">
+                                <p class="insta-name">Instagram</p>
+                                <p class="insta-note">近日DMにて注文受付開始</p>
+                            </div>
                         </div>
-                        <div class="insta-info">
-                            <p class="insta-name">Instagram</p>
-                            <p class="insta-note">近日DMにて注文受付開始</p>
-                        </div>
-                    </div>
+                    </a>
                     
                     <!-- Facebook Icon -->
                     <a href="#" class="footer-facebook-link">

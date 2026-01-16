@@ -123,7 +123,7 @@ Template Name: Top page
                 </p>
                 
                 <div class="service-btn-wrapper right">
-                    <a href="#" class="service-btn">花キューピット ➜</a>
+                    <a href="https://shunjusha.hanatown.net/" target="_blank" class="service-btn">花キューピット ➜</a>
                 </div>
 
                 <div class="payment-info">
