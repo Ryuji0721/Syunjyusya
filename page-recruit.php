@@ -60,7 +60,7 @@ get_header(); ?>
             <h2 class="company-section-title">社員インタビュー</h2>
             
             <div class="interview-grid">
-                <div class="interview-card">
+                <a href="<?php echo home_url('/interview-01'); ?>" class="interview-card">
                     <div class="interview-img-wrapper">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="Interview 1">
                         <span class="interview-number">01</span>
@@ -68,11 +68,11 @@ get_header(); ?>
                     <p class="interview-title">タイトルタイトルタイトルタイトル</p>
                     <div class="interview-footer">
                         <span class="interview-name">部署名　名前 名前</span>
-                        <a href="#" class="arrow-link">➜</a>
+                        <span class="arrow-link">➜</span>
                     </div>
-                </div>
+                </a>
 
-                <div class="interview-card">
+                <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
                     <div class="interview-img-wrapper">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="Interview 2">
                         <span class="interview-number">02</span>
@@ -80,9 +80,9 @@ get_header(); ?>
                     <p class="interview-title">タイトルタイトルタイトルタイトル</p>
                     <div class="interview-footer">
                         <span class="interview-name">部署名　名前 名前</span>
-                        <a href="#" class="arrow-link">➜</a>
+                        <span class="arrow-link">➜</span>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -91,15 +91,15 @@ get_header(); ?>
             <div class="department-guidelines">
                 <h4 class="department-title">生花部</h4>
                 <div class="guideline-buttons">
-                    <a href="<?php echo home_url('/contact'); ?>" class="guideline-btn">パート ➜</a>
-                    <a href="<?php echo home_url('/contact'); ?>" class="guideline-btn">正社員 ➜</a>
+                    <a href="<?php echo home_url('/recruit-seika-part'); ?>" class="guideline-btn">パート ➜</a>
+                    <a href="<?php echo home_url('/recruit-seika-full'); ?>" class="guideline-btn">正社員 ➜</a>
                 </div>
             </div>
             <div class="department-guidelines">
                 <h4 class="department-title">葬祭部</h4>
                 <div class="guideline-buttons">
-                    <a href="<?php echo home_url('/contact'); ?>" class="guideline-btn">パート ➜</a>
-                    <a href="<?php echo home_url('/contact'); ?>" class="guideline-btn">正社員 ➜</a>
+                    <a href="<?php echo home_url('/recruit-sousai-part'); ?>" class="guideline-btn">パート ➜</a>
+                    <a href="<?php echo home_url('/recruit-sousai-full'); ?>" class="guideline-btn">正社員 ➜</a>
                 </div>
             </div>
         </section>

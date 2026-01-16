@@ -186,6 +186,16 @@ get_header(); ?>
                     </div>
                 </a>
             </div>
+        <!-- Recruitment Section -->
+        <section class="recruit-guidelines">
+            <h2 class="company-section-title">募集要項</h2>
+            <div class="department-guidelines">
+                <h4 class="department-title">生花部</h4>
+                <div class="guideline-buttons">
+                    <a href="<?php echo home_url('/recruit-seika-part'); ?>" class="guideline-btn">パート ➜</a>
+                    <a href="<?php echo home_url('/recruit-seika-full'); ?>" class="guideline-btn">正社員 ➜</a>
+                </div>
+            </div>
         </section>
     </div>
 </main>
