@@ -41,7 +41,11 @@
                         <ul class="sitemap-list">
                             <li><a href="<?php echo home_url('/store'); ?>">各店舗概要</a></li>
                             <li><a href="<?php echo home_url('/store'); ?>">MAP</a></li>
+<<<<<<< Updated upstream
                             <li><a href="https://shunjusha.hanatown.net/" target="_blank">花キューピット ➚</a></li>
+=======
+                            <li><a href="#" target="_blank">花キューピット ➚</a></li>
+>>>>>>> Stashed changes
                             <li><a href="https://www.instagram.com/shunjusha/" target="_blank" rel="noopener noreferrer">公式Instagram ➚</a></li>
                             <li><a href="#" target="_blank">オンラインショップ<br>bloemen ➚</a></li>
                         </ul>

@@ -55,6 +55,7 @@
             </nav>
 
             <div class="sp-menu-sns">
+<<<<<<< Updated upstream
                 <a href="https://www.instagram.com/shunjusha/" target="_blank" rel="noopener noreferrer">
                     <div class="menu-sns-item instagram-box">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram_official.png" alt="Instagram" class="menu-sns-icon">
@@ -63,6 +64,14 @@
                             <p class="sns-desc">近日DMにて注文受付開始</p>
                     </div>
                 </a>
+=======
+                <div class="menu-sns-item instagram-box">
+                    <a href="https://www.instagram.com/shunjusha/" target="_blank" rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram_official.png" alt="Instagram" class="menu-sns-icon">
+                    <div class="sns-note">
+                        <p class="sns-name">Instagram</p>
+                        <p class="sns-desc">近日DMにて注文受付開始</p>
+                    </div></a>
+>>>>>>> Stashed changes
                 </div>
                 <div class="menu-sns-item facebook-item">
                     <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook_official.png" alt="Facebook" class="menu-sns-icon"></a>
