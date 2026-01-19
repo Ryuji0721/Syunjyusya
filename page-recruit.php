@@ -18,7 +18,7 @@ get_header(); ?>
         </section>
 
         <!-- Message Section -->
-        <section class="recruit-message">
+        <section id="message" class="recruit-message">
             <h2 class="company-section-title">メッセージ</h2>
             <div class="message-content">
                 <p>
@@ -56,7 +56,7 @@ get_header(); ?>
         </section>
 
         <!-- In-depth Sections (Interviews etc) -->
-        <section class="recruit-interviews">
+        <section id="interviews" class="recruit-interviews">
             <h2 class="company-section-title">社員インタビュー</h2>
             
             <div class="interview-grid">
@@ -86,25 +86,25 @@ get_header(); ?>
             </div>
         </section>
 
-        <section class="recruit-guidelines">
+        <section id="guidelines" class="recruit-guidelines">
             <h2 class="company-section-title">募集要項</h2>
             <div class="department-guidelines">
                 <h4 class="department-title">生花部</h4>
                 <div class="guideline-buttons">
-                    <a href="<?php echo home_url('/recruit-seika-part'); ?>" class="guideline-btn">パート ➜</a>
-                    <a href="<?php echo home_url('/recruit-seika-full'); ?>" class="guideline-btn">正社員 ➜</a>
+                    <a href="<?php echo home_url('/recruit-flower-part'); ?>" class="guideline-btn">パート ➜</a>
+                    <a href="<?php echo home_url('/recruit-flower-full'); ?>" class="guideline-btn">正社員 ➜</a>
                 </div>
             </div>
             <div class="department-guidelines">
                 <h4 class="department-title">葬祭部</h4>
                 <div class="guideline-buttons">
-                    <a href="<?php echo home_url('/recruit-sousai-part'); ?>" class="guideline-btn">パート ➜</a>
-                    <a href="<?php echo home_url('/recruit-sousai-full'); ?>" class="guideline-btn">正社員 ➜</a>
+                    <a href="<?php echo home_url('/recruit-funeral-part'); ?>" class="guideline-btn">パート ➜</a>
+                    <a href="<?php echo home_url('/recruit-funeral-full'); ?>" class="guideline-btn">正社員 ➜</a>
                 </div>
             </div>
         </section>
 
-        <section class="recruit-flow">
+        <section id="flow" class="recruit-flow">
             <h2 class="company-section-title">選考の流れ</h2>
             
             <!-- Part-time -->
