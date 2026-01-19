@@ -176,17 +176,6 @@ get_header(); ?>
                 <li>堀越葬儀社</li>
                 <li>栗田商店</li>
             </ul>
-        <!-- Recruitment Section -->
-        <section class="recruit-guidelines">
-            <h2 class="company-section-title">募集要項</h2>
-            <div class="department-guidelines">
-                <h4 class="department-title">葬祭部</h4>
-                <div class="guideline-buttons">
-                    <a href="<?php echo home_url('/recruit-sousai-part'); ?>" class="guideline-btn">パート ➜</a>
-                    <a href="<?php echo home_url('/recruit-sousai-full'); ?>" class="guideline-btn">正社員 ➜</a>
-                </div>
-            </div>
-        </section>
     </div>
 </main>
 

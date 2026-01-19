@@ -8,7 +8,6 @@ Template Name: Top page
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-visual-wrapper">
-                <a href="https://www.youtube.com/watch?v=MjIt5399Rhg" target="_blank" class="hero-video-link">
                     <video 
                         autoplay 
                         muted 
@@ -16,7 +15,6 @@ Template Name: Top page
                         playsinline
                         class="hero-video">
                         <source src="<?php echo get_template_directory_uri(); ?>/assets/movie/TOPFV1.mp4" type="video/mp4">
-                        お使いのブラウザは動画タグをサポートしていません。
                     </video>
                 </a>
             </div>

@@ -43,10 +43,8 @@ body {
     background-color: #f7f7f7;
     min-height: 100vh;
     position: relative;
-    /* box-shadow removed for cleaner design */
-    overflow-x: hidden;
+    /* overflow-x removed to allow top-level sticky positioning on PC */
     padding-top: var(--header-height);
-    /* Offset for fixed header */
 }
 
 /* =========================================
@@ -75,8 +73,7 @@ body {
     margin: 0 auto;
 }
 
-/* Common Content Width (Smartphone Fixed) */
-/* Common Content Width (Smartphone Fixed) */
+/* Page Container Defaults */
 .page-company,
 .page-recruit,
 .page-flower,
@@ -87,38 +84,19 @@ body {
 .page-privacy,
 .front-page-container {
     width: 100%;
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
-    /* Ensure visible */
-}
-
-/* Site Footer - Full Width */
-.site-footer {
-    width: 100%;
-    background-color: #FFF9EB;
-    /* Beige base */
-    color: #333;
-}
-
-/* White Background Pages */
-.page-company,
-.page-recruit,
-.page-flower,
-.page-funeral,
-.page-store,
-.front-page-container {
     background-color: #fff;
 }
 
-/* Beige Background Pages */
+/* Beige Background Overlay for Footer alignment */
 .page-contact,
 .page-legal,
 .page-privacy {
     background-color: #FFF9EB;
     padding-bottom: 40px;
-    /* Add some spacing */
 }
 
 /* =========================================
@@ -364,7 +342,7 @@ body {
 }
 
 .hero-visual-wrapper {
-    width: 375px;
+    width: 500px;
     height: 550px;
     /* Drastically reduced to match tight margins in mockup */
     margin: 0 auto;
@@ -840,7 +818,7 @@ body {
 /* Company Profile Section */
 .company-profile-section {
     padding: 0 20px 80px;
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -872,7 +850,7 @@ body {
 
 /* Company Stores Section (Inside Company Page) */
 .company-stores-section {
-    padding: 0 20px 80px;
+    padding: 0 20px 40px;
     color: #8B1A1A;
 }
 
@@ -915,8 +893,8 @@ body {
 /* Company History Section */
 .company-history-section {
     padding: 0 20px 80px;
-    max-width: 375px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 40px auto 0;
 }
 
 .history-timeline {
@@ -1176,7 +1154,7 @@ body {
 .flower-categories,
 .flower-usages {
     padding: 0 20px 40px;
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -1246,7 +1224,7 @@ body {
 .funeral-problems {
     padding: 0 20px 60px;
     text-align: center;
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -1343,7 +1321,7 @@ body {
 /* Funeral Flow */
 .funeral-flow {
     padding: 0 20px 60px;
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -1456,7 +1434,7 @@ body {
 
 .funeral-clients {
     padding: 0 20px 80px;
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -1506,19 +1484,8 @@ body {
    ========================================= */
 .recruit-message {
     padding: 60px 20px;
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
-}
-
-.recruit-section-title-en {
-    font-family: "Noto Serif JP", serif;
-    font-size: 1.3rem;
-    color: #A6192E;
-    font-weight: bold;
-    border-bottom: 2px solid #A6192E;
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 40px;
 }
 
 .message-content {
@@ -1531,19 +1498,26 @@ body {
 
 .recruit-movie {
     position: relative;
-    padding: 80px 20px;
+    padding: 40px 0px 0;
     text-align: center;
     background-color: #fff;
-    border-top: 50px solid #000;
-    border-bottom: 50px solid #000;
 }
 
 .recruit-movie .movie-container {
-    max-width: 300px;
+    height: 400px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.recruit-video {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .brand-logo-large {
@@ -1561,36 +1535,9 @@ body {
     font-weight: bold;
 }
 
-.movie-play-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    border: 3px solid #666;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.7);
-    z-index: 10;
-}
-
-.movie-play-btn::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px 0 10px 16px;
-    border-color: transparent transparent transparent #666;
-    margin-left: 5px;
-}
-
 .recruit-interviews {
     padding: 0 20px 40px;
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -1670,7 +1617,7 @@ body {
 
 .recruit-guidelines {
     padding: 0 20px 60px;
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -1716,7 +1663,7 @@ body {
 
 .recruit-flow {
     padding: 0 20px 80px;
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -1994,7 +1941,7 @@ body {
 
 .contact-container {
     padding: 0 20px;
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -2125,7 +2072,7 @@ textarea.form-control {
 
 .legal-container {
     padding: 0 20px;
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -2171,7 +2118,7 @@ textarea.form-control {
     .global-pc-wrapper {
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: stretch;
         gap: 0;
         margin: 0 auto;
         padding: 0;
@@ -2189,18 +2136,17 @@ textarea.form-control {
     /* Left Column (Logo & Decoration Container) */
     .global-pc-left {
         display: block;
-        width: calc((100vw - 375px) / 2);
+        width: calc((100vw - 500px) / 2);
         /* Dynamic width filling half the remaining space */
         min-width: 200px;
         flex-shrink: 1;
         position: relative;
-        height: 100vh;
         background: transparent;
     }
 
     /* Center Column */
     .global-pc-center {
-        width: 375px;
+        width: 500px;
         flex-shrink: 0;
         background-color: #000;
         /* Match mockup central column color */
@@ -2211,11 +2157,10 @@ textarea.form-control {
     /* Right Column (Decoration) */
     .global-pc-right {
         display: block;
-        width: calc((100vw - 375px) / 2);
+        width: calc((100vw - 500px) / 2);
         min-width: 200px;
         flex-shrink: 1;
         position: relative;
-        height: 100vh;
         background: transparent;
     }
 
@@ -2224,19 +2169,20 @@ textarea.form-control {
     .global-sticky-item {
         position: sticky;
         top: 50%;
-        /* Initial and follow position at vertical center */
+        /* Sticks to the vertical center of the viewport */
         transform: translateY(-50%);
         /* Center based on its own height */
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        z-index: 50;
     }
 
     /* Logo Styles */
     .global-side-logo {
-        width: 120px;
-        /* Slightly smaller for elegance */
+        width: 150px;
+        /* Adjusted to 150px as requested */
         height: auto;
         margin-bottom: 20px;
         display: block;
@@ -2323,7 +2269,7 @@ textarea.form-control {
 }
 
 .recruit-detail-container {
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -2414,8 +2360,8 @@ textarea.form-control {
 
 @media screen and (min-width: 768px) {
     .recruit-detail-container {
-        width: 375px;
-        /* Keep mobile width for consistent feel as per other pages */
+        width: 500px;
+        /* Updated from 375px to match standard width */
     }
 }
 
@@ -2493,7 +2439,6 @@ textarea.form-control {
     padding-bottom: 8px;
     border-bottom: 3px double #A6192E;
     /* Textured look from mockup */
-    margin: 0 0 40px;
     font-family: serif;
     font-weight: bold;
 }
@@ -2625,7 +2570,7 @@ textarea.form-control {
 .store-v-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 40px;
+    margin: 0 0 20px;
 }
 
 .store-v-list li {
@@ -2658,7 +2603,7 @@ textarea.form-control {
 
 /* History - Consistently applying the side line */
 .company-history-section {
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 /* History Timeline Styling */
@@ -3255,7 +3200,7 @@ textarea.form-control {
 
 /* Movie Video Section Mockup Alignment */
 .recruit-movie {
-    margin-bottom: 80px;
+    margin-bottom: 0;
 }
 
 .movie-placeholder {
@@ -3323,6 +3268,7 @@ textarea.form-control {
 /* Interview and other sections */
 .recruit-interviews,
 .recruit-guidelines {
+    padding-top: 40px;
     padding-left: 15px;
     margin-bottom: 80px;
 }
@@ -3460,7 +3406,7 @@ textarea.form-control {
 }
 
 .interview-detail-inner {
-    max-width: 375px;
+    max-width: 500px;
     margin: 0 auto;
 }
 

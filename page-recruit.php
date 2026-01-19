@@ -43,15 +43,14 @@ get_header(); ?>
         <section class="recruit-movie">
             <h2 class="company-section-title">イメージビデオ</h2>
             <div class="movie-container">
-                 <iframe 
-                    width="100%" 
-                    height="100%" 
-                    src="https://www.youtube.com/embed/MjIt5399Rhg?autoplay=1&mute=0&loop=1&playlist=MjIt5399Rhg&controls=0&rel=0&modestbranding=1" 
-                    title="Recruit Image Video" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+                 <video 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline
+                    class="recruit-video">
+                    <source src="<?php echo get_template_directory_uri(); ?>/assets/movie/TOPFV1.mp4" type="video/mp4">
+                </video>
             </div>
         </section>
 
