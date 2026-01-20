@@ -84,7 +84,7 @@ Template Name: Top page
                     お近くの店舗までぜひお立ち寄りください。
                 </p>
                 <div class="service-btn-wrapper right">
-                    <a href="<?php echo home_url('/store'); ?>" class="service-btn">店舗情報 ➜</a>
+                    <a href="<?php echo home_url('/store'); ?>" class="service-btn">店舗情報</a>
                 </div>
             </div>
 
@@ -99,7 +99,7 @@ Template Name: Top page
                     故人様のご冥福を祈り、ご当家のご要望に合わせ、気持ちを込めて制作いたします。
                 </p>
                 <div class="service-btn-wrapper right">
-                    <a href="<?php echo home_url('/funeral'); ?>" class="service-btn">葬祭部について ➜</a>
+                    <a href="<?php echo home_url('/funeral'); ?>" class="service-btn">葬祭部について</a>
                 </div>
             </div>
         </section>
@@ -121,7 +121,7 @@ Template Name: Top page
                 </p>
                 
                 <div class="service-btn-wrapper right">
-                    <a href="#" class="service-btn">花キューピット ➜</a>
+                    <a href="#" class="service-btn">花キューピット</a>
                 </div>
 
                 <div class="payment-info">

@@ -49,21 +49,22 @@
                     <li><a href="<?php echo home_url('/funeral'); ?>">葬祭部について</a></li>
                     <li><a href="<?php echo home_url('/recruit'); ?>">求人情報</a></li>
                     <li><a href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
-                    <li><a href="#" target="_blank">オンラインショップ bloemen ➚</a></li>
-                    <li><a href="#" target="_blank">花キューピット ➚</a></li>
+                    <li><a href="https://bloemen87.thebase.in/" target="_blank">オンラインショップ bloemen ➚</a></li>
+                    <li><a href="https://shunjusha.hanatown.net/" target="_blank">花キューピット ➚</a></li>
                 </ul>
             </nav>
 
             <div class="sp-menu-sns">
                 <div class="menu-sns-item instagram-box">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram_official.png" alt="Instagram" class="menu-sns-icon"></a>
+                    <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram_official.png" alt="Instagram" class="menu-sns-icon">
                     <div class="sns-note">
                         <p class="sns-name">Instagram</p>
                         <p class="sns-desc">近日DMにて注文受付開始</p>
                     </div>
+                    </a>
                 </div>
                 <div class="menu-sns-item facebook-item">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook_official.png" alt="Facebook" class="menu-sns-icon"></a>
+                    <a href="https://www.facebook.com/shunjusha/?locale=ja_JP" target="_blank"  rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook_official.png" alt="Facebook" class="menu-sns-icon"></a>
                 </div>
             </div>
         </div>

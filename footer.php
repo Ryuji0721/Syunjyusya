@@ -41,9 +41,9 @@
                         <ul class="sitemap-list">
                             <li><a href="<?php echo home_url('/store'); ?>">各店舗概要</a></li>
                             <li><a href="<?php echo home_url('/store'); ?>">MAP</a></li>
-                            <li><a href="#" target="_blank">花キューピット ➚</a></li>
-                            <li><a href="#" target="_blank">公式Instagram ➚</a></li>
-                            <li><a href="#" target="_blank">オンラインショップ<br>bloemen ➚</a></li>
+                            <li><a href="https://shunjusha.hanatown.net/" target="_blank">花キューピット<span class="link_img"></span></a></li>
+                            <li><a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer">公式Instagram<span class="link_img"></span></a></li>
+                            <li><a href="https://bloemen87.thebase.in/" target="_blank">オンラインショップ<br>bloemen<span class="link_img"></span></a></li>
                         </ul>
                     </div>
                     <!-- Col 4 -->
@@ -71,7 +71,7 @@
                             <li><a href="<?php echo home_url('/recruit'); ?>">社員インタビュー</a></li>
                             <li><a href="<?php echo home_url('/recruit'); ?>">募集要項</a></li>
                             <li><a href="<?php echo home_url('/recruit'); ?>">選考の流れ</a></li>
-                            <li><a href="#" target="_blank">採用サイト ➚</a></li>
+                            <li><a href="https://job-gear.net/shunjusha/" target="_blank">採用サイト ➚</a></li>
                         </ul>
                     </div>
                 </div>
@@ -86,14 +86,16 @@
                         <div class="insta-icon-circle">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerinst.svg" alt="Instagram">
                         </div>
-                        <div class="insta-info">
-                            <p class="insta-name">Instagram</p>
-                            <p class="insta-note">近日DMにて注文受付開始</p>
-                        </div>
+                        <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram_official.png" alt="Instagram" class="menu-sns-icon">
+                    <div class="sns-note">
+                        <p class="sns-name">Instagram</p>
+                        <p class="sns-desc">近日DMにて注文受付開始</p>
+                    </div>
+                    </a>
                     </div>
                     
                     <!-- Facebook Icon -->
-                    <a href="#" class="footer-facebook-link">
+                    <a href="https://www.facebook.com/shunjusha/?locale=ja_JP"  target="_blank"  rel="noopener noreferrer" class="footer-facebook-link">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerfacebook.svg" alt="Facebook">
                     </a>
                 </div>

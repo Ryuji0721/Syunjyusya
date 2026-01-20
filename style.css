@@ -16,7 +16,7 @@ Version: 1.8
     --accent-red: #A6192E;
     --btn-green: #66CCAA;
     /* Turquoise Green */
-    --text-brown: #8B4513;
+    --text-brown: #7A090B;
     /* Accents/Footer */
 }
 
@@ -318,13 +318,13 @@ body {
     font-size: 0.9rem;
     font-weight: bold;
     margin: 0;
-    color: #A6192E;
+    color: #7A090B;
 }
 
 .sns-note .sns-desc {
     font-size: 0.7rem;
     margin: 0;
-    color: #A6192E;
+    color: #7A090B;
 }
 
 /* =========================================
@@ -492,7 +492,7 @@ body {
 .section-subtitle-en {
     font-family: serif;
     font-style: italic;
-    color: #A6192E;
+    color: #7A090B;
     font-size: 1.4rem;
     margin: 0 0 5px 0;
 }
@@ -510,8 +510,8 @@ body {
 
 .service-block-title {
     font-size: 1.1rem;
-    color: #A6192E;
-    border-bottom: 2px solid #A6192E;
+    color: #7A090B;
+    border-bottom: 2px solid #7A090B;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 25px;
@@ -521,7 +521,7 @@ body {
 .service-text {
     font-size: 0.85rem;
     line-height: 1.8;
-    color: #333;
+    color: #7A090B;
     margin-bottom: 25px;
 }
 
@@ -530,7 +530,7 @@ body {
     height: auto;
     margin-bottom: 25px;
     display: block;
-    border-radius: 40px;
+    border-radius: 0 40px 0 40px;
     /* Large rounded corners from mockup */
     object-fit: cover;
 }
@@ -542,9 +542,9 @@ body {
 .service-btn {
     display: inline-block;
     background-color: #fff;
-    color: #A6192E;
+    color: #7A090B;
     padding: 10px 30px;
-    border: 1px solid #A6192E;
+    border: 1px solid #7A090B;
     border-radius: 30px;
     text-decoration: none;
     font-size: 0.85rem;
@@ -560,7 +560,7 @@ body {
 }
 
 .service-btn:hover {
-    background-color: #A6192E;
+    background-color: #7A090B;
     color: #fff;
 }
 
@@ -1772,7 +1772,7 @@ body {
 .footer-company-info {
     font-size: 0.8rem;
     line-height: 1.6;
-    color: #8B4513;
+    color: #7A090B;
     text-align: center;
 }
 
@@ -1786,7 +1786,7 @@ body {
 
 .sitemap-title {
     font-size: 1rem;
-    color: #A6192E;
+    color: #7A090B;
     font-weight: bold;
     margin-bottom: 15px;
     border-bottom: 1px solid rgba(166, 25, 46, 0.2);
@@ -1805,7 +1805,7 @@ body {
 
 .sitemap-list li a {
     text-decoration: none;
-    color: #A6192E;
+    color: #7A090B;
     font-size: 0.85rem;
 }
 
@@ -2231,7 +2231,7 @@ textarea.form-control {
 }
 
 .menu-button .menu-line {
-    background-color: #A6192E;
+    background-color: #7A090B;
     width: 26px;
     /* Slightly shorter */
     height: 1.5px;
@@ -2240,7 +2240,7 @@ textarea.form-control {
 
 .menu-label {
     display: block;
-    color: #A6192E;
+    color: #7A090B;
     letter-spacing: 0.15em;
     font-weight: 400;
     /* Regular weight for elegance */
@@ -2509,7 +2509,7 @@ textarea.form-control {
 
 .greeting-img {
     width: 100%;
-    border-radius: 30px;
+    border-radius: 0 30px 0 30px;
     margin-bottom: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
@@ -3598,4 +3598,15 @@ textarea.form-control {
     .interview-detail-inner {
         max-width: 800px;
     }
+}
+
+.link_img {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url('assets/images/link.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 4px;
+    vertical-align: middle;
 }
