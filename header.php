@@ -9,6 +9,10 @@
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.svg">
     <?php wp_head(); ?>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kaisei+Decol&family=Kiwi+Maru&family=M+PLUS+Rounded+1c:wght@400;500&family=Noto+Sans+JP:wght@100..900&family=Yusei+Magic&display=swap" rel="stylesheet">
 </head>
 <body <?php body_class(); ?>>
 
@@ -19,12 +23,11 @@
         <div class="header-inner">
             <div class="logo-area">
                 <a href="<?php echo home_url('/'); ?>" class="header-logo-link">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.svg" alt="SHUNJYUSHA" class="header-logo-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png" alt="SHUNJYUSHA" class="header-logo-img">
                 </a>
             </div>
             
             <button class="menu-button" id="menuToggle">
-                <span class="menu-line"></span>
                 <span class="menu-line"></span>
                 <span class="menu-line"></span>
                 <span class="menu-label">MENU</span>
@@ -76,7 +79,7 @@
         <!-- Left Column: Logo (Appears on PC) -->
         <div class="global-pc-left">
             <div class="global-sticky-item logo-area">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.svg" alt="SHUNJUSHA" class="global-side-logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png" alt="SHUNJUSHA" class="global-side-logo">
             </div>
         </div>
 

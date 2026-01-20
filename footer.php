@@ -86,11 +86,11 @@
                         <div class="insta-icon-circle">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerinst.svg" alt="Instagram">
                         </div>
-                        <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram_official.png" alt="Instagram" class="menu-sns-icon">
-                    <div class="sns-note">
-                        <p class="sns-name">Instagram</p>
-                        <p class="sns-desc">近日DMにて注文受付開始</p>
-                    </div>
+                        <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer">
+                        <div class="sns-note">
+                            <p class="sns-name">Instagram</p>
+                            <p class="sns-desc">近日DMにて注文受付開始</p>
+                        </div>
                     </a>
                     </div>
                     
