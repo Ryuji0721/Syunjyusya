@@ -2068,11 +2068,11 @@ textarea.form-control {
 
     /* Sticky Behavior */
     .global-sticky-item {
-        position: sticky;
-        top: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: none;
+    }
+
+    .global-sticky-item.flower-area {
+        display: none;
     }
 
     /* Logo Styles */
