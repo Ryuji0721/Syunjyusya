@@ -5,6 +5,7 @@ Template Name: Flower Page
 get_header(); ?>
 
 <main class="flower-page-container">
+    <div class="global-sticky-item flower-area" style="display:none"></div>
     <div class="flower-content-inner">
         
         <!-- Hero Section -->
