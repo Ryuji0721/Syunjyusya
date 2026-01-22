@@ -112,14 +112,6 @@
 
     </div><!-- /global-pc-center -->
 
-    <!-- Right Column: Flowers (Appears on PC) -->
-    <div class="global-pc-right">
-        <div class="global-sticky-item flower-area">
-             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/privacy_flower_1.png" alt="" class="global-flower flower-1">
-             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/privacy_flower_2.png" alt="" class="global-flower flower-2">
-        </div>
-    </div>
-
 </div><!-- /global-pc-wrapper -->
 
 </div> <!-- Close .sp-container -->
