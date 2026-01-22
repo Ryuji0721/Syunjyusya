@@ -2041,15 +2041,6 @@ textarea.form-control {
         position: relative;
         /* Unified Background for PC */
         background-color: #fff;
-        background-image:
-            url('assets/images/placeholder.png'),
-            /* Wood texture/wash layer */
-            url('assets/images/placeholder.png');
-        /* Scattered petals layer */
-        background-repeat: repeat, no-repeat;
-        background-position: top center, top center;
-        background-size: auto, cover;
-        background-attachment: fixed;
     }
 
     /* Left Column (Logo & Decoration Container) */
