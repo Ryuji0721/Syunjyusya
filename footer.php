@@ -127,15 +127,23 @@
             // Loop many times to ensure it covers long pages
             for ($i = 0; $i < 20; $i++): 
                 $img = $flower_images[$i % count($flower_images)];
-                $side_class = ($i % 2 == 0) ? 'vine-item-right' : 'vine-item-left';
+                $is_even = ($i % 2 == 0);
+                $side_class = $is_even ? 'vine-item-right' : 'vine-item-left';
             ?>
-                <div class="vine-flower-item <?php echo $side_class; ?>">
-                    <div class="vine-flower-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $img; ?>" alt="">
+                <div class="vine-segment <?php echo $side_class; ?>">
+                    <div class="vine-curve"></div>
+                    <div class="vine-flower-item">
+                        <div class="vine-flower-img-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $img; ?>" alt="">
+                        </div>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/happa.svg" class="vine-leaf leaf-1" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/happa.svg" class="vine-leaf leaf-2" alt="">
                     </div>
-                    <div class="vine-leaf"></div>
                 </div>
             <?php endfor; ?>
+            <div class="vine-bottom-deco">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/HanaLast.svg" alt="End Decoration">
+            </div>
         </div>
     </div>
 

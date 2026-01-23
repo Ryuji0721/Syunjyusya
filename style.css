@@ -2193,46 +2193,82 @@ textarea.form-control {
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
-        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: 50px;
+        padding-bottom: 300px;
     }
 
-    /* The Vine Line */
-    .vine-line {
+    /* The Wavy Vine Segment */
+    .vine-segment {
+        position: relative;
+        width: 150px;
+        /* Wider curve */
+        height: 400px;
+        /* Taller segment for elegance */
+    }
+
+    /* The Curve itself */
+    .vine-curve {
         position: absolute;
         top: 0;
-        bottom: 0;
-        left: 50%;
-        width: 2px;
-        background: linear-gradient(to bottom, transparent, #004d40, #004d40, transparent);
-        transform: translateX(-50%);
-        z-index: 1;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-right: 10px solid #154734;
+        border-radius: 0 50% 50% 0;
+    }
+
+    .vine-item-left .vine-curve {
+        border-right: none;
+        border-left: 10px solid #154734;
+        border-radius: 50% 0 0 50%;
+    }
+
+    /* Adjust the segments to connect */
+    .vine-segment+.vine-segment {
+        margin-top: -2px;
     }
 
     /* Flower Item Container */
     .vine-flower-item {
-        position: relative;
-        width: 100%;
-        margin-bottom: 200px;
-        /* Spacing between flowers along the vine */
+        position: absolute;
+        top: 15%;
+        /* Center vertically on the segment */
+        transform: translateY(-50%);
+        width: 150px;
         z-index: 2;
     }
 
-    /* Image Wrapper (Rounded Box) */
+    /* Right side flower (on left-curving segment) */
+    .vine-item-right .vine-flower-item {
+        right: 110px;
+    }
+
+    /* Left side flower (on right-curving segment) */
+    .vine-item-left .vine-flower-item {
+        left: 110px;
+    }
+
+    /* Image Wrapper (Attached Effect) */
     .vine-flower-img-wrapper {
-        width: 100px;
-        height: 100px;
-        border-radius: 12px;
+        width: 150px;
+        height: 200px;
         overflow: hidden;
-        border: 2px solid #fff;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        border: none;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         background: #fff;
-        margin: 0 auto;
-        transition: transform 0.3s ease;
+    }
+
+    /* Left Side: Sharp Top-Right */
+    .vine-item-left .vine-flower-img-wrapper {
+        border-radius: 20px 0 20px 20px;
+    }
+
+    /* Right Side: Sharp Top-Left */
+    .vine-item-right .vine-flower-img-wrapper {
+        border-radius: 0 20px 20px 20px;
     }
 
     .vine-flower-img-wrapper img {
@@ -2241,33 +2277,64 @@ textarea.form-control {
         object-fit: cover;
     }
 
-    /* Position flowers side-to-side relative to the vine */
-    .vine-item-right .vine-flower-img-wrapper {
-        transform: translateX(40px);
-    }
-
-    .vine-item-left .vine-flower-img-wrapper {
-        transform: translateX(-40px);
-    }
-
-    /* Simple Leaf with CSS */
+    /* Organic Sharp Leaves (SVG) */
     .vine-leaf {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 30px;
-        height: 15px;
-        background-color: #004d40;
-        border-radius: 0 100% 0 100%;
+        width: 80px;
+        height: auto;
         z-index: -1;
     }
 
-    .vine-item-right .vine-leaf {
-        transform: translate(10px, -50%) rotate(-30deg);
+    /* Left side leaves */
+    .vine-item-left .leaf-1 {
+        top: 60px;
+        left: -160px;
+        transform: rotate(70deg);
     }
 
-    .vine-item-left .vine-leaf {
-        transform: translate(-40px, -50%) rotate(210deg);
+    .vine-item-left .leaf-2 {
+        bottom: -80px;
+        left: -110px;
+        width: 80px;
+        transform: rotate(180deg);
+    }
+
+    /* Right side leaves */
+    .vine-item-right .leaf-1 {
+        top: 60px;
+        right: -87px;
+        transform: rotate(165deg) scaleX(-1);
+        /* Mirror */
+    }
+
+    .leaf-1 {}
+
+    .vine-item-right .leaf-2 {
+        bottom: 80px;
+        right: 80px;
+        width: 60px;
+        transform: rotate(-20deg) scaleX(-1);
+    }
+
+    .leaf-2 {}
+
+    /* Bottom Decoration (HanaLast) */
+    .vine-bottom-deco {
+        position: relative;
+        margin-top: -10px;
+        /* Slight overlap with the last segment */
+        margin-bottom: 20px;
+        /* Ensure space before footer ends */
+        width: 150px;
+        /* Adjust size as needed */
+        height: auto;
+        z-index: 3;
+    }
+
+    .vine-bottom-deco img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     /* Sticky Behavior */
