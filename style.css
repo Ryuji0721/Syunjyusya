@@ -2307,16 +2307,12 @@ textarea.form-control {
         /* Mirror */
     }
 
-    .leaf-1 {}
-
     .vine-item-right .leaf-2 {
         bottom: 80px;
         right: 80px;
         width: 60px;
         transform: rotate(-20deg) scaleX(-1);
     }
-
-    .leaf-2 {}
 
     /* Bottom Decoration (HanaLast) */
     .vine-bottom-deco {
