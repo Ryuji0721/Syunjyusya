@@ -113,11 +113,29 @@
 
     </div><!-- /global-pc-center -->
 
-    <!-- Right Column: Flowers (Appears on PC) -->
+    <!-- Right Column: Decoration (Vine & Flowers) -->
     <div class="global-pc-right">
-        <div class="global-sticky-item flower-area">
-             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/privacy_flower_1.png" alt="" class="global-flower flower-1">
-             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/privacy_flower_2.png" alt="" class="global-flower flower-2">
+        <div class="vine-decoration-area">
+            <div class="vine-line"></div>
+            <?php 
+            // Array of flower photos to display along the vine
+            $flower_images = array(
+                'Anteak.jpg', 'Doraiflower.jpg', 'Ha-barium.jpg', 'Hanataba.jpg', 
+                'flowerArenji.jpg', 'iwaibana.jpg', 'エルフラワー.jpg', 'フラワーエール.jpg'
+            );
+            
+            // Loop many times to ensure it covers long pages
+            for ($i = 0; $i < 20; $i++): 
+                $img = $flower_images[$i % count($flower_images)];
+                $side_class = ($i % 2 == 0) ? 'vine-item-right' : 'vine-item-left';
+            ?>
+                <div class="vine-flower-item <?php echo $side_class; ?>">
+                    <div class="vine-flower-img-wrapper">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $img; ?>" alt="">
+                    </div>
+                    <div class="vine-leaf"></div>
+                </div>
+            <?php endfor; ?>
         </div>
     </div>
 
