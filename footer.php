@@ -125,8 +125,8 @@
                     'flowerArenji.jpg', 'iwaibana.jpg', 'エルフラワー.jpg', 'フラワーエール.jpg'
                 );
                 
-                // Loop many times to ensure it covers long pages
-                for ($i = 0; $i < 10; $i++): 
+                // Loop fewer times to simplify (reduced from 10 to 5)
+                for ($i = 0; $i < 5; $i++): 
                     $img = $flower_images[$i % count($flower_images)];
                     $is_even = ($i % 2 == 0);
                     $side_class = $is_even ? 'vine-item-right' : 'vine-item-left';

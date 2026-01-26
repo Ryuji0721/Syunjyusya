@@ -106,19 +106,6 @@ get_header(); ?>
                 </div>
             </section>
 
-            <!-- Image Video Section -->
-            <section class="image-video-section">
-                <h2 class="company-section-title">イメージビデオ</h2>
-                <div class="video-container">
-                    <div class="video-placeholder">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top1.png" alt="Video Thumbnail" class="video-thumb">
-                        <div class="video-play-btn">
-                            <span class="play-icon"></span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <!-- Stores Section -->
             <section class="company-stores-section">
                 <h2 class="company-section-title">各店舗</h2>
