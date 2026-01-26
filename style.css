@@ -3861,3 +3861,26 @@ a {
     text-decoration: none;
     color: #8B1A1A;
 }
+
+/* Swiperの基本設定 */
+.swiper-interview {
+    overflow: hidden;
+}
+
+/* swiper-wrapperとして動作させるために必要 */
+.swiper-interview .swiper-wrapper {
+    display: flex;
+}
+
+/* スライドごとのスタイル */
+.swiper-interview .swiper-slide {
+    flex-shrink: 0;
+    width: auto;
+}
+
+/* カード自体のサイズ調整（必要に応じて） */
+.interview-card {
+    width: 280px;
+    /* カード幅 */
+    display: block;
+}

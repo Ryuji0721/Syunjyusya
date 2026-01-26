@@ -58,31 +58,150 @@ get_header(); ?>
         <section id="interviews" class="recruit-interviews">
             <h2 class="company-section-title">社員インタビュー</h2>
             
-            <div class="interview-grid">
-                <a href="<?php echo home_url('/interview-01'); ?>" class="interview-card">
-                    <div class="interview-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_1.jpg" alt="Interview 1">
-                        <span class="interview-number">01</span>
+            <div class="swiper swiper-interview">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="<?php echo home_url('/interview-01'); ?>" class="interview-card">
+                            <div class="interview-img-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_1.jpg" alt="Interview 1">
+                            <span class="interview-number">01</span>
                     </div>
                     <p class="interview-title">お客さんの喜ぶ顔がやりがい</p>
                     <div class="interview-footer">
-                        <span class="interview-name">フローラ森山店 川崎 紗香さん</span>
-                        <span class="arrow-link">➜</span>
+                            <span class="interview-name">フローラ森山店 川崎 紗香さん</span>
+                            <span class="arrow-link">➜</span>
                     </div>
-                </a>
+                    </a>
+                </div>
 
-                <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
-                    <div class="interview-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
-                        <span class="interview-number">02</span>
-                    </div>
-                    <p class="interview-title">花に関わる仕事なら一生続けられる</p>
-                    <div class="interview-footer">
-                        <span class="interview-name">葬祭部 愛場 理晴さん</span>
-                        <span class="arrow-link">➜</span>
-                    </div>
-                </a>
+                <div class="swiper-slide">
+                    <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
+                        <div class="interview-img-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
+                            <span class="interview-number">02</span>
+                        </div>
+                        <p class="interview-title">花に関わる仕事なら一生続けられる</p>
+                        <div class="interview-footer">
+                            <span class="interview-name">葬祭部 愛場 理晴さん</span>
+                            <span class="arrow-link">➜</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
+                        <div class="interview-img-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
+                            <span class="interview-number">02</span>
+                        </div>
+                        <p class="interview-title">花に関わる仕事なら一生続けられる</p>
+                        <div class="interview-footer">
+                            <span class="interview-name">葬祭部 愛場 理晴さん</span>
+                            <span class="arrow-link">➜</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
+                        <div class="interview-img-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
+                            <span class="interview-number">02</span>
+                        </div>
+                        <p class="interview-title">花に関わる仕事なら一生続けられる</p>
+                        <div class="interview-footer">
+                            <span class="interview-name">葬祭部 愛場 理晴さん</span>
+                            <span class="arrow-link">➜</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
+                        <div class="interview-img-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
+                            <span class="interview-number">02</span>
+                        </div>
+                        <p class="interview-title">花に関わる仕事なら一生続けられる</p>
+                        <div class="interview-footer">
+                            <span class="interview-name">葬祭部 愛場 理晴さん</span>
+                            <span class="arrow-link">➜</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
+                        <div class="interview-img-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
+                            <span class="interview-number">02</span>
+                        </div>
+                        <p class="interview-title">花に関わる仕事なら一生続けられる</p>
+                        <div class="interview-footer">
+                            <span class="interview-name">葬祭部 愛場 理晴さん</span>
+                            <span class="arrow-link">➜</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
+                        <div class="interview-img-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
+                            <span class="interview-number">02</span>
+                        </div>
+                        <p class="interview-title">花に関わる仕事なら一生続けられる</p>
+                        <div class="interview-footer">
+                            <span class="interview-name">葬祭部 愛場 理晴さん</span>
+                            <span class="arrow-link">➜</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
+                        <div class="interview-img-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
+                            <span class="interview-number">02</span>
+                        </div>
+                        <p class="interview-title">花に関わる仕事なら一生続けられる</p>
+                        <div class="interview-footer">
+                            <span class="interview-name">葬祭部 愛場 理晴さん</span>
+                            <span class="arrow-link">➜</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
+                        <div class="interview-img-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
+                            <span class="interview-number">02</span>
+                        </div>
+                        <p class="interview-title">花に関わる仕事なら一生続けられる</p>
+                        <div class="interview-footer">
+                            <span class="interview-name">葬祭部 愛場 理晴さん</span>
+                            <span class="arrow-link">➜</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
+                        <div class="interview-img-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
+                            <span class="interview-number">02</span>
+                        </div>
+                        <p class="interview-title">花に関わる仕事なら一生続けられる</p>
+                        <div class="interview-footer">
+                            <span class="interview-name">葬祭部 愛場 理晴さん</span>
+                            <span class="arrow-link">➜</span>
+                        </div>
+                    </a>
+                </div>
+
             </div>
+
         </section>
 
         <section id="guidelines" class="recruit-guidelines">
