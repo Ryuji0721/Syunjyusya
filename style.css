@@ -2197,15 +2197,16 @@ textarea.form-control {
         flex-direction: column;
         align-items: center;
         padding-top: 50px;
-        padding-bottom: 300px;
     }
+
+
 
     /* The Wavy Vine Segment */
     .vine-segment {
         position: relative;
         width: 150px;
         /* Wider curve */
-        height: 400px;
+        height: 600px;
         /* Taller segment for elegance */
     }
 

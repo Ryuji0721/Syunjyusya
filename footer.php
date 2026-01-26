@@ -125,7 +125,7 @@
             );
             
             // Loop many times to ensure it covers long pages
-            for ($i = 0; $i < 20; $i++): 
+            for ($i = 0; $i < 12; $i++): 
                 $img = $flower_images[$i % count($flower_images)];
                 $is_even = ($i % 2 == 0);
                 $side_class = $is_even ? 'vine-item-right' : 'vine-item-left';
@@ -155,6 +155,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Menu Toggle Logic
     var menuToggle = document.getElementById('menuToggle');
     var menuClose = document.getElementById('menuClose');
     var menuOverlay = document.getElementById('menuOverlay');
@@ -167,6 +168,34 @@ document.addEventListener('DOMContentLoaded', function() {
             menuOverlay.classList.remove('active');
         });
     }
+
+    // Dynamic Vine Height Adjustment
+    function adjustVineHeight() {
+        var centerCol = document.querySelector('.global-pc-center');
+        var footer = document.querySelector('.site-footer');
+        var vineArea = document.querySelector('.vine-decoration-area');
+
+        if (centerCol && footer && vineArea) {
+            var centerHeight = centerCol.offsetHeight;
+            var footerHeight = footer.offsetHeight;
+            // Subtract footer height and some extra margin (150px) for whitespace
+            var newHeight = centerHeight - footerHeight - 150; 
+            
+            if (newHeight > 0) {
+                vineArea.style.height = newHeight + 'px';
+                vineArea.style.overflow = 'hidden'; 
+            }
+        }
+    }
+
+    // Run on load
+    adjustVineHeight();
+
+    // Run on resize
+    window.addEventListener('resize', adjustVineHeight);
+    
+    // Run after a short delay to ensure images/layout are settled
+    setTimeout(adjustVineHeight, 500);
 });
 </script>
 </body>
