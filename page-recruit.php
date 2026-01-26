@@ -90,15 +90,15 @@ get_header(); ?>
             <div class="department-guidelines">
                 <h4 class="department-title">生花部</h4>
                 <div class="guideline-buttons">
-                    <a href="<?php echo home_url('/recruit-flower-part'); ?>" class="guideline-btn">パート ➜</a>
-                    <a href="<?php echo home_url('/recruit-flower-full'); ?>" class="guideline-btn">正社員 ➜</a>
+                    <a href="<?php echo home_url('/recruit-seika-part'); ?>" class="guideline-btn">パート ➜</a>
+                    <a href="<?php echo home_url('/recruit-seika-full-page'); ?>" class="guideline-btn">正社員 ➜</a>
                 </div>
             </div>
             <div class="department-guidelines">
                 <h4 class="department-title">葬祭部</h4>
                 <div class="guideline-buttons">
-                    <a href="<?php echo home_url('/recruit-funeral-part'); ?>" class="guideline-btn">パート ➜</a>
-                    <a href="<?php echo home_url('/recruit-funeral-full'); ?>" class="guideline-btn">正社員 ➜</a>
+                    <a href="<?php echo home_url('/recruit-sousai-part'); ?>" class="guideline-btn">パート ➜</a>
+                    <a href="<?php echo home_url('/recruit-sousai-full-page'); ?>" class="guideline-btn">正社員 ➜</a>
                 </div>
             </div>
         </section>
