@@ -1676,7 +1676,7 @@ body {
 }
 
 .recruit-flow {
-    padding: 0 20px 80px;
+    padding: 0 20px;
     max-width: 500px;
     margin: 0 auto;
 }
@@ -2424,7 +2424,7 @@ textarea.form-control {
    ========================================= */
 
 .company-page-container {
-    padding: 60px 0 120px;
+    padding: 60px 0 1px;
     background-color: #fff;
     overflow-x: hidden;
 }
@@ -2936,7 +2936,7 @@ textarea.form-control {
    ========================================= */
 
 .store-page-container {
-    padding: 60px 0 120px;
+    padding: 60px 0 1px;
     background-color: #fff;
 }
 
@@ -3008,7 +3008,6 @@ textarea.form-control {
 .store-map-section,
 .store-list-section {
     padding-left: 15px;
-    margin-bottom: 80px;
 }
 
 .map-placeholder {
@@ -3096,7 +3095,7 @@ textarea.form-control {
    ========================================= */
 
 .flower-page-container {
-    padding: 60px 0 120px;
+    padding: 60px 0 1px;
     background-color: #fff;
 }
 
@@ -3165,11 +3164,6 @@ textarea.form-control {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
     padding: 0 15px 40px;
-}
-
-.flower-categories,
-.flower-usages {
-    margin-bottom: 80px;
 }
 
 .flower-categories .company-section-title,
@@ -3241,7 +3235,7 @@ textarea.form-control {
    ========================================= */
 
 .funeral-page-container {
-    padding: 60px 0 120px;
+    padding: 60px 0 1px;
     background-color: #fff;
 }
 
@@ -3451,7 +3445,7 @@ textarea.form-control {
 
 /* Selection Flow Refinement */
 .recruit-flow {
-    padding: 0 10px 80px;
+    padding: 0 10px;
 }
 
 .flow-dropdown {
