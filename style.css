@@ -219,6 +219,13 @@ body {
     /* Rounded bottom-left as per mockup */
 }
 
+@media screen and (min-width: 768px) {
+    .sp-menu-overlay {
+        width: 20%;
+        /* ← PC width */
+    }
+}
+
 .sp-menu-overlay.active {
     transform: translateX(0);
 }
