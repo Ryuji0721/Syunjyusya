@@ -232,8 +232,8 @@ body {
 
 .menu-close-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 15px;
     width: 60px;
     height: 60px;
     background: transparent;
@@ -2336,7 +2336,7 @@ textarea.form-control {
     }
 
     .vine-bottom-deco img {
-        width: 100%;
+        width: 65%;
         height: auto;
         display: block;
     }

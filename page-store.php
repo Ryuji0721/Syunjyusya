@@ -23,7 +23,7 @@ get_header(); ?>
                 茨城県日立市を本店に10店舗の花屋を展開しています。お近くの店舗までぜひお立ち寄りください。
             </p>
             <p class="store-intro-para">
-                お近くに店舗がない場合は、<a href="https://shunjusha.hanatown.net/" target="_blank" class="store-external-link">花キューピット <span class="external-icon">➚</span></a> や <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer" class="store-external-link">Instagram <span class="external-icon">➚</span></a> のDM注文受付をご利用ください。
+                お近くに店舗がない場合は、<a href="https://shunjusha.hanatown.net/" target="_blank" class="store-external-link">花キューピット</a> や <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer" class="store-external-link">Instagram</a> のDM注文受付をご利用ください。
             </p>
         </section>
 
@@ -38,7 +38,7 @@ get_header(); ?>
         <!-- Store Name Search Section -->
         <section class="store-list-section">
             <h2 class="company-section-title store-list-title">
-                店舗名から探す <span class="chevron-down"></span>
+                店舗名から探す
             </h2>
             
             <div class="store-grid">
