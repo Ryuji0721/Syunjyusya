@@ -708,11 +708,14 @@ body {
     position: relative;
     width: 100%;
     margin-bottom: 40px;
+    aspect-ratio: 500 / 650;
+    overflow: hidden;
 }
 
 .company-main-img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -980,39 +983,7 @@ body {
     margin-bottom: 0;
 }
 
-/* =========================================
-   6. STORE INFORMATION PAGE
-   ========================================= */
-.store-hero {
-    position: relative;
-    width: 100%;
-    margin-bottom: 40px;
-}
 
-.store-hero-img-wrapper {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-}
-
-.store-hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.store-hero-title {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    margin: 0;
-    line-height: 1;
-}
 
 .store-intro {
     padding: 0 20px;
