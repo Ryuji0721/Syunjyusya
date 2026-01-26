@@ -3607,7 +3607,6 @@ textarea.form-control {
     width: 100%;
     aspect-ratio: 1/1.2;
     background-color: #E6E6E6;
-    margin-top: 30px;
 }
 
 /* Sections */
@@ -3626,7 +3625,7 @@ textarea.form-control {
 
 .section-a-text {
     font-size: 0.95rem;
-    color: #333;
+    color: #8B1A1A;
     line-height: 1.8;
 }
 
@@ -3652,7 +3651,7 @@ textarea.form-control {
     top: 40px;
     bottom: 0;
     width: 1px;
-    background-color: #D6D6D6;
+    background-color: #8B1A1A;
 }
 
 .schedule-item:last-child::before {
@@ -3662,22 +3661,22 @@ textarea.form-control {
 .schedule-time {
     width: 90px;
     height: 40px;
-    background-color: #EEEEEE;
+    background-color: #FFF2D8;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
     font-weight: bold;
-    color: #666;
+    color: #8B1A1A;
     flex-shrink: 0;
     z-index: 1;
+    border-radius: 10px;
 }
 
 .schedule-content {
     font-size: 0.9rem;
-    color: #333;
+    color: #8B1A1A;
     line-height: 1.6;
-    padding-top: 5px;
 }
 
 .schedule-note {
@@ -3804,4 +3803,57 @@ a {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+.interview-detail-hero {
+    position: relative;
+    padding: 0;
+    margin-bottom: 50px;
+    height: 550px;
+    /* 固定 */
+    background-color: #000;
+    overflow: hidden;
+}
+
+.interview-detail-hero .hero-img-placeholder {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.interview-detail-hero .hero-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.interview-detail-hero .hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 40px 20px;
+    background: linear-gradient(transparent 20%, rgba(0, 0, 0, 0.8) 80%);
+    text-align: center;
+}
+
+.interview-detail-hero .hero-main-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0 10px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: left;
+}
+
+.interview-detail-hero .hero-author {
+    font-size: 0.9rem;
+    color: #ddd;
+    text-align: left;
+}
+
+.schedule-content p {
+    margin-top: 0;
 }
