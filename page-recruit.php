@@ -61,12 +61,12 @@ get_header(); ?>
             <div class="interview-grid">
                 <a href="<?php echo home_url('/interview-01'); ?>" class="interview-card">
                     <div class="interview-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="Interview 1">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_1.jpg" alt="Interview 1">
                         <span class="interview-number">01</span>
                     </div>
-                    <p class="interview-title">タイトルタイトルタイトルタイトル</p>
+                    <p class="interview-title">お客さんの喜ぶ顔がやりがい</p>
                     <div class="interview-footer">
-                        <span class="interview-name">部署名　名前 名前</span>
+                        <span class="interview-name">フローラ森山店 川崎 紗香さん</span>
                         <span class="arrow-link">➜</span>
                     </div>
                 </a>
