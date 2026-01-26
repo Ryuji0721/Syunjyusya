@@ -73,12 +73,12 @@ get_header(); ?>
 
                 <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
                     <div class="interview-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="Interview 2">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
                         <span class="interview-number">02</span>
                     </div>
-                    <p class="interview-title">タイトルタイトルタイトルタイトル</p>
+                    <p class="interview-title">花に関わる仕事なら一生続けられる</p>
                     <div class="interview-footer">
-                        <span class="interview-name">部署名　名前 名前</span>
+                        <span class="interview-name">葬祭部 愛場 理晴さん</span>
                         <span class="arrow-link">➜</span>
                     </div>
                 </a>

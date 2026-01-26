@@ -100,18 +100,21 @@ get_header(); ?>
         </section> -->
 
         <!-- Other Interviews Footer -->
-        <section class="interview-footer-nav">
-            <h2 class="footer-nav-title">社員インタビュー</h2>
-            <div class="other-interview-card">
-                <div class="nav-img-placeholder">        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_1.jpg" alt="インタビュー1">
-</div>
-                <div class="nav-content">
-                    <span class="nav-number">01</span>
-                    <h3 class="nav-title">タイトルタイトルタイトルタイトルタイトル</h3>
-                    <p class="nav-author">部署名　名前 名前</p>
+        <a href="<?php echo home_url('/interview-01'); ?>" class="interview_1">
+            <section class="interview-footer-nav">
+                <h2 class="footer-nav-title">社員インタビュー</h2>
+                <div class="other-interview-card">
+                    <div class="nav-img-placeholder">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_1.jpg" alt="インタビュー1">
+                    </div>
+                    <div class="nav-content">
+                        <span class="nav-number">01</span>
+                        <h3 class="nav-title">お客さんの喜ぶ顔がやりがい</h3>
+                        <p class="nav-author">フローラ森山店 川崎 紗香さん</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </a>
     </div>
 </main>
 

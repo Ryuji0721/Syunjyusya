@@ -107,11 +107,14 @@ get_header(); ?>
         <section class="interview-footer-nav">
             <h2 class="footer-nav-title">社員インタビュー</h2>
             <div class="other-interview-card">
-                <div class="nav-img-placeholder"></div>
+                <div class="nav-img-placeholder">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="インタビュー2">
+
+                </div>
                 <div class="nav-content">
                     <span class="nav-number">02</span>
-                    <h3 class="nav-title">タイトルタイトルタイトルタイトルタイトル</h3>
-                    <p class="nav-author">部署名　名前 名前</p>
+                    <h3 class="nav-title">花に関わる仕事なら一生続けられる</h3>
+                    <p class="nav-author">葬祭部 愛場 理晴さん</p>
                     <a href="<?php echo home_url('/interview-02'); ?>" class="nav-arrow-link">➜</a>
                 </div>
             </div>
