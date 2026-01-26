@@ -116,34 +116,37 @@
     <!-- Right Column: Decoration (Vine & Flowers) -->
     <div class="global-pc-right">
         <div class="vine-decoration-area">
-            <div class="vine-line"></div>
-            <?php 
-            // Array of flower photos to display along the vine
-            $flower_images = array(
-                'Anteak.jpg', 'Doraiflower.jpg', 'Ha-barium.jpg', 'Hanataba.jpg', 
-                'flowerArenji.jpg', 'iwaibana.jpg', 'エルフラワー.jpg', 'フラワーエール.jpg'
-            );
-            
-            // Loop many times to ensure it covers long pages
-            for ($i = 0; $i < 12; $i++): 
-                $img = $flower_images[$i % count($flower_images)];
-                $is_even = ($i % 2 == 0);
-                $side_class = $is_even ? 'vine-item-right' : 'vine-item-left';
-            ?>
-                <div class="vine-segment <?php echo $side_class; ?>">
-                    <div class="vine-curve"></div>
-                    <div class="vine-flower-item">
-                        <div class="vine-flower-img-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $img; ?>" alt="">
+            <?php if ( ! is_page('contact') && ! is_page_template('page-contact.php') ) : ?>
+                <div class="vine-line"></div>
+                <?php 
+                // Array of flower photos to display along the vine
+                $flower_images = array(
+                    'Anteak.jpg', 'Doraiflower.jpg', 'Ha-barium.jpg', 'Hanataba.jpg', 
+                    'flowerArenji.jpg', 'iwaibana.jpg', 'エルフラワー.jpg', 'フラワーエール.jpg'
+                );
+                
+                // Loop many times to ensure it covers long pages
+                for ($i = 0; $i < 10; $i++): 
+                    $img = $flower_images[$i % count($flower_images)];
+                    $is_even = ($i % 2 == 0);
+                    $side_class = $is_even ? 'vine-item-right' : 'vine-item-left';
+                ?>
+                    <div class="vine-segment <?php echo $side_class; ?>">
+                        <div class="vine-curve"></div>
+                        <div class="vine-flower-item">
+                            <div class="vine-flower-img-wrapper">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/<?php echo $img; ?>" alt="">
+                            </div>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/happa.svg" class="vine-leaf leaf-1" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/happa.svg" class="vine-leaf leaf-2" alt="">
                         </div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/happa.svg" class="vine-leaf leaf-1" alt="">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/happa.svg" class="vine-leaf leaf-2" alt="">
                     </div>
+                <?php endfor; ?>
+                <div class="vine-bottom-deco">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/HanaLast.svg" alt="End Decoration">
                 </div>
-            <?php endfor; ?>
-            <div class="vine-bottom-deco">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/HanaLast.svg" alt="End Decoration">
-            </div>
+            <?php endif; ?>
+
         </div>
     </div>
 

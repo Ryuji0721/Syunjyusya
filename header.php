@@ -63,7 +63,7 @@
 
             <div class="sp-menu-sns">
                 <div class="menu-sns-item instagram-box">
-                    <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram_official.png" alt="Instagram" class="menu-sns-icon">
+                    <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.svg" alt="Instagram" class="menu-sns-icon">
                     <div class="sns-note">
                         <p class="sns-name">Instagram</p>
                         <p class="sns-desc">近日DMにて注文受付開始</p>
@@ -71,7 +71,7 @@
                     </a>
                 </div>
                 <div class="menu-sns-item facebook-item">
-                    <a href="https://www.facebook.com/shunjusha/?locale=ja_JP" target="_blank"  rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook_official.png" alt="Facebook" class="menu-sns-icon"></a>
+                    <a href="https://www.facebook.com/shunjusha/?locale=ja_JP" target="_blank"  rel="noopener noreferrer"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Facebook_LOGO.svg" alt="Facebook" class="menu-sns-icon"></a>
                 </div>
             </div>
         </div>
