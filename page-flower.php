@@ -36,7 +36,7 @@ get_header(); ?>
         <!-- Categories Section -->
         <section class="flower-categories">
             <h2 class="company-section-title">
-                カテゴリで選ぶ <span class="chevron-down"></span>
+                カテゴリで選ぶ
             </h2>
             
             <div class="flower-grid">
@@ -127,7 +127,7 @@ get_header(); ?>
         <!-- Usage Section -->
         <section class="flower-usages">
             <h2 class="company-section-title">
-                ご用途で選ぶ <span class="chevron-down"></span>
+                ご用途で選ぶ
             </h2>
 
             <div class="flower-grid">

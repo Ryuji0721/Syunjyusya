@@ -199,6 +199,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Run after a short delay to ensure images/layout are settled
     setTimeout(adjustVineHeight, 500);
+
+    // Store Map Interaction
+    var storeCards = document.querySelectorAll('.store-card');
+    var mapFrame = document.getElementById('storeMapFrame');
+
+    if (storeCards.length > 0 && mapFrame) {
+        storeCards.forEach(function(card) {
+            card.addEventListener('click', function() {
+                var query = this.getAttribute('data-query');
+                if (query) {
+                    var newSrc = "https://maps.google.com/maps?q=" + encodeURIComponent(query) + "&t=&z=15&ie=UTF8&iwloc=&output=embed";
+                    mapFrame.src = newSrc;
+                    
+                    // Optional: Scroll to map
+                    var mapSection = document.querySelector('.store-map-section');
+                    if(mapSection) {
+                        mapSection.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    }
+                }
+            });
+        });
+    }
 });
 </script>
 </body>

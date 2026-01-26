@@ -377,7 +377,7 @@ body {
 
 .scroll-indicator {
     position: absolute;
-    bottom: 15%;
+    bottom: 6%;
     /* Narrowed position as requested */
     left: 50%;
     transform: translateX(-50%);
@@ -2196,7 +2196,7 @@ textarea.form-control {
     /* Vine Decoration Area */
     .vine-decoration-area {
         position: absolute;
-        top: 0;
+        top: 10px;
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
@@ -2943,7 +2943,7 @@ textarea.form-control {
    ========================================= */
 
 .store-page-container {
-    padding: 60px 0 1px;
+    padding: 0px 0 1px;
     background-color: #fff;
 }
 
@@ -2963,7 +2963,8 @@ textarea.form-control {
 .store-hero-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 500 / 650;
+    /* User requested ~500x650 */
     overflow: hidden;
 }
 
@@ -2985,6 +2986,9 @@ textarea.form-control {
     font-weight: bold;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     margin: 0;
+    writing-mode: horizontal-tb;
+    /* Force horizontal */
+    white-space: nowrap;
 }
 
 /* Store Intro */
@@ -3025,6 +3029,20 @@ textarea.form-control {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 767px) {
+    .store-map-section {
+        margin-left: -15px;
+        margin-right: -15px;
+        width: calc(100% + 30px);
+    }
+
+    .map-placeholder {
+        aspect-ratio: auto;
+        height: 70vh;
+        border-radius: 0;
+    }
 }
 
 .map-label {
@@ -3102,14 +3120,14 @@ textarea.form-control {
    ========================================= */
 
 .flower-page-container {
-    padding: 60px 0 1px;
+    padding: 0px 0 1px;
     background-color: #fff;
 }
 
 .flower-content-inner {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 3px;
     position: relative;
     border: none;
 }
@@ -3122,7 +3140,7 @@ textarea.form-control {
 .flower-hero-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 500 / 650;
     overflow: hidden;
 }
 
@@ -3242,14 +3260,14 @@ textarea.form-control {
    ========================================= */
 
 .funeral-page-container {
-    padding: 60px 0 1px;
+    padding: 0px 0 1px;
     background-color: #fff;
 }
 
 .funeral-content-inner {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 2px;
     position: relative;
     border: none;
 }
@@ -3261,7 +3279,7 @@ textarea.form-control {
 .funeral-hero-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 500 / 650;
     overflow: hidden;
 }
 
@@ -3312,7 +3330,7 @@ textarea.form-control {
    ========================================= */
 
 .recruit-page-container {
-    padding: 60px 0 120px;
+    padding: 0px 0 120px;
     background-color: #fff;
 }
 
@@ -3333,7 +3351,7 @@ textarea.form-control {
 .recruit-hero-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4/5;
+    aspect-ratio: 500 / 650;
     /* Taller hero like mockup */
     overflow: hidden;
 }
