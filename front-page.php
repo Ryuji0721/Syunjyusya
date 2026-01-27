@@ -16,7 +16,6 @@ Template Name: Top page
                         class="hero-video">
                         <source src="<?php echo get_template_directory_uri(); ?>/assets/movie/TOPFV1.mp4" type="video/mp4">
                     </video>
-                </a>
             </div>
             
             <div class="scroll-indicator">
