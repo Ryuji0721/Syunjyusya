@@ -622,7 +622,7 @@ body {
     opacity: 0.8;
 }
 
-..deco-img.bottom-right img {
+.deco-img.bottom-right img {
     min-width: 153px;
 }
 
