@@ -5,16 +5,16 @@ Template Name: Funeral Page
 get_header(); ?>
 
 <main class="funeral-page-container">
-    <div class="funeral-content-inner">
-        
-        <!-- Funeral Hero -->
-        <section class="funeral-hero">
-            <div class="funeral-hero-img-wrapper">
+    <div class="funeral-hero-img-wrapper">
                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaiFV.jpg" alt="葬祭部について" class="funeral-hero-img">
                  <div class="funeral-hero-overlay">
                      <h1 class="funeral-hero-title">葬祭部について</h1>
                  </div>
-            </div>
+            </div><div class="funeral-content-inner">
+        
+        <!-- Funeral Hero -->
+        <section class="funeral-hero">
+            
         </section>
 
         <!-- Intro Text -->
@@ -64,10 +64,8 @@ get_header(); ?>
                 <div class="flow-step">
                     <h4 class="flow-step-title">お問い合わせ</h4>
                     <p class="flow-step-desc">
-                        まずはお電話またはお問い合わせフォームより<br>
-                        ご連絡ください。<br>
-                        ご葬儀の日程や会場、宗派、ご希望の祭壇など<br>
-                        を伺い、適切なお提案をさせていただきます。
+                        まずはお電話またはお問い合わせフォームよりご連絡ください。<br>
+                        ご葬儀の日程や会場、宗派、ご希望の祭壇などを伺い、適切なご提案をさせていただきます。
                     </p>
                 </div>
                 <div class="flow-arrow">▼</div>
@@ -76,10 +74,8 @@ get_header(); ?>
                 <div class="flow-step">
                     <h4 class="flow-step-title">打ち合わせ</h4>
                     <p class="flow-step-desc">
-                        ご希望に応じて、祭壇のデザインや使用する花<br>
-                        材、色合いなどを詳細にお伺いします。<br>
-                        会場の規模や搬入の可否などもレイアウト調整を<br>
-                        行います。
+                        ご希望に応じて、祭壇のデザインや使用する花材、色合いなどを詳細にお伺いします。<br>
+                        会場の規模や搬入の可否などもレイアウト調整を行います。
                     </p>
                 </div>
                 <div class="flow-arrow">▼</div>
@@ -88,22 +84,16 @@ get_header(); ?>
                 <div class="flow-step">
                     <h4 class="flow-step-title">お見積り・ご発注</h4>
                     <p class="flow-step-desc">
-                        ご要望に沿ったプランのお見積もりを<br>
-                        ご提示いたします。<br>
-                        内容をご確認いただき、ご納得いただけましたら<br>
-                        正式にご発注となります。
+                        ご要望に沿ったプランのお見積もりをご提示いたします。<br>
+                        内容をご確認いただき、ご納得いただけましたら正式にご発注となります。
                     </p>
                 </div>
             </div>
 
             <div class="flow-note">
                 <p>
-                    故人様への感謝と思いをカタチにする<br>
-                    大切な空間だからこそ、<br>
-                    一つひとつの提案を真心を込めて<br>
-                    お作りしております。<br>
-                    ご希望やご不明な点がございましたら、<br>
-                    どんな些細なことでもお気軽にご相談ください。
+                    故人様への感謝と思いをカタチにする大切な空間だからこそ、一つひとつの提案を真心を込めてお作りしております。<br>
+                    ご希望やご不明な点がございましたら、どんな些細なことでもお気軽にご相談ください。
                 </p>
             </div>
 

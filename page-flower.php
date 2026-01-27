@@ -5,16 +5,16 @@ Template Name: Flower Page
 get_header(); ?>
 
 <main class="flower-page-container">
-    <div class="flower-content-inner">
-        
-        <!-- Hero Section -->
-        <section class="flower-hero">
-            <div class="flower-hero-img-wrapper">
+    <div class="flower-hero-img-wrapper">
                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top1.png" alt="お花について" class="flower-hero-img">
                  <div class="flower-hero-overlay">
                      <h1 class="flower-hero-title">お花について</h1>
                  </div>
-            </div>
+            </div><div class="flower-content-inner">
+        
+        <!-- Hero Section -->
+        <section class="flower-hero">
+            
         </section>
 
         <!-- Intro Text -->

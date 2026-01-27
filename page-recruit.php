@@ -5,17 +5,17 @@ Template Name: Recruit Page
 get_header(); ?>
 
 <main class="recruit-page-container">
-    <div class="recruit-content-inner">
-        
-        <!-- Recruit Hero -->
-        <section class="recruit-hero">
-            <div class="recruit-hero-img-wrapper">
+    <div class="recruit-hero-img-wrapper">
                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kyujin.jpg" alt="求人情報" class="recruit-hero-img">
                  <div class="recruit-hero-overlay">
                      <h1 class="recruit-hero-title">求人情報</h1>
                  </div>
-            </div>
-        </section>
+            </div><div class="recruit-content-inner">
+        
+        <!-- Recruit Hero -->
+        <!-- <section class="recruit-hero">
+            
+        </section> -->
 
         <!-- Message Section -->
         <section id="message" class="recruit-message">

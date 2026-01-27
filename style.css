@@ -290,8 +290,6 @@ body {
     text-decoration: none;
     color: #7A090B;
     font-size: 1.1rem;
-    font-weight: 500;
-    font-family: serif;
     letter-spacing: 0.05em;
 }
 
@@ -576,9 +574,8 @@ body {
 /* Delivery Section */
 .delivery-section {
     background-color: #fff;
-    padding: 80px 20px 195px;
+    padding: 110px 20px 195px;
     position: relative;
-    border-top: 1px solid #eee;
 }
 
 .delivery-content {
@@ -591,8 +588,8 @@ body {
 
 .deco-img.top-left {
     position: absolute;
-    top: -20px;
-    left: -20px;
+    top: 0px;
+    left: 0px;
     width: 150px;
     height: auto;
     z-index: 0;
@@ -607,21 +604,26 @@ body {
     }
 
     .deco-img.top-left {
-        width: 250px;
+        width: 150px;
         /* Bigger as requested */
-        top: -40px;
-        left: -50px;
+        top: 0px;
+        left: 0px;
     }
 }
 
 .deco-img.bottom-right {
+    width: 100%;
     position: absolute;
     bottom: 95px;
-    right: -20px;
+    right: 0px;
     width: 150px;
     height: auto;
     z-index: 0;
     opacity: 0.8;
+}
+
+..deco-img.bottom-right img {
+    min-width: 153px;
 }
 
 .payment-info {
@@ -2584,6 +2586,10 @@ textarea.form-control {
     font-size: 0.95rem;
 }
 
+.company-intro-para p {
+    padding-left: 20px;
+}
+
 /* Section Titles with Underline */
 .company-section-title {
     font-size: 1.4rem;
@@ -2950,7 +2956,7 @@ textarea.form-control {
 
 .store-hero-overlay {
     position: absolute;
-    bottom: 20px;
+    bottom: 60px;
     left: 20px;
 }
 
@@ -3016,6 +3022,10 @@ textarea.form-control {
         aspect-ratio: auto;
         height: 70vh;
         border-radius: 0;
+    }
+
+    .store-hero-img-wrapper {
+        min-width: 375px;
     }
 }
 
@@ -3130,7 +3140,7 @@ textarea.form-control {
 
 .flower-hero-overlay {
     position: absolute;
-    bottom: 20px;
+    bottom: 60px;
     left: 20px;
 }
 
@@ -3269,7 +3279,7 @@ textarea.form-control {
 
 .funeral-hero-overlay {
     position: absolute;
-    bottom: 20px;
+    bottom: 60px;
     left: 20px;
 }
 
@@ -3342,7 +3352,7 @@ textarea.form-control {
 
 .recruit-hero-overlay {
     position: absolute;
-    bottom: 20px;
+    bottom: 60px;
     left: 20px;
 }
 
@@ -3790,7 +3800,8 @@ textarea.form-control {
 h1,
 h2,
 h3,
-h4 {
+h4,
+.menu-label {
     font-family: "Kiwi Maru", "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
     font-weight: 500;
     font-style: normal;
@@ -3898,4 +3909,19 @@ html {
     scroll-padding-top: 80px;
     /* スムーススクロールを追加したい場合 */
     scroll-behavior: smooth;
+}
+
+.site-header::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    /* ヘッダーのすぐ下 */
+    left: 0;
+    width: 100%;
+    height: 10px;
+    /* グラデーションの厚さ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent);
+    pointer-events: none;
+    /* クリック無効化 */
+    z-index: -1;
 }

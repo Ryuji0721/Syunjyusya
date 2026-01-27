@@ -5,16 +5,16 @@ Template Name: Store Information
 get_header(); ?>
 
 <main class="store-page-container">
-    <div class="store-content-inner">
-        
-        <!-- Hero Section -->
-        <section class="store-hero">
-            <div class="store-hero-img-wrapper">
+    <div class="store-hero-img-wrapper">
                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/本店.jpg" alt="店舗情報" class="store-hero-img">
                  <div class="store-hero-overlay">
                      <h1 class="store-hero-title">店舗情報</h1>
                  </div>
-            </div>
+            </div><div class="store-content-inner">
+        
+        <!-- Hero Section -->
+        <section class="store-hero">
+            
         </section>
 
         <!-- Intro Text -->
