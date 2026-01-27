@@ -125,8 +125,8 @@
                     'flowerArenji.jpg', 'iwaibana.jpg', 'エルフラワー.jpg', 'フラワーエール.jpg'
                 );
                 
-                // Loop fewer times to simplify (reduced from 10 to 5)
-                for ($i = 0; $i < 5; $i++): 
+                // Loop more times to cover longer pages
+                for ($i = 0; $i < 15; $i++): 
                     $img = $flower_images[$i % count($flower_images)];
                     $is_even = ($i % 2 == 0);
                     $side_class = $is_even ? 'vine-item-right' : 'vine-item-left';
@@ -181,8 +181,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (centerCol && footer && vineArea) {
             var centerHeight = centerCol.offsetHeight;
             var footerHeight = footer.offsetHeight;
-            // Subtract footer height and some extra margin (150px) for whitespace
-            var newHeight = centerHeight - footerHeight - 150; 
+            // Subtract footer height and some extra margin (100px) for whitespace
+            var newHeight = centerHeight - footerHeight - 100; 
             
             if (newHeight > 0) {
                 vineArea.style.height = newHeight + 'px';

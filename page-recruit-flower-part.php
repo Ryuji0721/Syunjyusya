@@ -111,6 +111,7 @@ get_header(); ?>
         </div>
 
         <div class="recruit-detail-footer">
+            <a href="<?php echo home_url('/recruit'); ?>" class="recruit-back-btn">求人募集トップへ戻る ➜</a>
             <a href="<?php echo home_url('/contact'); ?>" class="recruit-site-btn">採用サイトへ <span class="external-icon"></span></a>
         </div>
     </div>
