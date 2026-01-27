@@ -23,18 +23,18 @@ get_header(); ?>
                 日立市内の配達は、3,000円（税別）以上の商品から無料で配達いたします。
             </p>
             <p class="flower-intro-para">
-                市外・県外への配達は、宅配または <a href="https://shunjusha.hanatown.net/" target="_blank" class="flower-external-link">花キューピット <span class="external-icon">➚</span></a> で手配いたします。
+                市外・県外への配達は、宅配または <a href="https://shunjusha.hanatown.net/" target="_blank" class="flower-external-link">花キューピット<span class="link_img"></span></a> で手配いたします。
             </p>
             <p class="flower-intro-para">
-                <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer" class="flower-external-link">公式Instagram <span class="external-icon">➚</span></a> のDMでも注文を受け付けております。お気軽にご相談ください。
+                <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer" class="flower-external-link">公式Instagram<span class="link_img"></span></a> のDMでも注文を受け付けております。お気軽にご相談ください。
             </p>
             <p class="flower-intro-para">
-                また、アンティーク雑貨を <a href="https://bloemen87.thebase.in/" target="_blank" class="flower-external-link">オンラインショップ bloemen <span class="external-icon">➚</span></a> で販売しております。ぜひご利用ください。
+                また、アンティーク雑貨を <a href="https://bloemen87.thebase.in/" target="_blank" class="flower-external-link">オンラインショップ bloemen<span class="link_img"></span></a> で販売しております。ぜひご利用ください。
             </p>
         </section>
 
         <!-- Categories Section -->
-        <section class="flower-categories">
+        <section class="flower-categories" id="flower-categories">
             <h2 class="company-section-title">
                 カテゴリで選ぶ
             </h2>
@@ -70,7 +70,7 @@ get_header(); ?>
                 <!-- Item 4 -->
                 <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder.png" alt="造花">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ArtificialFlowers.jpg" alt="造花">
                         <div class="grid-overlay">
                             <span class="grid-label">造花</span>
                         </div>
@@ -125,7 +125,7 @@ get_header(); ?>
         </section>
 
         <!-- Usage Section -->
-        <section class="flower-usages">
+        <section class="flower-usages" id="flower-usages">
             <h2 class="company-section-title">
                 ご用途で選ぶ
             </h2>

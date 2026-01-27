@@ -56,7 +56,7 @@ get_header(); ?>
         </section>
 
         <!-- Flow Section -->
-        <section class="funeral-flow">
+        <section class="funeral-flow" id="funeral-flow">
             <h2 class="company-section-title">ご依頼の流れ</h2>
             
             <div class="flow-steps">
@@ -113,7 +113,7 @@ get_header(); ?>
         </section>
 
         <!-- Example Photos (Swiper Slider) -->
-        <section class="funeral-examples">
+        <section class="funeral-examples" id="funeral-examples">
             <h2 class="company-section-title">実例写真</h2>
             
             <div class="swiper funeral-examples-swiper">
@@ -152,7 +152,7 @@ get_header(); ?>
         </section>
 
         <!-- Client List -->
-        <section class="funeral-clients">
+        <section class="funeral-clients" id="funeral-clients">
             <h2 class="company-section-title">お取引葬儀社様一覧</h2>
             <ul class="client-list">
                 <li class="list-note">(敬称略、順序不可/2022年現在)</li>

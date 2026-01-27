@@ -232,7 +232,7 @@ get_header(); ?>
                     <div class="recruit-flow-box">
                         <h4 class="recruit-flow-title">ご応募</h4>
                         <p class="recruit-flow-text">採用サイトよりご応募ください。<br>こちらより折り返しご連絡いたします。</p>
-                        <a href="<?php echo home_url('/contact'); ?>" class="recruit-flow-btn">採用サイトへ <span class="external-icon"></span></a>
+                        <a href="<?php echo home_url('/contact'); ?>" class="recruit-flow-btn">採用サイトへ<span class="link_img"></span></a>
                     </div>
                     <div class="recruit-flow-arrow"></div>
                     <div class="recruit-flow-box">
@@ -254,7 +254,7 @@ get_header(); ?>
                     <div class="recruit-flow-box">
                         <h4 class="recruit-flow-title">ご応募</h4>
                         <p class="recruit-flow-text">採用サイトよりご応募ください。<br>こちらより折り返しご連絡いたします。</p>
-                        <a href="<?php echo home_url('/contact'); ?>" class="recruit-flow-btn">採用サイトへ <span class="external-icon"></span></a>
+                        <a href="<?php echo home_url('/contact'); ?>" class="recruit-flow-btn">採用サイトへ<span class="link_img"></span></a>
                     </div>
                     <div class="recruit-flow-arrow"></div>
                     <div class="recruit-flow-box">

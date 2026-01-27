@@ -576,7 +576,7 @@ body {
 /* Delivery Section */
 .delivery-section {
     background-color: #fff;
-    padding: 80px 20px 100px;
+    padding: 80px 20px 195px;
     position: relative;
     border-top: 1px solid #eee;
 }
@@ -616,7 +616,7 @@ body {
 
 .deco-img.bottom-right {
     position: absolute;
-    bottom: -40px;
+    bottom: 95px;
     right: -20px;
     width: 150px;
     height: auto;
@@ -645,7 +645,6 @@ body {
 
 .page-subtitle-en {
     font-family: serif;
-    font-style: italic;
     /* Use serif italic as generic cursive if needed */
     font-size: 1.5rem;
     color: #7A090B;
@@ -954,6 +953,10 @@ body {
     flex-shrink: 0;
     text-align: left;
     line-height: 1.2;
+}
+
+.history-year P {
+    margin-top: 0;
 }
 
 .history-content {
@@ -1712,10 +1715,11 @@ body {
 
 .recruit-flow-arrow {
     text-align: center;
-    font-size: 2.0rem;
     color: #F8E3B6;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
     line-height: 1;
+    margin: 10px 0;
+    transform: scaleY(0.8);
 }
 
 /* =========================================
@@ -2531,10 +2535,11 @@ textarea.form-control {
 }
 
 .page-header-simple .page-subtitle-en {
-    font-family: serif;
-    font-style: italic;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     color: #7A090B;
-    font-size: 1.2rem;
     margin-bottom: 5px;
 }
 
@@ -2587,8 +2592,6 @@ textarea.form-control {
     padding-bottom: 8px;
     border-bottom: 3px double #7A090B;
     /* Textured look from mockup */
-    font-family: serif;
-    font-weight: bold;
 }
 
 /* Profile List Vertical */
@@ -2870,7 +2873,7 @@ textarea.form-control {
 .history-item::after {
     content: '';
     position: absolute;
-    left: 110px;
+    left: 111px;
     top: 9px;
     /* Centered with first line */
     width: 9px;
@@ -3057,6 +3060,10 @@ textarea.form-control {
     padding: 12px 15px;
     /* Space around title */
     background-color: #fff;
+    margin: 0;
+}
+
+.store-card-name p {
     margin: 0;
 }
 
@@ -3797,7 +3804,8 @@ a {
     font-style: normal;
 }
 
-.section-subtitle-en {
+.section-subtitle-en,
+.page-subtitle-en {
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -3883,4 +3891,11 @@ a {
     width: 280px;
     /* カード幅 */
     display: block;
+}
+
+html {
+    /* ヘッダーの高さが 80px の場合 */
+    scroll-padding-top: 80px;
+    /* スムーススクロールを追加したい場合 */
+    scroll-behavior: smooth;
 }

@@ -20,27 +20,29 @@
                     <div class="sitemap-col">
                         <h4 class="sitemap-title">TOP</h4>
                         <ul class="sitemap-list">
-                            <li><a href="<?php echo home_url('/'); ?>#omoi">想い</a></li>
-                            <li><a href="<?php echo home_url('/'); ?>#service">事業案内</a></li>
-                            <li><a href="<?php echo home_url('/'); ?>#delivery">配送・支払い情報</a></li>
+                            <li><a href="<?php echo home_url('/'); ?>#omoi-section">想い</a></li>
+                            <li><a href="<?php echo home_url('/'); ?>#service-section">事業案内</a></li>
+                            <li><a href="<?php echo home_url('/'); ?>#delivery-section">配送・支払い情報</a></li>
                         </ul>
                     </div>
                     <!-- Col 2 -->
                     <div class="sitemap-col">
                         <h4 class="sitemap-title">企業情報</h4>
                         <ul class="sitemap-list">
-                            <li><a href="<?php echo home_url('/company'); ?>">代表者挨拶</a></li>
-                            <li><a href="<?php echo home_url('/company'); ?>">企業概要</a></li>
-                            <li><a href="<?php echo home_url('/company'); ?>">各店舗</a></li>
-                            <li><a href="<?php echo home_url('/company'); ?>">沿革</a></li>
+                            <li><a href="<?php echo home_url('/company'); ?>#company-profile-section">会社概要</a></li>
+                            <li><a href="<?php echo home_url('/company'); ?>#greeting-section">代表者挨拶</a></li>
+                            <li><a href="<?php echo home_url('/company'); ?>#company-stores-section">各店舗</a></li>
+                            <li><a href="<?php echo home_url('/company'); ?>#company-history-section">沿革</a></li>
                         </ul>
                     </div>
                     <!-- Col 3 -->
                     <div class="sitemap-col">
                         <h4 class="sitemap-title">店舗情報</h4>
                         <ul class="sitemap-list">
-                            <li><a href="<?php echo home_url('/store'); ?>">各店舗概要</a></li>
-                            <li><a href="<?php echo home_url('/store'); ?>">MAP</a></li>
+                            <li><a href="<?php echo home_url('/store'); ?>#store-intro">各店舗概要</a></li>
+                            <li><a href="<?php echo home_url('/store'); ?>#store-map-section">MAPから探す</a></li>
+                             <li><a href="<?php echo home_url('/store'); ?>#store-list-section">店舗名から探す</a></li>
+
                             <li><a href="https://shunjusha.hanatown.net/" target="_blank">花キューピット<span class="link_img"></span></a></li>
                             <li><a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer">公式Instagram<span class="link_img"></span></a></li>
                             <li><a href="https://bloemen87.thebase.in/" target="_blank">オンラインショップ<br>bloemen<span class="link_img"></span></a></li>
@@ -50,28 +52,28 @@
                     <div class="sitemap-col">
                         <h4 class="sitemap-title">お花について</h4>
                         <ul class="sitemap-list">
-                            <li><a href="<?php echo home_url('/flower'); ?>">カテゴリで選ぶ</a></li>
-                            <li><a href="<?php echo home_url('/flower'); ?>">ご用途で選ぶ</a></li>
+                            <li><a href="<?php echo home_url('/flower'); ?>#flower-categories">カテゴリで選ぶ</a></li>
+                            <li><a href="<?php echo home_url('/flower'); ?>#flower-usages">ご用途で選ぶ</a></li>
                         </ul>
                     </div>
                     <!-- Col 5 -->
                     <div class="sitemap-col">
                         <h4 class="sitemap-title">葬祭部について</h4>
                         <ul class="sitemap-list">
-                            <li><a href="<?php echo home_url('/funeral'); ?>">ご依頼の流れ</a></li>
-                            <li><a href="<?php echo home_url('/funeral'); ?>">実例写真</a></li>
-                            <li><a href="<?php echo home_url('/funeral'); ?>">お取引葬儀社様一覧</a></li>
+                            <li><a href="<?php echo home_url('/funeral'); ?>#funeral-flow">ご依頼の流れ</a></li>
+                            <li><a href="<?php echo home_url('/funeral'); ?>#funeral-examples">実例写真</a></li>
+                            <li><a href="<?php echo home_url('/funeral'); ?>#funeral-clients">お取引葬儀社様一覧</a></li>
                         </ul>
                     </div>
                     <!-- Col 6 -->
                     <div class="sitemap-col">
                         <h4 class="sitemap-title">求人情報</h4>
                         <ul class="sitemap-list">
-                            <li><a href="<?php echo home_url('/recruit'); ?>">メッセージ</a></li>
-                            <li><a href="<?php echo home_url('/recruit'); ?>">社員インタビュー</a></li>
-                            <li><a href="<?php echo home_url('/recruit'); ?>">募集要項</a></li>
-                            <li><a href="<?php echo home_url('/recruit'); ?>">選考の流れ</a></li>
-                            <li><a href="https://job-gear.net/shunjusha/" target="_blank">採用サイト ➚</a></li>
+                            <li><a href="<?php echo home_url('/recruit'); ?>#message">メッセージ</a></li>
+                            <li><a href="<?php echo home_url('/recruit'); ?>#interviews">社員インタビュー</a></li>
+                            <li><a href="<?php echo home_url('/recruit'); ?>#guidelines">募集要項</a></li>
+                            <li><a href="<?php echo home_url('/recruit'); ?>#flow">選考の流れ</a></li>
+                            <li><a href="https://job-gear.net/shunjusha/" target="_blank">採用サイト<span class="link_img"></span></a></li>
                         </ul>
                     </div>
                 </div>

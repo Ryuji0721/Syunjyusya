@@ -49,15 +49,15 @@
             <nav class="sp-menu-nav">
                 <ul>
                     <li><a href="<?php echo home_url('/'); ?>">TOP</a></li>
-                    <li><a href="<?php echo home_url('/'); ?>#service">事業案内</a></li>
+                    <li><a href="<?php echo home_url('/'); ?>#service-section">事業案内</a></li>
                     <li><a href="<?php echo home_url('/company'); ?>">企業情報</a></li>
                     <li><a href="<?php echo home_url('/store'); ?>">店舗情報</a></li>
                     <li><a href="<?php echo home_url('/flower'); ?>">お花について</a></li>
                     <li><a href="<?php echo home_url('/funeral'); ?>">葬祭部について</a></li>
                     <li><a href="<?php echo home_url('/recruit'); ?>">求人情報</a></li>
                     <li><a href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
-                    <li><a href="https://bloemen87.thebase.in/" target="_blank">オンラインショップ bloemen ➚</a></li>
-                    <li><a href="https://shunjusha.hanatown.net/" target="_blank">花キューピット ➚</a></li>
+                    <li><a href="https://bloemen87.thebase.in/" target="_blank">オンラインショップ bloemen<span class="link_img"></span></a></li>
+                    <li><a href="https://shunjusha.hanatown.net/" target="_blank">花キューピット<span class="link_img"></span></a></li>
                 </ul>
             </nav>
 
