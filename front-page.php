@@ -29,7 +29,7 @@ Template Name: Top page
         </section>
         
         <!-- Omoi Section -->
-        <section class="omoi-section">
+        <section class="omoi-section" id="omoi-section">
             <!-- Background Image -->
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top1.png" alt="Omoi Background" class="omoi-bg-img">
             
@@ -66,7 +66,7 @@ Template Name: Top page
         </section>
 
         <!-- Service Section -->
-        <section class="service-section">
+        <section class="service-section" id="service-section">
             <div class="section-header">
                 <p class="section-subtitle-en">Service</p>
                 <h2 class="section-title-ja">事業内容</h2>
@@ -105,7 +105,7 @@ Template Name: Top page
         </section>
 
         <!-- Delivery / Payment Section -->
-        <section class="delivery-section">
+        <section class="delivery-section" id="delivery-section">
             <div class="delivery-header">
                 <p class="section-subtitle-en">Delivery, payment</p>
                 <h2 class="section-title-ja">配送・支払い情報</h2>

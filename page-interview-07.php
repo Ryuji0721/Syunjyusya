@@ -9,11 +9,11 @@ get_header(); ?>
         <!-- Hero Section -->
        <section class="interview-detail-hero">
     <div class="hero-img-placeholder">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousai_aibasan.jpg" alt="フローラ森山店川崎さんの写真">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousai_kamosidasan.jpg" alt="葬祭部鴨志田さんの写真">
     </div>
     <div class="hero-content">
-        <h1 class="hero-main-title">花に関わる仕事なら一生続けられる</h1>
-        <p class="hero-author">葬祭部 愛場 理晴さん</p>
+        <h1 class="hero-main-title">お花に囲まれた仕事</h1>
+        <p class="hero-author">葬祭部 鴨志田 祐子さん</p>
     </div>
 </section>
 
@@ -22,8 +22,7 @@ get_header(); ?>
             <h2 class="section-q-title">入社したきっかけは？</h2>
             <div class="section-a-text">
                 <p>
-                    22歳のときに職業安定所にて春秋舎と出会いました。<br>
-                    前職の時は、玄関で門前払いなどのこともありましたが、花はもらって嫌な人はいないと悟り、花に関わる仕事なら一生続けられると思い入社しました。
+                    花屋さんに勤めていた経験もありまたお花に囲まれた仕事ができたら楽しいだろうなと思い働きたいと思ったのがきっかけです。
                 </p>
             </div>
         </section>
@@ -33,38 +32,39 @@ get_header(); ?>
             <h2 class="section-q-title">1日のスケジュールを教えてください</h2>
             <div class="schedule-timeline">
                 <div class="schedule-item">
-                    <div class="schedule-time">9:00</div>
+                    <div class="schedule-time">10:00</div>
                     <div class="schedule-content"><p>
-                        出勤して朝礼 → そうじ<br>
-                        ボードを確認<br>
-                        納品・回収の準備
+                        出社<br>
+                        テナント売り場の水換え、補充<br>
                     </p></div>
                 </div>
                 <div class="schedule-item">
                     <div class="schedule-time">11:00</div>
                     <div class="schedule-content"><p>
-                        明日以降の祭壇の作成<br>
-                        生花の作成
+                        市場の処理<br>
+                        市場から来た花の水揚げ、湯揚げなどの処理を行いキーパーに並べる
                     </p></div>
                 </div>
                 <div class="schedule-item">
                     <div class="schedule-time">12:00</div>
                     <div class="schedule-content"><p>
-                        昼休憩
+                        午後からの市場に備える<br>
+                        昼食
                     </p></div>
                 </div>
                 <div class="schedule-item">
                     <div class="schedule-time">15:00</div>
                     <div class="schedule-content"><p>
-                    帰社<br>    
-                    現場にて納品・回収<br>
-                        花を降ろす・束の作成<br>
-                        明日の準備
+                    不足しているものなどの準備<br>
+                    （オアシスをベースに詰める、資材の整理整頓等々）
                     </p></div>
                 </div>
                 <div class="schedule-item">
                     <div class="schedule-time">18:00</div>
-                    <div class="schedule-content">何もなければ退勤</div>
+                    <div class="schedule-content"><p>明日使用するものの下準備
+                        掃き掃除<br>
+                        配達対応
+                    </p></div>
                 </div>
             </div>
             <p class="schedule-note">※当日のスケジュールによって時間・仕事内容の変動があります。</p>
@@ -82,7 +82,7 @@ get_header(); ?>
             <h2 class="section-q-title">どんなところにやりがいを感じますか？</h2>
             <div class="section-a-text">
                 <p>
-                    自分の頭の中で思い描いた通りに花が挿せた時に達成感を得られます。あとは、毎回あるわけではないですが、直接お客様に「綺麗な祭壇をありがとうございます」と喜んでもらえた時はやりがいを感じます。
+                    やりがいを感じるのは市場で入荷してきたお花の箱を開ける時です。色々な色や形のかわいい花がたくさんあり、生産者さんがつけた名前を見ながら箱を開ける瞬間が好きです。
                 </p>
             </div>
         </section>
@@ -116,6 +116,20 @@ get_header(); ?>
                             <span class="interview-name">フローラ森山店 川崎 紗香さん</span>
                             <span class="arrow-link">➜</span>
                     </div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide">
+                    <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
+                        <div class="interview-img-wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
+                            <span class="interview-number">02</span>
+                        </div>
+                        <p class="interview-title">02 花に関わる仕事なら一生続けられる</p>
+                        <div class="interview-footer">
+                            <span class="interview-name">フローラ平沢店 Aさん</span>
+                            <span class="arrow-link">➜</span>
+                        </div>
                     </a>
                 </div>
 
@@ -170,20 +184,6 @@ get_header(); ?>
                         <p class="interview-title">06 お客様に幸せを届けられる仕事</p>
                         <div class="interview-footer">
                             <span class="interview-name">フローラ滑川店 鈴木 愛美さん</span>
-                            <span class="arrow-link">➜</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="swiper-slide">
-                    <a href="<?php echo home_url('/interview-07'); ?>" class="interview-card">
-                        <div class="interview-img-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_7.jpg" alt="Interview 7">
-                            <span class="interview-number">07</span>
-                        </div>
-                        <p class="interview-title">07 お花に囲まれた仕事</p>
-                        <div class="interview-footer">
-                            <span class="interview-name">葬祭部 鴨志田 祐子さん</span>
                             <span class="arrow-link">➜</span>
                         </div>
                     </a>

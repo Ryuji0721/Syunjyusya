@@ -28,7 +28,7 @@ get_header(); ?>
             </section>
 
             <!-- Company Profile Section -->
-            <section class="company-profile-section">
+            <section class="company-profile-section" id="company-profile-section">
                 <h2 class="company-section-title">会社概要</h2>
                 <div class="profile-list-v">
                     <div class="profile-v-item">
@@ -89,7 +89,7 @@ get_header(); ?>
             </section>
 
             <!-- Greeting Section -->
-            <section class="greeting-section">
+            <section class="greeting-section" id="greeting-section">
                 <h2 class="company-section-title">代表者挨拶</h2>
                 <div class="greeting-content">
                     <div class="greeting-text">
@@ -107,7 +107,7 @@ get_header(); ?>
             </section>
 
             <!-- Stores Section -->
-            <section class="company-stores-section">
+            <section class="company-stores-section" id="company-stores-section">
                 <h2 class="company-section-title">各店舗</h2>
                 <div class="store-list-container">
                     <ul class="store-v-list">
@@ -128,11 +128,11 @@ get_header(); ?>
             </section>
 
             <!-- History Section -->
-            <section class="company-history-section">
+            <section class="company-history-section" id="company-history-section">
                 <h2 class="company-section-title">沿革</h2>
                 <div class="history-timeline">
                     <div class="history-item">
-                        <div class="history-year">1929年</div>
+                        <div class="history-year"><p>1929年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">春秋舎 日立市鹿島町に創業</p>
                             <div class="history-sub-text">
@@ -143,20 +143,20 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">1984年</div>
+                        <div class="history-year"><p>1984年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">（株）富士祭典</p>
                             <p class="history-main-text">「総合結婚式場 日立サンシャイン常陽」にウェディング部門として参入</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">1985年</div>
+                        <div class="history-year"><p>1985年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">伊勢甚日立店　テナント参入</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">1987年</div>
+                        <div class="history-year"><p>1987年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">株式会社 春秋舎 設立</p>
                             <div class="history-sub-text">
@@ -166,83 +166,83 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">1991年</div>
+                        <div class="history-year"><p>1991年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">イトーヨーカドー日立店</p>
                             <p class="history-main-text">（現日立ＳＣ店） テナント参入</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">1992年</div>
+                        <div class="history-year"><p>1992年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">ホテルサンガーデン日立</p>
                             <p class="history-main-text">（現在「ホテルテラスザスクエア日立」） ウェディング部門参入</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">1995年</div>
+                        <div class="history-year"><p>1995年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">株式会社かわねや 南高野店</p>
                             <p class="history-main-text">テナントオープン</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">1998年</div>
+                        <div class="history-year"><p>1998年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">株式会社かわねや 南高野店</p>
                             <p class="history-main-text">テナントオープン</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">2000年</div>
+                        <div class="history-year"><p>2000年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">株式会社マルト 東金沢店 参入</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">2003年</div>
+                        <div class="history-year"><p>2003年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">（株）富士祭典の生花部として、</p>
                             <p class="history-main-text">有限会社ユー花 を設立</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">2007年</div>
+                        <div class="history-year"><p>2007年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">ショッピングセンターマルト滑川店</p>
                             <p class="history-main-text">テナントオープン</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">2008年</div>
+                        <div class="history-year"><p>2008年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">ショッピングセンターマルト森山店</p>
                             <p class="history-main-text">テナントオープン</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">2009年</div>
+                        <div class="history-year"><p>2009年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">ショッピングセンターマルト那珂店</p>
                             <p class="history-main-text">テナントオープン</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">2009年</div>
+                        <div class="history-year"><p>2009年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">ショッピングセンターマルト平沢店</p>
                             <p class="history-main-text">テナントオープン</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">2014年</div>
+                        <div class="history-year"><p>2014年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">ショッピングセンターマルト元吉田店</p>
                             <p class="history-main-text">テナントオープン（現退去）</p>
                         </div>
                     </div>
                     <div class="history-item">
-                        <div class="history-year">2025年</div>
+                        <div class="history-year"><p>2025年</p></div>
                         <div class="history-content">
                             <p class="history-main-text">ショッピングセンターマルト内</p>
                             <p class="history-main-text">フローラ田尻店 退去</p>
