@@ -118,8 +118,10 @@ Template Name: Top page
 
             <div class="delivery-content">
                 <p class="service-text">
-                    日立市内の配達は、3,000円（税別）以上商品から無料で配達いたします。<br>
-                    市外・県外への配達は、宅配または花キューピットで手配いたします。
+                    日立市内の配達は、3,000円（税別）以上商品から<br>
+                    無料で配達いたします。<br>
+                    市外・県外への配達は、宅配または花キューピットで<br>
+                    手配いたします。
                 </p>
                 
                 <div class="service-btn-wrapper right">
@@ -129,7 +131,8 @@ Template Name: Top page
                 <div class="payment-info">
                     <p class="service-text">
                         クレジットカード決済<br>
-                        Visa/Masters/Amex/Diners/JCB/Discoverがご利用になれます。<br>
+                        Visa/Masters/Amex/Diners/JCB/Discover <br>
+                        がご利用になれます。<br>
                         ご注文後即時決済されます。
                     </p>
                 </div>
