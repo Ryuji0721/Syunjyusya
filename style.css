@@ -44,7 +44,7 @@ body {
     min-height: 100vh;
     position: relative;
     /* overflow-x removed to allow top-level sticky positioning on PC */
-    padding-top: var(--header-height);
+    padding-top: 50px;
 }
 
 /* =========================================
