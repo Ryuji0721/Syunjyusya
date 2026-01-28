@@ -14,6 +14,9 @@ function syunjyusya_enqueue_scripts() {
 
     // 自作初期化用JS
     wp_enqueue_script( 'custom-swiper', get_template_directory_uri() . '/assets/js/custom-swiper.js', array('swiper-js'), null, true );
+
+    // メインのJS
+    wp_enqueue_script( 'syunjyusya-main', get_template_directory_uri() . '/assets/js/main.js', array(), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'syunjyusya_enqueue_scripts' );
 
