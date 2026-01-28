@@ -123,8 +123,8 @@
                 <?php 
                 // Array of flower photos to display along the vine
                 $flower_images = array(
-                    'Anteak.jpg', 'Doraiflower.jpg', 'Ha-barium.jpg', 'Hanataba.jpg', 
-                    'flowerArenji.jpg', 'iwaibana.jpg', 'エルフラワー.jpg', 'フラワーエール.jpg'
+                    'flowerArenji.jpg', 'kotyouran.jpg','Doraiflower.jpg', 'hatiue.jpg', 'wreathe.jpg', 
+                    'dry_Flower2.jpg', 'arrangement.jpg', 'PCBackgroundimg8.jpg','standflower.jpg'
                 );
                 
                 // Loop more times to cover longer pages
