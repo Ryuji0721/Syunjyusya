@@ -2827,8 +2827,8 @@ textarea.form-control {
 }
 
 .history-main-text {
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 0.95rem;
+    font-weight: normal;
     color: #333;
     line-height: 1.6;
     margin: 0 0 5px;
@@ -2905,9 +2905,8 @@ textarea.form-control {
 
 .history-main-text {
     font-size: 0.95rem;
-    font-weight: bold;
-    color: #7A090B;
-    /* Reddish text in photo */
+    font-weight: normal;
+    color: #333;
     line-height: 1.4;
     margin: 0;
 }
