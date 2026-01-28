@@ -131,123 +131,43 @@ get_header(); ?>
             <section class="company-history-section" id="company-history-section">
                 <h2 class="company-section-title">沿革</h2>
                 <div class="history-timeline">
+                    <?php
+                    $history_data = get_post_meta( get_the_ID(), '_company_history', true );
+                    if ( ! empty( $history_data ) ) :
+                        foreach ( $history_data as $item ) :
+                    ?>
                     <div class="history-item">
-                        <div class="history-year"><p>1929年</p></div>
+                        <div class="history-year"><p><?php echo esc_html( $item['year'] ); ?></p></div>
                         <div class="history-content">
-                            <p class="history-main-text">春秋舎 日立市鹿島町に創業</p>
+                            <?php 
+                            $main_lines = explode( "\n", $item['main'] );
+                            foreach ( $main_lines as $line ) {
+                                if ( ! empty( trim( $line ) ) ) {
+                                    echo '<p class="history-main-text">' . esc_html( $line ) . '</p>';
+                                }
+                            }
+                            ?>
+                            <?php if ( ! empty( $item['sub'] ) ) : ?>
                             <div class="history-sub-text">
-                                <p>［創業者：柴沼 安寿</p>
-                                <p>　二代目：柴沼 由</p>
-                                <p>　三代目：柴沼 清］</p>
+                                <?php 
+                                $sub_lines = explode( "\n", $item['sub'] );
+                                foreach ( $sub_lines as $line ) {
+                                    if ( ! empty( trim( $line ) ) ) {
+                                        echo '<p>' . esc_html( $line ) . '</p>';
+                                    }
+                                }
+                                ?>
                             </div>
+                            <?php endif; ?>
                         </div>
                     </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>1984年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">（株）富士祭典</p>
-                            <p class="history-main-text">「総合結婚式場 日立サンシャイン常陽」にウェディング部門として参入</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>1985年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">伊勢甚日立店　テナント参入</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>1987年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">株式会社 春秋舎 設立</p>
-                            <div class="history-sub-text">
-                                <p>［四代目：代表取締役社長</p>
-                                <p>　鏑木賢剛 就任］</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>1991年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">イトーヨーカドー日立店</p>
-                            <p class="history-main-text">（現日立ＳＣ店） テナント参入</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>1992年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">ホテルサンガーデン日立</p>
-                            <p class="history-main-text">（現在「ホテルテラスザスクエア日立」） ウェディング部門参入</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>1995年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">株式会社かわねや 南高野店</p>
-                            <p class="history-main-text">テナントオープン</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>1998年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">株式会社かわねや 南高野店</p>
-                            <p class="history-main-text">テナントオープン</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>2000年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">株式会社マルト 東金沢店 参入</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>2003年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">（株）富士祭典の生花部として、</p>
-                            <p class="history-main-text">有限会社ユー花 を設立</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>2007年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">ショッピングセンターマルト滑川店</p>
-                            <p class="history-main-text">テナントオープン</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>2008年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">ショッピングセンターマルト森山店</p>
-                            <p class="history-main-text">テナントオープン</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>2009年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">ショッピングセンターマルト那珂店</p>
-                            <p class="history-main-text">テナントオープン</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>2009年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">ショッピングセンターマルト平沢店</p>
-                            <p class="history-main-text">テナントオープン</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>2014年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">ショッピングセンターマルト元吉田店</p>
-                            <p class="history-main-text">テナントオープン（現退去）</p>
-                        </div>
-                    </div>
-                    <div class="history-item">
-                        <div class="history-year"><p>2025年</p></div>
-                        <div class="history-content">
-                            <p class="history-main-text">ショッピングセンターマルト内</p>
-                            <p class="history-main-text">フローラ田尻店 退去</p>
-                        </div>
-                    </div>
+                    <?php
+                        endforeach;
+                    else :
+                    ?>
+                    <!-- 沿革データが未設定の場合のデフォルト表示 -->
+                    <p>沿革情報はまだ設定されていません。</p>
+                    <?php endif; ?>
                 </div>
             </section>
         </div>

@@ -20,3 +20,96 @@ function syunjyusya_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'syunjyusya_enqueue_scripts' );
 
+// 沿革カスタムメタボックス
+function add_company_history_metabox() {
+    add_meta_box(
+        'company_history_metabox',
+        '沿革',
+        'company_history_metabox_callback',
+        'page',
+        'normal',
+        'high'
+    );
+}
+add_action( 'add_meta_boxes', 'add_company_history_metabox' );
+
+function company_history_metabox_callback( $post ) {
+    wp_nonce_field( 'company_history_nonce', 'company_history_nonce' );
+    
+    $history_data = get_post_meta( $post->ID, '_company_history', true );
+    if ( empty( $history_data ) ) {
+        $history_data = array();
+    }
+    ?>
+    <div id="history-items-container">
+        <?php if ( ! empty( $history_data ) ) : ?>
+            <?php foreach ( $history_data as $index => $item ) : ?>
+                <div class="history-item-input" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9;">
+                    <p>
+                        <label>年</label><br>
+                        <input type="text" name="history_year[]" value="<?php echo esc_attr( $item['year'] ); ?>" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+                    </p>
+                    <p>
+                        <label>メイン内容</label><br>
+                        <textarea name="history_main[]" rows="3" style="width: 100%; padding: 8px; margin-bottom: 10px;"><?php echo esc_textarea( $item['main'] ); ?></textarea>
+                    </p>
+                    <p>
+                        <label>サブ内容（オプション）</label><br>
+                        <textarea name="history_sub[]" rows="3" style="width: 100%; padding: 8px; margin-bottom: 10px;"><?php echo esc_textarea( $item['sub'] ); ?></textarea>
+                    </p>
+                    <button type="button" class="button button-secondary remove-history-item">削除</button>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
+    <button type="button" id="add-history-item" class="button button-primary" style="margin-top: 10px;">沿革を追加</button>
+
+    <script>
+    jQuery(document).ready(function($) {
+        $('#add-history-item').click(function() {
+            var html = '<div class="history-item-input" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9;">' +
+                '<p><label>年</label><br><input type="text" name="history_year[]" value="" style="width: 100%; padding: 8px; margin-bottom: 10px;"></p>' +
+                '<p><label>メイン内容</label><br><textarea name="history_main[]" rows="3" style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea></p>' +
+                '<p><label>サブ内容（オプション）</label><br><textarea name="history_sub[]" rows="3" style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea></p>' +
+                '<button type="button" class="button button-secondary remove-history-item">削除</button>' +
+                '</div>';
+            $('#history-items-container').append(html);
+        });
+
+        $(document).on('click', '.remove-history-item', function() {
+            $(this).closest('.history-item-input').remove();
+        });
+    });
+    </script>
+    <?php
+}
+
+function save_company_history_metabox( $post_id ) {
+    if ( ! isset( $_POST['company_history_nonce'] ) || ! wp_verify_nonce( $_POST['company_history_nonce'], 'company_history_nonce' ) ) {
+        return;
+    }
+
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+
+    $history_data = array();
+    if ( isset( $_POST['history_year'] ) && is_array( $_POST['history_year'] ) ) {
+        $years = array_map( 'sanitize_text_field', $_POST['history_year'] );
+        $mains = isset( $_POST['history_main'] ) ? array_map( 'sanitize_textarea_field', $_POST['history_main'] ) : array();
+        $subs = isset( $_POST['history_sub'] ) ? array_map( 'sanitize_textarea_field', $_POST['history_sub'] ) : array();
+
+        foreach ( $years as $index => $year ) {
+            if ( ! empty( $year ) ) {
+                $history_data[] = array(
+                    'year' => $year,
+                    'main' => isset( $mains[ $index ] ) ? $mains[ $index ] : '',
+                    'sub' => isset( $subs[ $index ] ) ? $subs[ $index ] : '',
+                );
+            }
+        }
+    }
+
+    update_post_meta( $post_id, '_company_history', $history_data );
+}
+add_action( 'save_post_page', 'save_company_history_metabox' );
