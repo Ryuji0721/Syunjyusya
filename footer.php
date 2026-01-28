@@ -85,20 +85,20 @@
                 <div class="footer-sns-section">
                     <!-- Instagram Box -->
                     <div class="footer-insta-box">
-                        <div class="insta-icon-circle">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerinst.svg" alt="Instagram">
-                        </div>
                         <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer">
-                        <div class="sns-note">
-                            <p class="sns-name">Instagram</p>
-                            <p class="sns-desc">近日DMにて注文受付開始</p>
-                        </div>
-                    </a>
+                            <div class="insta-icon-circle">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerinst.svg" alt="Instagram">
+                            </div>
+                            <div class="sns-note">
+                                <p class="sns-name">Instagram</p>
+                                <p class="sns-desc">近日DMにて注文受付開始</p>
+                            </div>
+                        </a>
                     </div>
                     
                     <!-- Facebook Icon -->
                     <a href="https://www.facebook.com/shunjusha/?locale=ja_JP"  target="_blank"  rel="noopener noreferrer" class="footer-facebook-link">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerfacebook.svg" alt="Facebook">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerfacebook.svg" alt="Facebook" class="footer-facebook-icon">
                     </a>
                 </div>
 
