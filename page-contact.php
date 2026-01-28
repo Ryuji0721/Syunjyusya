@@ -101,22 +101,22 @@ get_header(); ?>
 
             <div class="form-group">
                 <label class="form-label">お名前 <span class="required">*</span></label>
-                <input type="text" name="your-name" class="form-control" placeholder="text">
+                <input type="text" name="your-name" class="form-control" placeholder="山田 太郎">
             </div>
 
             <div class="form-group">
                 <label class="form-label">会社名・組織名</label>
-                <input type="text" name="company-name" class="form-control" placeholder="text">
+                <input type="text" name="company-name" class="form-control" placeholder="株式会社〇〇">
             </div>
 
             <div class="form-group">
                 <label class="form-label">お電話番号 <span class="required">*</span></label>
-                <input type="tel" name="phone-number" class="form-control" placeholder="text">
+                <input type="tel" name="phone-number" class="form-control" placeholder="03-1234-5678">
             </div>
 
             <div class="form-group">
                 <label class="form-label">メールアドレス <span class="required">*</span></label>
-                <input type="email" name="your-email" class="form-control" placeholder="text">
+                <input type="email" name="your-email" class="form-control" placeholder="〇〇@example.com">
             </div>
 
             <div class="form-group">
