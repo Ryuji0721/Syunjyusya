@@ -118,7 +118,7 @@
     <!-- Right Column: Decoration (Vine & Flowers) -->
     <div class="global-pc-right">
         <div class="vine-decoration-area">
-            <?php if ( ! is_page('contact') && ! is_page_template('page-contact.php') ) : ?>
+            <?php if ( ! is_page(['contact', 'privacy', 'legal']) && ! is_page_template(['page-contact.php', 'page-privacy.php', 'page-legal.php']) ) : ?>
                 <div class="vine-line"></div>
                 <?php 
                 // Array of flower photos to display along the vine
