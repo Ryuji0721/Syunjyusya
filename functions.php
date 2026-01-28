@@ -53,12 +53,8 @@ function company_history_metabox_callback( $post ) {
                         <input type="text" name="history_year[]" value="<?php echo esc_attr( $item['year'] ); ?>">
                     </p>
                     <p>
-                        <label>メイン内容</label><br>
+                        <label>タイトル</label><br>
                         <textarea name="history_main[]" rows="3"><?php echo esc_textarea( $item['main'] ); ?></textarea>
-                    </p>
-                    <p>
-                        <label>サブ内容（オプション）</label><br>
-                        <textarea name="history_sub[]" rows="3"><?php echo esc_textarea( $item['sub'] ); ?></textarea>
                     </p>
                     <button type="button" class="button button-secondary remove-history-item">削除</button>
                 </div>
@@ -69,11 +65,35 @@ function company_history_metabox_callback( $post ) {
 
     <script>
     jQuery(document).ready(function($) {
+        // 年フォームに対して「年」を自動付与
+        function formatYearInput() {
+            $('input[name="history_year[]"]').each(function() {
+                var value = $(this).val().trim();
+                if (value && !value.endsWith('年')) {
+                    // 数字のみを抽出
+                    var numOnly = value.replace(/[^0-9]/g, '');
+                    if (numOnly) {
+                        $(this).val(numOnly + '年');
+                    }
+                }
+            });
+        }
+
+        // フォーカスが外れた時に「年」を付与
+        $(document).on('blur', 'input[name="history_year[]"]', function() {
+            var value = $(this).val().trim();
+            if (value && !value.endsWith('年')) {
+                var numOnly = value.replace(/[^0-9]/g, '');
+                if (numOnly) {
+                    $(this).val(numOnly + '年');
+                }
+            }
+        });
+
         $('#add-history-item').click(function() {
             var html = '<div class="history-item-input">' +
-                '<p><label>年</label><br><input type="text" name="history_year[]" value=""></p>' +
-                '<p><label>メイン内容</label><br><textarea name="history_main[]" rows="3"></textarea></p>' +
-                '<p><label>サブ内容（オプション）</label><br><textarea name="history_sub[]" rows="3"></textarea></p>' +
+                '<p><label>年</label><br><input type="text" name="history_year[]" value="" placeholder="例：1929"></p>' +
+                '<p><label>タイトル</label><br><textarea name="history_main[]" rows="3"></textarea></p>' +
                 '<button type="button" class="button button-secondary remove-history-item">削除</button>' +
                 '</div>';
             $('#history-items-container').append(html);
@@ -82,6 +102,9 @@ function company_history_metabox_callback( $post ) {
         $(document).on('click', '.remove-history-item', function() {
             $(this).closest('.history-item-input').remove();
         });
+
+        // 初期読み込み時も年フォームをフォーマット
+        formatYearInput();
     });
     </script>
     <?php

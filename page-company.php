@@ -137,7 +137,7 @@ get_header(); ?>
                         foreach ( $history_data as $item ) :
                     ?>
                     <div class="history-item">
-                        <div class="history-year"><p><?php echo esc_html( $item['year'] ); ?></p></div>
+                        <div class="history-year"><p><?php echo esc_html( $item['year'] ); ?>年</p></div>
                         <div class="history-content">
                             <?php 
                             $main_lines = explode( "\n", $item['main'] );
@@ -147,18 +147,6 @@ get_header(); ?>
                                 }
                             }
                             ?>
-                            <?php if ( ! empty( $item['sub'] ) ) : ?>
-                            <div class="history-sub-text">
-                                <?php 
-                                $sub_lines = explode( "\n", $item['sub'] );
-                                foreach ( $sub_lines as $line ) {
-                                    if ( ! empty( trim( $line ) ) ) {
-                                        echo '<p>' . esc_html( $line ) . '</p>';
-                                    }
-                                }
-                                ?>
-                            </div>
-                            <?php endif; ?>
                         </div>
                     </div>
                     <?php

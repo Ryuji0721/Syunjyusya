@@ -2827,11 +2827,11 @@ textarea.form-control {
 }
 
 .history-main-text {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: normal;
-    color: #333;
+    color: #7A090B;
     line-height: 1.6;
-    margin: 0 0 5px;
+    margin: 0;
 }
 
 .history-sub-text {
@@ -2904,10 +2904,10 @@ textarea.form-control {
 }
 
 .history-main-text {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: normal;
-    color: #333;
-    line-height: 1.4;
+    color: #7A090B;
+    line-height: 1.6;
     margin: 0;
 }
 
@@ -2928,10 +2928,10 @@ textarea.form-control {
    Company History Metabox Styles
    ========================================= */
 .history-item-input {
-    border: 1px solid #ddd;
-    padding: 15px;
+    border: none;
+    padding: 0;
     margin-bottom: 15px;
-    background: #f9f9f9;
+    background: transparent;
 }
 
 .history-item-input p {
@@ -2943,6 +2943,7 @@ textarea.form-control {
     margin-bottom: 5px;
     font-weight: 500;
     color: #333;
+    font-size: 0.9rem;
 }
 
 .history-item-input input[type="text"],
@@ -2953,11 +2954,12 @@ textarea.form-control {
     border-radius: 3px;
     font-family: inherit;
     box-sizing: border-box;
+    font-size: 0.85rem;
+    color: #7A090B;
 }
 
 .history-item-input textarea {
     resize: vertical;
-    font-size: 0.95rem;
 }
 
 #add-history-item,
