@@ -56,7 +56,7 @@ body {
 .site-header {
     height: var(--header-height);
     padding: 0 20px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.7);
     /* Ensure background for stickiness */
     backdrop-filter: blur(5px);
     /* Premium feel */
@@ -1870,19 +1870,15 @@ body {
 
 .footer-insta-box a {
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
 }
 
-.sns-note {
+.insta-info {
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
-.sns-name {
+.insta-name {
     font-size: 1.1rem;
     font-weight: bold;
     color: #8B1A1A;
@@ -1891,7 +1887,7 @@ body {
     /* Closer to mockup's elegant feel */
 }
 
-.sns-desc {
+.insta-note {
     font-size: 0.85rem;
     color: #8B1A1A;
     margin: 0;
