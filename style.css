@@ -2925,6 +2925,47 @@ textarea.form-control {
 }
 
 /* =========================================
+   Company History Metabox Styles
+   ========================================= */
+.history-item-input {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+}
+
+.history-item-input p {
+    margin-bottom: 10px;
+}
+
+.history-item-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.history-item-input input[type="text"],
+.history-item-input textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.history-item-input textarea {
+    resize: vertical;
+    font-size: 0.95rem;
+}
+
+#add-history-item,
+.remove-history-item {
+    margin-top: 10px;
+}
+
+/* =========================================
    Store Information Page (Mockup Alignment)
    ========================================= */
 

@@ -47,33 +47,33 @@ function company_history_metabox_callback( $post ) {
     <div id="history-items-container">
         <?php if ( ! empty( $history_data ) ) : ?>
             <?php foreach ( $history_data as $index => $item ) : ?>
-                <div class="history-item-input" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9;">
+                <div class="history-item-input">
                     <p>
                         <label>年</label><br>
-                        <input type="text" name="history_year[]" value="<?php echo esc_attr( $item['year'] ); ?>" style="width: 100%; padding: 8px; margin-bottom: 10px;">
+                        <input type="text" name="history_year[]" value="<?php echo esc_attr( $item['year'] ); ?>">
                     </p>
                     <p>
                         <label>メイン内容</label><br>
-                        <textarea name="history_main[]" rows="3" style="width: 100%; padding: 8px; margin-bottom: 10px;"><?php echo esc_textarea( $item['main'] ); ?></textarea>
+                        <textarea name="history_main[]" rows="3"><?php echo esc_textarea( $item['main'] ); ?></textarea>
                     </p>
                     <p>
                         <label>サブ内容（オプション）</label><br>
-                        <textarea name="history_sub[]" rows="3" style="width: 100%; padding: 8px; margin-bottom: 10px;"><?php echo esc_textarea( $item['sub'] ); ?></textarea>
+                        <textarea name="history_sub[]" rows="3"><?php echo esc_textarea( $item['sub'] ); ?></textarea>
                     </p>
                     <button type="button" class="button button-secondary remove-history-item">削除</button>
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
     </div>
-    <button type="button" id="add-history-item" class="button button-primary" style="margin-top: 10px;">沿革を追加</button>
+    <button type="button" id="add-history-item" class="button button-primary">沿革を追加</button>
 
     <script>
     jQuery(document).ready(function($) {
         $('#add-history-item').click(function() {
-            var html = '<div class="history-item-input" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #f9f9f9;">' +
-                '<p><label>年</label><br><input type="text" name="history_year[]" value="" style="width: 100%; padding: 8px; margin-bottom: 10px;"></p>' +
-                '<p><label>メイン内容</label><br><textarea name="history_main[]" rows="3" style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea></p>' +
-                '<p><label>サブ内容（オプション）</label><br><textarea name="history_sub[]" rows="3" style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea></p>' +
+            var html = '<div class="history-item-input">' +
+                '<p><label>年</label><br><input type="text" name="history_year[]" value=""></p>' +
+                '<p><label>メイン内容</label><br><textarea name="history_main[]" rows="3"></textarea></p>' +
+                '<p><label>サブ内容（オプション）</label><br><textarea name="history_sub[]" rows="3"></textarea></p>' +
                 '<button type="button" class="button button-secondary remove-history-item">削除</button>' +
                 '</div>';
             $('#history-items-container').append(html);
