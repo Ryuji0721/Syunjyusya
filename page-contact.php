@@ -22,11 +22,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     elseif ($response_method === 'email') $response_method_label = 'メールを希望します';
     elseif ($response_method === 'phone') $response_method_label = '電話を希望します';
 
-    // Basic Validation
-    if (empty($name) || empty($phone) || empty($email) || empty($message_content)) {
-        $error_message = '必須項目（お名前、お電話番号、メールアドレス、内容）をすべて入力してください。';
+    // Validation
+    $validation_errors = array();
+
+    // お問い合わせ内容 - 必須
+    if (empty($inquiry_type)) {
+        $validation_errors[] = '※お問い合わせ内容を選択してください。';
+    }
+
+    // お名前 - 必須、日本語またはアルファベットのみ
+    if (empty($name)) {
+        $validation_errors[] = '※お名前を入力してください。';
+    } elseif (!preg_match('/^[\p{Han}\p{Hiragana}\p{Katakana}ａ-ｚＡ-Ｚa-zA-Z\s\-\u3000]+$/u', $name)) {
+        $validation_errors[] = '※お名前は日本語またはアルファベットで入力してください。';
+    }
+
+    // お電話番号 - 必須、数字のみ
+    if (empty($phone)) {
+        $validation_errors[] = '※お電話番号を入力してください。';
+    } elseif (!preg_match('/^[0-9]+$/', $phone)) {
+        $validation_errors[] = '※お電話番号は数字で入力してください。';
+    } elseif (strlen($phone) < 10 || strlen($phone) > 11) {
+        $validation_errors[] = '※お電話番号は10〜11桁で入力してください。';
+    }
+
+    // メールアドレス - 必須、有効なメール形式
+    if (empty($email)) {
+        $validation_errors[] = '※メールアドレスを入力してください。';
     } elseif (!is_email($email)) {
-        $error_message = '有効なメールアドレスを入力してください。';
+        $validation_errors[] = '※有効なメールアドレスを入力してください。';
+    }
+
+    // 内容 - 必須、1文字以上
+    if (empty($message_content)) {
+        $validation_errors[] = '※内容を入力してください。';
+    }
+
+    if (!empty($validation_errors)) {
+        $error_message = implode('<br>', $validation_errors);
     } else {
         // Prepare Email
         $to = '24aw0115@jec.ac.jp'; // Target email
@@ -62,6 +95,318 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 get_header(); ?>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form');
+    if (!contactForm) return;
+
+    // 各フィールドにリアルタイムバリデーションを設定
+    const inquiryRadios = contactForm.querySelectorAll('input[name="inquiry_type"]');
+    const nameInput = contactForm.querySelector('input[name="your-name"]');
+    const phoneInput = contactForm.querySelector('input[name="phone-number"]');
+    const emailInput = contactForm.querySelector('input[name="your-email"]');
+    const messageInput = contactForm.querySelector('textarea[name="your-message"]');
+    const companyInput = contactForm.querySelector('input[name="company-name"]');
+
+    // 各フィールドの検証状態を管理するオブジェクト
+    const fieldStates = {
+        'inquiry_type': { touched: false },
+        'your-name': { touched: false },
+        'phone-number': { touched: false },
+        'your-email': { touched: false },
+        'your-message': { touched: false },
+        'company-name': { touched: false }
+    };
+
+    // お問い合わせ内容のバリデーション
+    inquiryRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            fieldStates['inquiry_type'].touched = true;
+            validateField('inquiry_type');
+        });
+    });
+
+    // お名前のバリデーション
+    nameInput.addEventListener('blur', function() {
+        fieldStates['your-name'].touched = true;
+        validateField('your-name');
+    });
+    nameInput.addEventListener('input', function() {
+        if (fieldStates['your-name'].touched) {
+            validateField('your-name');
+        }
+    });
+
+    // お電話番号のバリデーション
+    phoneInput.addEventListener('blur', function() {
+        fieldStates['phone-number'].touched = true;
+        validateField('phone-number');
+    });
+    phoneInput.addEventListener('input', function() {
+        // 数字のみを抽出
+        let digits = this.value.replace(/[^0-9]/g, '');
+        
+        // 自動フォーマット
+        this.value = formatPhoneNumber(digits);
+        
+        if (fieldStates['phone-number'].touched) {
+            validateField('phone-number');
+        }
+    });
+
+    // メールアドレスのバリデーション
+    emailInput.addEventListener('blur', function() {
+        fieldStates['your-email'].touched = true;
+        validateField('your-email');
+    });
+    emailInput.addEventListener('input', function() {
+        if (fieldStates['your-email'].touched) {
+            validateField('your-email');
+        }
+    });
+
+    // 内容のバリデーション
+    messageInput.addEventListener('blur', function() {
+        fieldStates['your-message'].touched = true;
+        validateField('your-message');
+    });
+    messageInput.addEventListener('input', function() {
+        if (fieldStates['your-message'].touched) {
+            validateField('your-message');
+        }
+    });
+
+    // Form submission validation
+    contactForm.addEventListener('submit', function(e) {
+        const errors = validateForm();
+        if (errors.length > 0) {
+            e.preventDefault();
+            displayErrors(errors);
+            scrollToTop();
+        }
+    });
+
+    function validateField(fieldName) {
+        const errors = [];
+
+        if (fieldName === 'inquiry_type') {
+            const inquiryType = document.querySelector('input[name="inquiry_type"]:checked');
+            if (!inquiryType) {
+                errors.push('※お問い合わせ内容を選択してください。');
+            }
+        }
+
+        if (fieldName === 'your-name') {
+            const name = nameInput.value.trim();
+            if (!name) {
+                errors.push('※お名前を入力してください。');
+            } else if (!isValidName(name)) {
+                errors.push('※お名前は日本語またはアルファベットで入力してください。');
+            }
+        }
+
+        if (fieldName === 'phone-number') {
+            const phone = phoneInput.value.trim();
+            if (!phone) {
+                errors.push('※お電話番号を入力してください。');
+            } else if (!isValidPhone(phone)) {
+                errors.push('※お電話番号は数字で入力してください。');
+            } else if (phone.replace(/[^0-9]/g, '').length < 10 || phone.replace(/[^0-9]/g, '').length > 11) {
+                errors.push('※お電話番号は10〜11桁で入力してください。');
+            }
+        }
+
+        if (fieldName === 'your-email') {
+            const email = emailInput.value.trim();
+            if (!email) {
+                errors.push('※メールアドレスを入力してください。');
+            } else if (!isValidEmail(email)) {
+                errors.push('※有効なメールアドレスを入力してください。');
+            }
+        }
+
+        if (fieldName === 'your-message') {
+            const message = messageInput.value.trim();
+            if (!message) {
+                errors.push('※内容を入力してください。');
+            }
+        }
+
+        displayFieldError(fieldName, errors);
+    }
+
+    function displayFieldError(fieldName, errors) {
+        // 既存のエラーメッセージを削除
+        const existingError = document.querySelector(`[data-error-for="${fieldName}"]`);
+        if (existingError) {
+            existingError.remove();
+        }
+
+        // エラーがあれば表示、なければ削除（既に上で削除されているので念のため確認）
+        if (errors.length > 0) {
+            const errorDiv = document.createElement('div');
+            errorDiv.setAttribute('data-error-for', fieldName);
+            errorDiv.style.backgroundColor = '#f8d7da';
+            errorDiv.style.color = '#721c24';
+            errorDiv.style.padding = '10px';
+            errorDiv.style.marginTop = '5px';
+            errorDiv.style.marginBottom = '10px';
+            errorDiv.style.border = '1px solid #f5c6cb';
+            errorDiv.style.borderRadius = '4px';
+            errorDiv.style.fontSize = '0.9em';
+            errorDiv.innerHTML = errors.join('<br>');
+
+            // フィールドの後に挿入
+            let targetField;
+            if (fieldName === 'inquiry_type') {
+                targetField = contactForm.querySelector('.radio-group-vertical');
+            } else {
+                targetField = contactForm.querySelector(`input[name="${fieldName}"], textarea[name="${fieldName}"]`);
+            }
+
+            if (targetField) {
+                targetField.parentElement.insertBefore(errorDiv, targetField.nextSibling);
+            }
+        }
+    }
+
+    function validateForm() {
+        const errors = [];
+
+        // お問い合わせ内容 - 必須
+        const inquiryType = document.querySelector('input[name="inquiry_type"]:checked');
+        if (!inquiryType) {
+            errors.push('※お問い合わせ内容を選択してください。');
+        }
+
+        // お名前 - 必須、日本語またはアルファベットのみ
+        const name = nameInput.value.trim();
+        if (!name) {
+            errors.push('※お名前を入力してください。');
+        } else if (!isValidName(name)) {
+            errors.push('※お名前は日本語またはアルファベットで入力してください。');
+        }
+
+        // お電話番号 - 必須、数字のみ
+        const phone = phoneInput.value.trim();
+        if (!phone) {
+            errors.push('※お電話番号を入力してください。');
+        } else if (!isValidPhone(phone)) {
+            errors.push('※お電話番号は数字で入力してください。');
+        } else if (phone.replace(/[^0-9]/g, '').length < 10 || phone.replace(/[^0-9]/g, '').length > 11) {
+            errors.push('※お電話番号は10〜11桁で入力してください。');
+        }
+
+        // メールアドレス - 必須、有効なメール形式
+        const email = emailInput.value.trim();
+        if (!email) {
+            errors.push('※メールアドレスを入力してください。');
+        } else if (!isValidEmail(email)) {
+            errors.push('※有効なメールアドレスを入力してください。');
+        }
+
+        // 内容 - 必須、1文字以上
+        const message = messageInput.value.trim();
+        if (!message) {
+            errors.push('※内容を入力してください。');
+        }
+
+        return errors;
+    }
+
+    function displayErrors(errors) {
+        // 既存のエラーメッセージを削除
+        const existingError = document.querySelector('.contact-container > div[style*="background-color: #f8d7da"]:not([data-error-for])');
+        if (existingError) {
+            existingError.remove();
+        }
+
+        // 新しいエラーメッセージを表示
+        const errorHtml = errors.join('<br>');
+        const errorDiv = document.createElement('div');
+        errorDiv.style.backgroundColor = '#f8d7da';
+        errorDiv.style.color = '#721c24';
+        errorDiv.style.padding = '15px';
+        errorDiv.style.marginBottom = '20px';
+        errorDiv.style.border = '1px solid #f5c6cb';
+        errorDiv.style.borderRadius = '4px';
+        errorDiv.innerHTML = errorHtml;
+
+        // フォーム前に挿入
+        contactForm.parentElement.insertBefore(errorDiv, contactForm);
+    }
+
+    function isValidName(str) {
+        // 日本語（漢字、ひらがな、カタカナ）またはアルファベット、スペース、ハイフン
+        const nameRegex = /^[\u4E00-\u9FFF\u3040-\u309F\u30A0-\u30FFａ-ｚＡ-Ｚa-zA-Z\s\-\u3000]+$/;
+        return nameRegex.test(str);
+    }
+
+    function isValidPhone(str) {
+        // 数字とハイフンのみ（ハイフンは自動挿入されるため、数字のみの入力を許可）
+        const phoneRegex = /^[0-9\-]+$/;
+        return phoneRegex.test(str);
+    }
+
+    function formatPhoneNumber(digits) {
+        // 数字のみを受け取り、自動的にハイフンを挿入
+        if (digits.length === 0) return '';
+        if (digits.length <= 3) return digits;
+        
+        // 最初の1-3文字で市外局番を判定
+        let formatted = '';
+        
+        // 090, 080, 070, 060の場合（携帯電話、IP電話）
+        if (digits.match(/^(090|080|070|060)/)) {
+            if (digits.length <= 3) {
+                formatted = digits;
+            } else if (digits.length <= 7) {
+                formatted = digits.slice(0, 3) + '-' + digits.slice(3);
+            } else {
+                formatted = digits.slice(0, 3) + '-' + digits.slice(3, 7) + '-' + digits.slice(7, 11);
+            }
+        }
+        // 0から始まり090等ではない場合（固定電話）
+        else if (digits.startsWith('0')) {
+            // 3桁市外局番の場合（0xxx-xx-xxxx）
+            if (digits.match(/^0[1-9]{3}/)) {
+                if (digits.length <= 4) {
+                    formatted = digits;
+                } else if (digits.length <= 6) {
+                    formatted = digits.slice(0, 4) + '-' + digits.slice(4);
+                } else {
+                    formatted = digits.slice(0, 4) + '-' + digits.slice(4, 6) + '-' + digits.slice(6, 10);
+                }
+            }
+            // 2桁市外局番の場合（0xx-xxxx-xxxx）
+            else {
+                if (digits.length <= 2) {
+                    formatted = digits;
+                } else if (digits.length <= 6) {
+                    formatted = digits.slice(0, 2) + '-' + digits.slice(2);
+                } else {
+                    formatted = digits.slice(0, 2) + '-' + digits.slice(2, 6) + '-' + digits.slice(6, 10);
+                }
+            }
+        }
+        
+        return formatted;
+    }
+
+    function isValidEmail(str) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(str);
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+});
+</script>
+
+
+
+
 <main class="page-contact">
     <!-- Page Header -->
     <div class="page-header">
@@ -84,14 +429,14 @@ get_header(); ?>
 
         <?php if (!empty($error_message)): ?>
             <div style="background-color: #f8d7da; color: #721c24; padding: 15px; margin-bottom: 20px; border: 1px solid #f5c6cb; border-radius: 4px;">
-                <?php echo esc_html($error_message); ?>
+                <?php echo wp_kses_post($error_message); ?>
             </div>
         <?php endif; ?>
 
         <form action="" method="post" class="contact-form">
             
             <div class="form-group">
-                <label class="form-label">お問い合わせ内容</label>
+                <label class="form-label">お問い合わせ内容 <span class="required">*</span></label>
                 <div class="radio-group-vertical">
                     <label class="radio-label"><input type="radio" name="inquiry_type" value="その他"> その他</label>
                     <label class="radio-label"><input type="radio" name="inquiry_type" value="求人応募"> 求人応募</label>
