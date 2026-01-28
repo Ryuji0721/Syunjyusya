@@ -1870,15 +1870,19 @@ body {
 
 .footer-insta-box a {
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
 }
 
-.insta-info {
+.sns-note {
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
-.insta-name {
+.sns-name {
     font-size: 1.1rem;
     font-weight: bold;
     color: #8B1A1A;
@@ -1887,7 +1891,7 @@ body {
     /* Closer to mockup's elegant feel */
 }
 
-.insta-note {
+.sns-desc {
     font-size: 0.85rem;
     color: #8B1A1A;
     margin: 0;
