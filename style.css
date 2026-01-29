@@ -1870,6 +1870,10 @@ body {
 
 .footer-insta-box a {
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
 }
 
 .insta-info {
