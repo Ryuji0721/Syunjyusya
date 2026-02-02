@@ -483,6 +483,8 @@ body {
     margin-bottom: 20px;
     text-shadow: 0 0px 10px rgba(0, 0, 0, 1);
     text-align: left;
+    width: 320px;
+    margin-left: 10px;
 }
 
 /* Service Section */
@@ -544,8 +546,9 @@ body {
     object-fit: cover;
 }
 
-.service-btn-wrapper.right {
-    text-align: right;
+.service-btn-wrapper.left {
+    text-align: left;
+    padding-left: 50px;
 }
 
 .service-btn {
@@ -4028,4 +4031,8 @@ html {
     pointer-events: none;
     /* クリック無効化 */
     z-index: -1;
+}
+
+.delivery-text {
+    padding-left: 50px;
 }

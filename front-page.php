@@ -59,9 +59,10 @@ Template Name: Top page
                     新鮮な旬の花を常時揃えるよう心がけています。
                 </p>
                 <p class="omoi-text">
-                    気持ちが伝わる素敵なお花を多数取り揃えてお待ちしております。<br>
+                    気持ちが伝わる素敵なお花を多数取り揃えて<br>お待ちしております。<br>
                     どんな花がいいかな？など、気になることが<br>
-                    ございましたら、お気軽にスタッフにお声かけください。<br>
+                    ございましたら、お気軽にスタッフにお声かけ<br>
+                    ください。<br>
                     各店舗スタッフ、心よりお待ちしております。
                 </p>
             </div>
@@ -117,19 +118,19 @@ Template Name: Top page
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top4bara.png" alt="Tulips" class="deco-img top-left">
 
             <div class="delivery-content">
-                <p class="service-text">
+                <p class="service-text delivery-text">
                     日立市内の配達は、3,000円（税別）以上商品から<br>
                     無料で配達いたします。<br>
                     市外・県外への配達は、宅配または花キューピットで<br>
                     手配いたします。
                 </p>
                 
-                <div class="service-btn-wrapper right">
+                <div class="service-btn-wrapper left">
                     <a href="#" class="service-btn">花キューピット</a>
                 </div>
 
                 <div class="payment-info">
-                    <p class="service-text">
+                    <p class="service-text delivery-text">
                         クレジットカード決済<br>
                         Visa/Masters/Amex/Diners/JCB/Discover <br>
                         がご利用になれます。<br>
