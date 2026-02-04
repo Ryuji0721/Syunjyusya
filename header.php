@@ -38,6 +38,9 @@
             </button>
         </div>
 
+    
+
+
         <!-- Menu Overlay -->
         <div class="sp-menu-overlay" id="menuOverlay">
             <button class="menu-close-btn" id="menuClose">
@@ -81,11 +84,27 @@
     <div class="global-pc-wrapper">
         
         <!-- Left Column: Logo (Appears on PC) -->
-        <div class="global-pc-left">
-            <div class="global-sticky-item logo-area">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png" alt="SHUNJUSHA" class="global-side-logo">
-            </div>
-        </div>
+            <div class="global-pc-left">
+  <div class="pc-side-menu global-sticky-item">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png"
+         alt="SHUNJUSHA"
+         class="pc-side-logo">
+
+    <nav class="pc-side-nav">
+      <ul>
+       <li><a class="nav-top" href="<?php echo home_url('/'); ?>">TOP</a></li>
+    <li><a class="nav-company" href="<?php echo home_url('/company'); ?>">企業情報</a></li>
+    <li><a class="nav-store" href="<?php echo home_url('/store'); ?>">店舗情報</a></li>
+    <li><a class="nav-flower" href="<?php echo home_url('/flower'); ?>">お花について</a></li>
+    <li><a class="nav-funeral" href="<?php echo home_url('/funeral'); ?>">葬祭部について</a></li>
+    <li><a class="nav-recruit" href="<?php echo home_url('/recruit'); ?>">求人情報</a></li>
+    <li><a class="nav-contact" href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
+        <li><a href="https://bloemen87.thebase.in/" target="_blank">オンラインショップ bloemen<span class="link_img"></span></a></li>
+        <li><a href="https://shunjusha.hanatown.net/" target="_blank">花キューピット<span class="link_img"></span></a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
 
         <!-- Center Column: Main Content -->
         <div class="global-pc-center">

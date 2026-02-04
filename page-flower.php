@@ -19,9 +19,7 @@ get_header(); ?>
 
         <!-- Intro Text -->
         <section class="flower-intro">
-            <p class="flower-intro-para">
-                日立市内の配達は、3,000円（税別）以上の商品から無料で配達いたします。
-            </p>
+            
             <p class="flower-intro-para">
                 市外・県外への配達は、宅配または <a href="https://shunjusha.hanatown.net/" target="_blank" class="flower-external-link">花キューピット<span class="link_img"></span></a> で手配いたします。
             </p>
@@ -145,7 +143,7 @@ get_header(); ?>
                     <div class="grid-img-wrapper">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Oiwai.jpg" alt="お祝い・お見舞い（出産・引越しなど）">
                         <div class="grid-overlay">
-                            <span class="grid-label">お祝い・お見舞い<br>(出産・引越しなど)</span>
+                            <span class="grid-label">お祝い・お見舞い<br>(出産・引越し<br>など)</span>
                         </div>
                     </div>
                 </a>
@@ -186,6 +184,9 @@ get_header(); ?>
                     </div>
                 </a>
             </div>
+            <p class="flower-intro-para">
+                日立市内の配達は、3,000円（税別）以上の商品から無料で配達いたします。
+            </p>
     </div>
 </main>
 

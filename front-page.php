@@ -31,7 +31,8 @@ Template Name: Top page
         <section class="omoi-section" id="omoi-section">
             <!-- Background Image -->
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top1.png" alt="Omoi Background" class="omoi-bg-img">
-            
+             <div class="omoi-overlay"></div>
+
             <h2 class="omoi-title">想い</h2>
             <!-- Background Image Area (CSS or IMG?) - Using CSS bg for text overlay usually, but user asked for "Images areas". 
                  For "Omoi", the text is ON TOP of the image. 
