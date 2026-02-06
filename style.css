@@ -320,14 +320,14 @@ body {
 }
 
 .sns-note .sns-name {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
     margin: 0;
     color: #7A090B;
 }
 
 .sns-note .sns-desc {
-    font-size: 0.7rem;
+    font-size: 1rem;
     margin: 0;
     color: #7A090B;
 }
@@ -470,7 +470,7 @@ body {
 }
 
 .omoi-lead {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 30px;
     line-height: 1.6;
@@ -478,13 +478,13 @@ body {
 }
 
 .omoi-text {
-    font-size: 0.9rem;
     line-height: 1.8;
     margin-bottom: 20px;
     text-shadow: 0 0px 10px rgba(0, 0, 0, 1);
     text-align: left;
     width: 320px;
-    margin-left: 10px;
+    margin: 0 auto;
+    font-size: 1.1rem;
 }
 
 /* Service Section */
@@ -520,7 +520,7 @@ body {
 }
 
 .service-block-title {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #7A090B;
     border-bottom: 2px solid #7A090B;
     display: inline-block;
@@ -530,7 +530,7 @@ body {
 }
 
 .service-text {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: #7A090B;
     margin-bottom: 25px;
@@ -548,7 +548,7 @@ body {
 
 .service-btn-wrapper.left {
     text-align: left;
-    padding-left: 50px;
+    padding-left: 20px;
 }
 
 .service-btn {
@@ -559,7 +559,7 @@ body {
     border: 1px solid #7A090B;
     border-radius: 30px;
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     font-weight: bold;
     transition: all 0.3s;
     letter-spacing: 0.05em;
@@ -822,7 +822,7 @@ body {
 }
 
 .greeting-text {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 2.2;
     margin-bottom: 40px;
     text-align: justify;
@@ -1236,7 +1236,7 @@ body {
 }
 
 .problems-title {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #7A090B;
     font-weight: bold;
     border-bottom: 2px solid #7A090B;
@@ -1259,8 +1259,8 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
 }
 
 .bubble-item:nth-child(1) {
@@ -1286,7 +1286,7 @@ body {
 }
 
 .bubble-text {
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: #7A090B;
     font-weight: bold;
     line-height: 1.5;
@@ -1302,7 +1302,7 @@ body {
 }
 
 .problems-answer {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: #7A090B;
     margin-bottom: 30px;
@@ -1321,7 +1321,7 @@ body {
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.0rem;
+    font-size: 1.1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -1333,7 +1333,7 @@ body {
 }
 
 .funeral-flow .company-section-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #7B0A0A;
     font-weight: bold;
     border-bottom: 2px solid #7B0A0A;
@@ -1352,14 +1352,14 @@ body {
 }
 
 .flow-step-title {
-    font-size: 1.0rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #7B0A0A;
     margin: 0 0 15px;
 }
 
 .flow-step-desc {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.7;
     color: #7B0A0A;
     margin: 0;
@@ -1377,7 +1377,7 @@ body {
 .flow-note {
     padding: 20px 0;
     margin: 20px 0 40px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.9;
     color: #7A090B;
 }
@@ -1389,7 +1389,7 @@ body {
 
 .funeral-examples .company-section-title {
     margin-left: 20px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #7A090B;
     font-weight: bold;
     border-bottom: 2px solid #7A090B;
@@ -1446,7 +1446,7 @@ body {
 }
 
 .funeral-clients .company-section-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #7A090B;
     font-weight: bold;
     border-bottom: 2px solid #7A090B;
@@ -1459,7 +1459,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: #7A090B;
     line-height: 2.2;
     font-weight: bold;
@@ -1599,7 +1599,7 @@ body {
 }
 
 .interview-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #7A090B;
     margin-bottom: 15px;
@@ -1610,7 +1610,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     color: #7A090B;
     font-weight: bold;
 }
@@ -1633,7 +1633,7 @@ body {
 }
 
 .department-title {
-    font-size: 1.0rem;
+    font-size: 1.3rem;
     color: #7A090B;
     font-weight: bold;
     margin-bottom: 15px;
@@ -1655,7 +1655,7 @@ body {
     padding: 12px 0;
     border-radius: 25px;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: bold;
     background-color: #fff;
     transition: all 0.3s ease;
@@ -1691,6 +1691,10 @@ body {
     margin-bottom: 30px;
 }
 
+.flow-toggle h3 {
+    font-size: 1.3rem;
+}
+
 .recruit-flow-box {
     background-color: #FFF9EB;
     padding: 25px;
@@ -1699,14 +1703,14 @@ body {
 }
 
 .recruit-flow-title {
-    font-size: 1.0rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #7A090B;
     margin-bottom: 15px;
 }
 
 .recruit-flow-text {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: #7A090B;
     margin-bottom: 20px;
@@ -1781,7 +1785,7 @@ body {
 }
 
 .footer-company-info {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     color: #7A090B;
     text-align: left;
@@ -1796,7 +1800,7 @@ body {
 }
 
 .sitemap-title {
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #7A090B;
     font-weight: bold;
     margin-bottom: 15px;
@@ -1811,13 +1815,13 @@ body {
 }
 
 .sitemap-list li {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .sitemap-list li a {
     text-decoration: none;
     color: #7A090B;
-    font-size: 0.85rem;
+    font-size: 1.1rem;
 }
 
 .footer-contact-area {
@@ -1835,7 +1839,7 @@ body {
 
 .footer-sns-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 20px;
     margin-bottom: 40px;
@@ -1969,7 +1973,7 @@ body {
 }
 
 .contact-intro {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: #7A090B;
     /* Reddish Brown */
@@ -1993,7 +1997,7 @@ body {
 
 .form-label {
     display: block;
-    font-size: 1.0rem;
+    font-size: 1.3rem;
     color: #7A090B;
     /* Red Title */
     font-weight: bold;
@@ -2006,7 +2010,7 @@ body {
 }
 
 .label-note {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     font-weight: normal;
     color: #7A090B;
 }
@@ -2037,7 +2041,7 @@ textarea.form-control {
 }
 
 .radio-label {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: #8B1A1A;
     font-weight: bold;
     display: flex;
@@ -2590,6 +2594,7 @@ textarea.form-control {
 
 .company-tagline {
     margin-bottom: 40px;
+    padding-left: 10px;
 }
 
 .tagline-text {
@@ -2603,7 +2608,7 @@ textarea.form-control {
     text-align: left;
     line-height: 1.8;
     color: #7A090B;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
 }
 
 .company-intro-para p {
@@ -2612,7 +2617,7 @@ textarea.form-control {
 
 /* Section Titles with Underline */
 .company-section-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #7A090B;
     display: inline-block;
     padding-bottom: 8px;
@@ -2639,12 +2644,12 @@ textarea.form-control {
 .profile-v-label {
     color: #7A090B;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
 }
 
 .profile-v-value {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     color: #7A090B;
 }
@@ -2675,7 +2680,7 @@ textarea.form-control {
 
 .greeting-text {
     line-height: 2;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #7A090B;
     text-align: justify;
 }
@@ -2694,7 +2699,7 @@ textarea.form-control {
 .greeting-signature {
     text-align: right;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #7A090B;
 }
 
@@ -2752,7 +2757,7 @@ textarea.form-control {
 
 .store-v-list li {
     margin-bottom: 15px;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #7A090B;
     line-height: 1.6;
 }
@@ -2769,7 +2774,7 @@ textarea.form-control {
     color: #7A090B;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     transition: background 0.3s;
 }
 
@@ -2889,7 +2894,7 @@ textarea.form-control {
     font-family: serif;
     font-weight: 500;
     color: #7A090B;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     text-align: left;
     flex-shrink: 0;
     line-height: 1.4;
@@ -2917,7 +2922,7 @@ textarea.form-control {
 }
 
 .history-main-text {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     font-weight: normal;
     color: #7A090B;
     line-height: 1.6;
@@ -3040,7 +3045,7 @@ textarea.form-control {
 }
 
 .store-intro-para {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #7A090B;
     line-height: 1.8;
     margin-bottom: 15px;
@@ -3125,7 +3130,7 @@ textarea.form-control {
 }
 
 .store-card-name {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #7A090B;
     /* Signature dark red */
@@ -3137,6 +3142,7 @@ textarea.form-control {
 
 .store-card-name p {
     margin: 0;
+    font-size: 1.1rem;
 }
 
 .store-card-img-wrapper {
@@ -3221,7 +3227,7 @@ textarea.form-control {
 }
 
 .flower-intro-para {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #7A090B;
     line-height: 1.8;
     margin-bottom: 15px;
@@ -3294,7 +3300,7 @@ textarea.form-control {
 
 .grid-label {
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.3;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
@@ -3359,7 +3365,7 @@ textarea.form-control {
 }
 
 .funeral-intro-text {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #7A090B;
     line-height: 1.8;
 }
@@ -3432,7 +3438,7 @@ textarea.form-control {
 }
 
 .recruit-message .message-content p {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #7A090B;
     line-height: 1.8;
 }
@@ -3566,14 +3572,14 @@ textarea.form-control {
 }
 
 .recruit-flow-title {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #8B1A1A;
     margin-bottom: 15px;
 }
 
 .recruit-flow-text {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: #7A090B;
     line-height: 1.6;
     margin: 0;
@@ -3594,7 +3600,7 @@ textarea.form-control {
     /* Prevent overflow */
     color: #8B1A1A;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-weight: bold;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease;
@@ -3866,15 +3872,20 @@ h1,
 h2,
 h3,
 h4,
-.menu-label {
+.menu-label,
+.required,
+.flow-toggle {
     font-family: "Kiwi Maru", "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
     font-weight: 500;
     font-style: normal;
+    font-size: 1.3rem;
 }
+
 
 p,
 li,
-a {
+a,
+.radio-label {
     font-family: "Kiwi Maru", "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif;
     font-weight: 400;
     font-style: normal;
@@ -4040,7 +4051,7 @@ html {
 }
 
 .delivery-text {
-    padding-left: 50px;
+    padding-left: 20px;
 }
 
 .omoi-overlay {
@@ -4077,7 +4088,7 @@ html {
     }
 
     .pc-side-logo {
-        width: 120px;
+        width: 180px;
         pointer-events: none;
     }
 
@@ -4175,5 +4186,28 @@ html {
         background-image: url('/wp-content/themes/syunjyusya-theme/assets/images/list_flower.png');
         background-size: contain;
         background-repeat: no-repeat;
+    }
+}
+
+.store-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* ← ここで余白を作る */
+}
+
+.store-card-img-wrapper {
+    margin-top: 0;
+    /* 削除 */
+}
+
+
+.store-card-name {
+    min-height: 8.6em;
+}
+
+@media screen and (min-width: 768px) {
+    .store-card-name {
+        min-height: 5.8em;
     }
 }

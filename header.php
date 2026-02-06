@@ -99,7 +99,7 @@
     <li><a class="nav-funeral" href="<?php echo home_url('/funeral'); ?>">葬祭部について</a></li>
     <li><a class="nav-recruit" href="<?php echo home_url('/recruit'); ?>">求人情報</a></li>
     <li><a class="nav-contact" href="<?php echo home_url('/contact'); ?>">お問い合わせ</a></li>
-        <li><a href="https://bloemen87.thebase.in/" target="_blank">オンラインショップ bloemen<span class="link_img"></span></a></li>
+        <li><a href="https://bloemen87.thebase.in/" target="_blank">オンラインショップ<br>　　bloemen<span class="link_img"></span></a></li>
         <li><a href="https://shunjusha.hanatown.net/" target="_blank">花キューピット<span class="link_img"></span></a></li>
       </ul>
     </nav>

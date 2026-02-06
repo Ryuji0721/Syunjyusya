@@ -9,7 +9,7 @@
                     </div>
                     <div class="footer-company-info">
                         <p class="company-name">株式会社 春秋舎</p>
-                        <p class="company-address">〒317-0071<br>茨城県日立市鹿島町1-12-6</p>
+                        <p class="company-address">〒317-0071<br>茨城県日立市鹿島町<br>1-12-6</p>
                         <p class="company-tel">TEL : 0294-21-1414</p>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                             </div>
                             <div class="sns-note">
                                 <p class="sns-name">Instagram</p>
-                                <p class="sns-desc">近日DMにて注文受付開始</p>
+                                <p class="sns-desc">近日DMにて<br>注文受付開始</p>
                             </div>
                         </a>
                     </div>

@@ -49,22 +49,19 @@ Template Name: Top page
             
             <div class="omoi-content">
                 <p class="omoi-lead">
-                    毎日の暮らしを美しく彩る花で、<br>
+                    毎日の暮らしを<br>美しく彩る花で、<br>
                     心地よい暮らしを
                 </p>
                 <p class="omoi-text">
-                    笑顔のこぼれる、お客様の顔がみたいから。<br>
+                    笑顔のこぼれる、<br>お客様の顔がみたいから。
                     国内外から常に新鮮な花を厳選して入荷し、<br>
                     心を込めて皆様にお届けします。<br>
-                    切り花、観葉植物・花苗など<br>
-                    新鮮な旬の花を常時揃えるよう心がけています。
+                    切り花、観葉植物・花苗など新鮮な<br>旬の花を常時揃えるよう心がけて<br>います。
                 </p>
                 <p class="omoi-text">
-                    気持ちが伝わる素敵なお花を多数取り揃えて<br>お待ちしております。<br>
-                    どんな花がいいかな？など、気になることが<br>
-                    ございましたら、お気軽にスタッフにお声かけ<br>
-                    ください。<br>
-                    各店舗スタッフ、心よりお待ちしております。
+                    気持ちが伝わる素敵なお花を多数<br>取り揃えてお待ちしております。<br>
+                    どんな花がいいかな？など、<br>気になることがございましたら、お気軽にスタッフにお声かけください。<br>
+                    各店舗スタッフ、心よりお待ちして<br>おります。
                 </p>
             </div>
         </section>
@@ -99,7 +96,7 @@ Template Name: Top page
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/topSousai.png" alt="Funeral Dept" class="service-img">
                 
                 <p class="service-text">
-                    最後のお別れの場にふさわしい空間をお花でデザインします。<br>
+                    最後のお別れの場にふさわしい空間をお花でデザイン<br>します。<br>
                     故人様のご冥福を祈り、ご当家のご要望に合わせ、気持ちを込めて制作いたします。
                 </p>
                 <div class="service-btn-wrapper right">
@@ -120,21 +117,18 @@ Template Name: Top page
 
             <div class="delivery-content">
                 <p class="service-text delivery-text">
-                    日立市内の配達は、3,000円（税別）以上商品から<br>
-                    無料で配達いたします。<br>
-                    市外・県外への配達は、宅配または花キューピットで<br>
-                    手配いたします。
+                    日立市内の配達は、3,000円（税別）以上商品から無料で配達いたします。<br>
+                    市外・県外への配達は、宅配または<br>花キューピットで手配いたします。
                 </p>
                 
                 <div class="service-btn-wrapper left">
-                    <a href="#" class="service-btn">花キューピット</a>
+                    <a href="https://shunjusha.hanatown.net/" target="_blank" class="service-btn">花キューピット</a>
                 </div>
 
                 <div class="payment-info">
                     <p class="service-text delivery-text">
                         クレジットカード決済<br>
-                        Visa/Masters/Amex/Diners/JCB/Discover <br>
-                        がご利用になれます。<br>
+                        Visa/Masters/Amex/Diners/<br>JCB/Discoverがご利用になれます。<br>
                         ご注文後即時決済されます。
                     </p>
                 </div>

@@ -24,7 +24,7 @@ get_header(); ?>
                 市外・県外への配達は、宅配または <a href="https://shunjusha.hanatown.net/" target="_blank" class="flower-external-link">花キューピット<span class="link_img"></span></a> で手配いたします。
             </p>
             <p class="flower-intro-para">
-                <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer" class="flower-external-link">公式Instagram<span class="link_img"></span></a> のDMでも注文を受け付けております。お気軽にご相談ください。
+                <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer" class="flower-external-link">公式Instagram<span class="link_img"></span></a> のDMでも注文を受け付けております。<br>お気軽にご相談ください。
             </p>
             <p class="flower-intro-para">
                 また、アンティーク雑貨を <a href="https://bloemen87.thebase.in/" target="_blank" class="flower-external-link">オンラインショップ bloemen<span class="link_img"></span></a> で販売しております。ぜひご利用ください。

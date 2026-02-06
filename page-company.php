@@ -17,7 +17,7 @@ get_header(); ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.svg" alt="SHUNJUSHA Logo">
                 </div>
                 <div class="company-tagline">
-                    <p class="tagline-text">日々の暮らしに、花の潤いを。</p>
+                    <p class="tagline-text">日々の暮らしに、<br>花の潤いを。</p>
                 </div>
                 <div class="company-intro-para">
                     <p>
@@ -94,7 +94,7 @@ get_header(); ?>
                 <div class="greeting-content">
                     <div class="greeting-text">
                         <p>
-                            私たちは、冠婚葬祭をはじめ、お客様のあらゆるイベントに取り組み、四季折々の花を通して、お客様に感動と喜びと安らぎを提供し、お客様と社員さんの幸せを実現し、社会に貢献する企業になります。
+                            私たちは、冠婚葬祭をはじめ、お客様の<br>あらゆるイベントに取り組み、四季折々の花を通して、お客様に感動と喜びと安らぎを提供し、お客様と社員さんの幸せを実現し、社会に貢献する企業になります。
                         </p>
                     </div>
                     <div class="greeting-image-area">
@@ -112,14 +112,14 @@ get_header(); ?>
                 <div class="store-list-container">
                     <ul class="store-v-list">
                         <li>・ 本店</li>
-                        <li>・ エルフラワー（スーパーかわねや南高野店内）</li>
-                        <li>・ フラワーエル（ヒタチエ1F(旧イトーヨーカ堂)）</li>
-                        <li>・ フローラ滑川店（スーパーマルト滑川店内）</li>
-                        <li>・ フローラ那珂店（スーパーマルト那珂店内）</li>
-                        <li>・ フローラ諏訪店（スーパーマルト諏訪店内）</li>
-                        <li>・ フローラ塙山店（スーパーマルト塙山店内）</li>
-                        <li>・ フローラ平沢店（スーパーマルト平沢店内）</li>
-                        <li>・ フローラ森山店（スーパーマルト森山店内）</li>
+                        <li>・ エルフラワー<br>（スーパーかわねや南高野店内）</li>
+                        <li>・ フラワーエル<br>（ヒタチエ1F(旧イトーヨーカ堂)）</li>
+                        <li>・ フローラ滑川店<br>（スーパーマルト滑川店内）</li>
+                        <li>・ フローラ那珂店<br>（スーパーマルト那珂店内）</li>
+                        <li>・ フローラ諏訪店<br>（スーパーマルト諏訪店内）</li>
+                        <li>・ フローラ塙山店<br>（スーパーマルト塙山店内）</li>
+                        <li>・ フローラ平沢店<br>（スーパーマルト平沢店内）</li>
+                        <li>・ フローラ森山店<br>（スーパーマルト森山店内）</li>
                     </ul>
                     <div class="store-btn-area">
                         <a href="<?php echo home_url('/store'); ?>" class="pill-btn">店舗情報 ➔</a>

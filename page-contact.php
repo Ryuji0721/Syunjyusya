@@ -436,7 +436,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <form action="" method="post" class="contact-form">
             
             <div class="form-group">
-                <label class="form-label">お問い合わせ内容 <span class="required">*必須です</span></label>
+                <label class="form-label"><h3>お問い合わせ内容</h3> <span class="required">*必須です</span></label>
                 <div class="radio-group-vertical">
                     <label class="radio-label"><input type="radio" name="inquiry_type" value="求人応募" checked> 求人応募</label>
                     <label class="radio-label"><input type="radio" name="inquiry_type" value="お問い合わせ"> お問い合わせ</label>
@@ -445,32 +445,32 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
 
             <div class="form-group">
-                <label class="form-label">お名前 <span class="required">*必須です</span></label>
+                <label class="form-label"><h3>お名前</h3> <span class="required">*必須です</span></label>
                 <input type="text" name="your-name" class="form-control" placeholder="山田 太郎">
             </div>
 
             <div class="form-group">
-                <label class="form-label">会社名・組織名</label>
+                <label class="form-label"><h3>会社名・組織名</h3></label>
                 <input type="text" name="company-name" class="form-control" placeholder="株式会社春秋舎">
             </div>
 
             <div class="form-group">
-                <label class="form-label">お電話番号 <span class="required">*必須です</span></label>
+                <label class="form-label"><h3>お電話番号</h3> <span class="required">*必須です</span></label>
                 <input type="tel" name="phone-number" class="form-control" placeholder="000-0000-0000">
             </div>
 
             <div class="form-group">
-                <label class="form-label">メールアドレス <span class="required">*必須です</span></label>
+                <label class="form-label"><h3>メールアドレス</h3> <span class="required">*必須です</span></label>
                 <input type="email" name="your-email" class="form-control" placeholder="〇〇@example.com">
             </div>
 
             <div class="form-group">
-                <label class="form-label">内容 <span class="required">*必須です</span><br><span class="label-note">（できるだけ詳細に記載願います）</span></label>
+                <label class="form-label"><h3>内容</h3> <span class="required">*必須です</span><br><span class="label-note">（できるだけ詳細に記載願います）</span></label>
                 <textarea name="your-message" class="form-control" rows="8" placeholder="求人の問い合わせなど"></textarea>
             </div>
 
             <div class="form-group">
-                <label class="form-label">返信方法について</label>
+                <label class="form-label"><h3>返信方法について</h3></label>
                 <div class="radio-group-vertical">
                     <label class="radio-label"><input type="radio" name="response_method" value="both" checked> 電話、メールどちらでも構いません</label>
                     <label class="radio-label"><input type="radio" name="response_method" value="email"> メールを希望します</label>

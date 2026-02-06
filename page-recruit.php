@@ -227,7 +227,7 @@ get_header(); ?>
             
             <!-- Part-time -->
             <div class="flow-dropdown active">
-                <button class="flow-toggle">パートの場合 <span class="toggle-icon"></span></button>
+                <button class="flow-toggle"><h3>パートの場合</h3> <span class="toggle-icon"></span></button>
                 <div class="flow-content">
                     <div class="recruit-flow-box">
                         <h4 class="recruit-flow-title">ご応募</h4>
