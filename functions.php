@@ -342,7 +342,7 @@ function syunjyusya_generate_webp_on_upload($metadata, $attachment_id) {
             if (function_exists('imagecreatefromjpeg') && function_exists('imagewebp')) {
                 $img = imagecreatefromjpeg($file);
                 if ($img) {
-                    imagewebp($img, $webp_path, 100);
+                    imagewebp($img, $webp_path);
                     imagedestroy($img);
                 }
             }
