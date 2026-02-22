@@ -42,63 +42,93 @@ get_header(); ?>
             <h2 class="company-section-title store-list-title">
                 店舗名から探す
             </h2>
-            
-            <div class="store-grid">
-                <div class="store-card" data-query="春秋舎 本店 茨城県日立市鹿島町1-20-3" style="cursor: pointer;">
-                    <div class="store-card-name"><p>春秋舎　本店</p></div>
-                    <div class="store-card-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/本店.jpg" alt="春秋舎 本店" class="store-card-img">
+            <?php
+            $args = array(
+                'post_type' => 'store',
+                'posts_per_page' => -1,
+                'orderby' => 'title',
+                'order' => 'ASC',
+            );
+            $store_query = new WP_Query($args);
+            $main_store = null;
+            $other_stores = array();
+            if ($store_query->have_posts()) :
+                while ($store_query->have_posts()) : $store_query->the_post();
+                    if (strpos(get_the_title(), '本店') !== false) {
+                        $main_store = $post;
+                    } else {
+                        $other_stores[] = $post;
+                    }
+                endwhile;
+                // 本店を先頭、他をあいうえお順で並べる
+                $ordered_stores = array();
+                if ($main_store) {
+                    $ordered_stores[] = $main_store;
+                }
+                // あいうえお順（title昇順）
+                usort($other_stores, function($a, $b) {
+                    return strcmp($a->post_title, $b->post_title);
+                });
+                $ordered_stores = array_merge($ordered_stores, $other_stores);
+                echo '<div class="store-grid">';
+                foreach ($ordered_stores as $store_post) :
+                    setup_postdata($store_post);
+                    $img = get_post_meta($store_post->ID, '_store_image_jpg', true);
+                    $webp = get_post_meta($store_post->ID, '_store_image_webp', true);
+                    $img_url = '';
+                    $webp_url = '';
+                    if ($img) {
+                        if (strpos($img, 'http') === 0) {
+                            $img_url = $img;
+                        } elseif (strpos($img, 'wp-content/') === 0) {
+                            $img_url = site_url('/') . $img;
+                        } elseif (preg_match('/^\d{4}\/\d{2}\//', $img)) {
+                            $img_url = site_url('/wp-content/uploads/' . ltrim($img, '/'));
+                        } else {
+                            $img_url = get_template_directory_uri() . '/' . ltrim($img, '/');
+                        }
+                    }
+                    if ($webp) {
+                        if (strpos($webp, 'http') === 0) {
+                            $webp_url = $webp;
+                        } elseif (strpos($webp, 'wp-content/') === 0) {
+                            $webp_url = site_url('/') . $webp;
+                        } elseif (preg_match('/^\d{4}\/\d{2}\//', $webp)) {
+                            $webp_url = site_url('/wp-content/uploads/' . ltrim($webp, '/'));
+                        } else {
+                            $webp_url = get_template_directory_uri() . '/' . ltrim($webp, '/');
+                        }
+                    }
+                    ?>
+                    <div class="store-card" style="display:flex; flex-direction:column; justify-content:stretch; aspect-ratio:1/1; border-radius:18px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:0; margin:0; background:#fff;">
+                        <div class="store-card-name" style="flex:1 1 33%; display:flex; align-items:center; justify-content:left; padding:0 0.8em; font-size:14px; color:#7a2222; background:transparent; margin:0; border-radius:0;">
+                            <p style="margin:0; width:100%; text-align:left; font-weight:400; letter-spacing:0.08em;"><?php echo esc_html(get_the_title($store_post)); ?></p>
+                        </div>
+                        <div class="store-card-img-wrapper" style="flex:2 1 67%; width:100%; height:0; min-height:0; aspect-ratio:4/3; position:relative; margin:0; padding:0; overflow:hidden; border-radius:0 0 18px 18px;">
+                            <picture style="width:100%; height:100%; display:block;">
+                                <?php if ($webp_url): ?>
+                                    <source srcset="<?php echo esc_url($webp_url); ?>" type="image/webp">
+                                <?php endif; ?>
+                                <?php if ($img_url): ?>
+                                    <img src="<?php echo esc_url($img_url); ?>" alt="<?php echo esc_attr(get_the_title($store_post)); ?>" class="store-card-img" style="width:100%; height:100%; object-fit:cover; display:block; margin:0; padding:0; border-radius:0 0 18px 18px; position:absolute; top:0; left:0;">
+                                <?php else: ?>
+                                    <img src="" alt="画像なし" class="store-card-img" style="width:100%; height:100%; object-fit:cover; display:block; margin:0; padding:0; border-radius:0 0 18px 18px; position:absolute; top:0; left:0;">
+                                <?php endif; ?>
+                            </picture>
+                            <div style="font-size:12px; color:#888; word-break:break-all; background:#fff; opacity:0.8; padding:2px 4px; position:relative; z-index:2;">
+                                <span>img_url: <?php echo htmlspecialchars($img_url); ?></span><br>
+                                <span>webp_url: <?php echo htmlspecialchars($webp_url); ?></span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="store-card" data-query="茨城県日立市南高野町２丁目１−１" style="cursor: pointer;">
-                    <div class="store-card-name"><p>エル・フラワー（スーパーかわねや南高野店内）</p></div>
-                    <div class="store-card-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/エルフラワー.jpg" alt="エルフラワー" class="store-card-img">
-                    </div>
-                </div>
-                <div class="store-card" data-query="茨城県日立市幸町１丁目１６−１" style="cursor: pointer;">
-                    <div class="store-card-name"><p>フラワーエル（ヒタチエ1F(旧イトーヨーカ堂)）</p></div>
-                    <div class="store-card-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/フラワーエール.jpg" alt="フラワーエル" class="store-card-img">
-                    </div>
-                </div>
-                <div class="store-card" data-query="フローラ諏訪店 茨城県日立市諏訪町1-18-10" style="cursor: pointer;">
-                    <div class="store-card-name"><p>フローラ諏訪店（スーパーマルト諏訪店内）</p></div>
-                    <div class="store-card-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Suwa.jpg" alt="フローラ諏訪店" class="store-card-img">
-                    </div>
-                </div>
-                <div class="store-card" data-query="フローラ那珂店 茨城県那珂市菅谷1587-1" style="cursor: pointer;">
-                    <div class="store-card-name"><p>フローラ那珂店（スーパーマルト那珂店内）</p></div>
-                    <div class="store-card-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Naka.jpg" alt="フローラ那珂店" class="store-card-img">
-                    </div>
-                </div>
-                <div class="store-card" data-query="フローラ滑川店 茨城県日立市滑川町2-12-1" style="cursor: pointer;">
-                    <div class="store-card-name"><p>フローラ滑川店（スーパーマルト滑川店内）</p></div>
-                    <div class="store-card-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Namegawa.jpg" alt="フローラ滑川店" class="store-card-img">
-                    </div>
-                </div>
-                <div class="store-card" data-query="マルト塙山店 茨城県日立市金沢町4-1-20" style="cursor: pointer;">
-                    <div class="store-card-name"><p>フローラ塙山店（スーパーマルト塙山店内）</p></div>
-                    <div class="store-card-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Hanayama.jpg" alt="フローラ塙山店" class="store-card-img">
-                    </div>
-                </div>
-                <div class="store-card" data-query="フローラ平沢店 茨城県日立市高鈴町2-4-3" style="cursor: pointer;">
-                    <div class="store-card-name"><p>フローラ平沢店（スーパーマルト平沢店内）</p></div>
-                    <div class="store-card-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Hirasawa.jpg" alt="フローラ平沢店" class="store-card-img">
-                    </div>
-                </div>
-                <div class="store-card" data-query="フローラ森山店 茨城県日立市森山町2-24-1" style="cursor: pointer;">
-                    <div class="store-card-name"><p>フローラ森山店（スーパーマルト森山店内）</p></div>
-                    <div class="store-card-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Moriyama.jpg" alt="フローラ森山店" class="store-card-img">
-                    </div>
-                </div>
-            </div>
+                    <?php
+                endforeach;
+                echo '</div>';
+                wp_reset_postdata();
+            else :
+                echo '<p>店舗情報がありません。</p>';
+            endif;
+            ?>
         </section>
     </div>
 </main>
