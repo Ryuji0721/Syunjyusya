@@ -24,17 +24,26 @@ add_action( 'wp_enqueue_scripts', 'syunjyusya_enqueue_scripts' );
 add_filter( 'use_block_editor_for_post_type', '__return_false', 10 );
 
 // 沿革カスタムメタボックス
-function add_company_history_metabox() {
-    add_meta_box(
-        'company_history_metabox',
-        '沿革',
-        'company_history_metabox_callback',
-        'page',
-        'normal',
-        'high'
-    );
+function add_company_history_metabox( $post_type, $post ) {
+    // 企業情報ページ（スラッグ: company）のみ沿革メタボックスを表示
+    if ( $post_type === 'page' ) {
+        $slug = '';
+        if ( isset( $post ) && $post instanceof WP_Post ) {
+            $slug = get_page_uri( $post->ID );
+        }
+        if ( $slug === 'company' ) {
+            add_meta_box(
+                'company_history_metabox',
+                '沿革',
+                'company_history_metabox_callback',
+                'page',
+                'normal',
+                'high'
+            );
+        }
+    }
 }
-add_action( 'add_meta_boxes', 'add_company_history_metabox' );
+add_action( 'add_meta_boxes', 'add_company_history_metabox', 10, 2 );
 
 function company_history_metabox_callback( $post ) {
     wp_nonce_field( 'company_history_nonce', 'company_history_nonce' );
@@ -111,20 +120,22 @@ function company_history_metabox_callback( $post ) {
 }
 
 function save_company_history_metabox( $post_id ) {
+    // 企業情報ページ（スラッグ: company）以外は保存しない
+    $post = get_post( $post_id );
+    if ( ! $post || get_page_uri( $post_id ) !== 'company' ) {
+        return;
+    }
     if ( ! isset( $_POST['company_history_nonce'] ) || ! wp_verify_nonce( $_POST['company_history_nonce'], 'company_history_nonce' ) ) {
         return;
     }
-
     if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
         return;
     }
-
     $history_data = array();
     if ( isset( $_POST['history_year'] ) && is_array( $_POST['history_year'] ) ) {
         $years = array_map( 'sanitize_text_field', $_POST['history_year'] );
         $mains = isset( $_POST['history_main'] ) ? array_map( 'sanitize_textarea_field', $_POST['history_main'] ) : array();
         $subs = isset( $_POST['history_sub'] ) ? array_map( 'sanitize_textarea_field', $_POST['history_sub'] ) : array();
-
         foreach ( $years as $index => $year ) {
             if ( ! empty( $year ) ) {
                 $history_data[] = array(
@@ -135,7 +146,6 @@ function save_company_history_metabox( $post_id ) {
             }
         }
     }
-
     update_post_meta( $post_id, '_company_history', $history_data );
 }
 add_action( 'save_post_page', 'save_company_history_metabox' );
