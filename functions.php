@@ -82,14 +82,14 @@ function company_history_metabox_callback( $post ) {
         // フォーカスが外れた時に「年」を付与
         $(document).on('blur', 'input[name="history_year[]"]', function() {
             var value = $(this).val().trim();
-            if (value && !value.endsWith()) {
+            if (value && !value.endsWith('年')) {
                 var numOnly = value.replace(/[^0-9]/g, '');
                 if (numOnly) {
-                    $(this).val(numOnly);
+                    $(this).val(numOnly + '年');
                 }
             }
         });
-å
+
         $('#add-history-item').click(function() {
             var html = '<div class="history-item-input">' +
                 '<p><label>年</label><br><input type="text" name="history_year[]" value="" placeholder="例：1929"></p>' +
