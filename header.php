@@ -27,7 +27,14 @@
         <div class="header-inner">
             <div class="logo-area">
                 <a href="<?php echo home_url('/'); ?>" class="header-logo-link">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png" alt="SHUNJYUSHA" class="header-logo-img">
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.webp">
+                    <source type="image/png"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png"
+                    alt="SHUNJUSHA"
+                    loading="lazy" decoding="async"
+                    class="header-logo-img">
+                </picture>
                 </a>
             </div>
             
@@ -86,10 +93,16 @@
         <!-- Left Column: Logo (Appears on PC) -->
             <div class="global-pc-left">
   <div class="pc-side-menu global-sticky-item">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png"
-         alt="SHUNJUSHA"
-         class="pc-side-logo">
-
+  <a href="<?php echo home_url('/'); ?>">       
+  <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.webp">
+                    <source type="image/png"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png"
+                    alt="SHUNJUSHA"
+                    loading="lazy" decoding="async"
+                    class="pc-side-logo">
+                </picture></a>
+         
     <nav class="pc-side-nav">
       <ul>
        <li><a class="nav-top" href="<?php echo home_url('/'); ?>">TOP</a></li>

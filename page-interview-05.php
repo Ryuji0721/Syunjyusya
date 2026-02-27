@@ -9,7 +9,13 @@ get_header(); ?>
         <!-- Hero Section -->
        <section class="interview-detail-hero">
     <div class="hero-img-placeholder">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/namekawa_katousan.jpg" alt="フローラ森山店加藤さんの写真">
+        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/namekawa_katousan.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/namekawa_katousan.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/namekawa_katousan.jpg"
+                    alt="フローラ森山店加藤さんの写真"
+                    loading="lazy" decoding="async">
+                </picture>
     </div>
     <div class="hero-content">
         <h1 class="hero-main-title">お客様の笑顔のために</h1>

@@ -6,7 +6,14 @@ get_header(); ?>
 
 <main class="funeral-page-container">
     <div class="funeral-hero-img-wrapper">
-                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaiFV.jpg" alt="葬祭部について" class="funeral-hero-img">
+        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/sousaiFV.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/sousaiFV.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaiFV.jpg"
+                    alt="葬祭部について"
+                    loading="lazy" decoding="async"
+                    class="funeral-hero-img">
+                </picture>
                  <div class="funeral-hero-overlay">
                      <h1 class="funeral-hero-title">葬祭部について</h1>
                  </div>
@@ -164,6 +171,7 @@ get_header(); ?>
                 <li>堀越葬儀社</li>
                 <li>栗田商店</li>
             </ul>
+        </section>
     </div>
 </main>
 
@@ -179,10 +187,6 @@ document.addEventListener('DOMContentLoaded', function() {
             disableOnInteraction: false,
         },
         breakpoints: {
-            768: {
-               slidesPerView: 1.5,
-               spaceBetween: 40,
-            },
             // Explicitly disable for mobile if needed, though breakpoints usually override
             0: {
                autoplay: false
@@ -191,6 +195,8 @@ document.addEventListener('DOMContentLoaded', function() {
                autoplay: {
                    delay: 3000,
                    disableOnInteraction: false,
+                   slidesPerView: 1.5,
+               spaceBetween: 40,
                }
             }
         }

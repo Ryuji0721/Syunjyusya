@@ -9,7 +9,13 @@ get_header(); ?>
         <!-- Hero Section -->
       <section class="interview-detail-hero">
     <div class="hero-img-placeholder">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/moriyama_kawasakisan.jpg" alt="フローラ森山店川崎さんの写真">
+        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/moriyama_kawasakisan.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/moriyama_kawasakisan.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/toplast.png"
+                    alt="フローラ森山店川崎さんの写真"
+                    loading="lazy" decoding="async">
+                </picture>
     </div>
     <div class="hero-content">
         <h1 class="hero-main-title">お客さんの喜ぶ顔がやりがい</h1>

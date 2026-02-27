@@ -30,7 +30,13 @@ Template Name: Top page
         <!-- Omoi Section -->
         <section class="omoi-section" id="omoi-section">
             <!-- Background Image -->
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top1.png" alt="Omoi Background" class="omoi-bg-img">
+            <picture>
+                <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top1.webp">
+                <source type="image/jpeg" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top1.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top1.png"
+                alt="Omoi Background"
+                loading="lazy" decoding="async" class="omoi-bg-img">
+            </picture>
              <div class="omoi-overlay"></div>
 
             <h2 class="omoi-title">想い</h2>
@@ -77,7 +83,15 @@ Template Name: Top page
             <div class="service-block">
                 <h3 class="service-block-title">各種お花販売</h3>
                 <!-- Refactored to IMG -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top2.png" alt="Flower Sales" class="service-img">
+                <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top2.webp">
+                    <source type="image/png"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top2.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top2.png"
+                    alt="Flower Sales"
+                    loading="lazy" decoding="async"
+                    class="service-img">
+                </picture>
+
                 
                 <p class="service-text">
                     お誕生日・各種お祝いやプレゼントなどのお花の贈り物を心を込めて販売しています。<br>
@@ -93,7 +107,14 @@ Template Name: Top page
             <div class="service-block">
                 <h3 class="service-block-title">葬祭部［会社様向け］</h3>
                 <!-- Refactored to IMG -->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/topSousai.png" alt="Funeral Dept" class="service-img">
+                                <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/topSousai.webp">
+                    <source type="image/png"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/topSousai.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/topSousai.png"
+                    alt="Funeral Dept"
+                    loading="lazy" decoding="async"
+                    class="service-img">
+                </picture>
                 
                 <p class="service-text">
                     最後のお別れの場にふさわしい空間をお花でデザイン<br>します。<br>
@@ -113,7 +134,14 @@ Template Name: Top page
             </div>
 
             <!-- Deco Top Left -->
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top4bara.png" alt="Tulips" class="deco-img top-left">
+             <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top4bara.webp">
+                    <source type="image/png"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top4bara.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top4bara.png"
+                    alt="Tulips"
+                    loading="lazy" decoding="async"
+                    class="deco-img top-left">
+                </picture>
 
             <div class="delivery-content">
                 <p class="service-text delivery-text">
@@ -135,6 +163,14 @@ Template Name: Top page
             </div>
 
             <!-- Deco Bottom Right -->
+            <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/toplast.webp">
+                    <source type="image/png"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/toplast.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/toplast.png"
+                    alt="Daisies"
+                    loading="lazy" decoding="async"
+                    class="deco-img bottom-right">
+                </picture>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/toplast.png" alt="Daisies" class="deco-img bottom-right">
         </section>
 

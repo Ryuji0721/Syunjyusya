@@ -5,7 +5,14 @@
                 <!-- Logo & Main Info -->
                 <div class="footer-brand">
                     <div class="footer-logo-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.svg" alt="SHUNJUSHA" class="footer-logo-img">
+                        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.webp">
+                    <source type="image/png"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LOGO.png"
+                    alt="SHUNJUSHA"
+                    loading="lazy" decoding="async"
+                    class="footer-logo-img">
+                </picture>
                     </div>
                     <div class="footer-company-info">
                         <p class="company-name">株式会社 春秋舎</p>
@@ -87,6 +94,7 @@
                     <div class="footer-insta-box">
                         <a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer">
                             <div class="insta-icon-circle">
+                                
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerinst.svg" alt="Instagram">
                             </div>
                             <div class="sns-note">

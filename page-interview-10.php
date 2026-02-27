@@ -9,7 +9,13 @@ get_header(); ?>
         <!-- Hero Section -->
        <section class="interview-detail-hero">
     <div class="hero-img-placeholder">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousai_Bkosan.jpg" alt="葬祭部B子さんの写真">
+        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/sousai_Bkosan.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/sousai_Bkosan.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousai_Bkosan.jpg"
+                    alt="葬祭部B子さんの写真"
+                    loading="lazy" decoding="async">
+                </picture>
     </div>
     <div class="hero-content">
         <h1 class="hero-main-title">私にとってぴったりな場所</h1>

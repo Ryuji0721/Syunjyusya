@@ -9,7 +9,13 @@ get_header(); ?>
         <!-- Hero Section -->
        <section class="interview-detail-hero">
     <div class="hero-img-placeholder">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/namekawa_itisekisan.jpg" alt="フローラ滑川店一関さんの写真">
+        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/namekawa_itisekisan.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/namekawa_itisekisan.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/namekawa_itisekisan.jpg"
+                    alt="フローラ滑川店一関さんの写真"
+                    loading="lazy" decoding="async">
+                </picture>
     </div>
     <div class="hero-content">
         <h1 class="hero-main-title">嬉しかった記憶を自分も提供したい</h1>

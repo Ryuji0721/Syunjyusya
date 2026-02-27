@@ -98,7 +98,14 @@ get_header(); ?>
                         </p>
                     </div>
                     <div class="greeting-image-area">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Syatyou.png" alt="鏑木 宏介" class="greeting-img">
+                        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Syatyou.webp">
+                    <source type="image/png"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Syatyou.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Syatyou.png"
+                    alt="鏑木 宏介"
+                    loading="lazy" decoding="async"
+                    class="greeting-img">
+                </picture>
                         <p class="greeting-signature">
                             代表取締役社長　　鏑木　宏介
                         </p>

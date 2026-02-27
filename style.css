@@ -810,7 +810,7 @@ body {
 .company-section-title {
     font-size: 1.3rem;
     color: #7A090B;
-    border-bottom: 3px double #7A090B;
+    border-bottom: 2px solid #7A090B;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 30px;
@@ -818,7 +818,7 @@ body {
 }
 
 .greeting-section .company-section-title {
-    border-bottom-style: double;
+    border-bottom-style: solid;
 }
 
 .greeting-text {
@@ -1323,6 +1323,14 @@ body {
     font-weight: bold;
     font-size: 1.1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.funeral-cta-btn:hover {
+    background-color: #fff;
+    color: #8B1A1A;
+    border: #8B1A1A solid 1px;
+    transition: all 0.3s ease;
+    transform: translateY(-2px);
 }
 
 /* Funeral Flow */
@@ -2621,7 +2629,7 @@ textarea.form-control {
     color: #7A090B;
     display: inline-block;
     padding-bottom: 8px;
-    border-bottom: 3px double #7A090B;
+    border-bottom: 2px solid #7A090B;
     /* Textured look from mockup */
 }
 
@@ -3092,7 +3100,8 @@ textarea.form-control {
     }
 
     .store-hero-img-wrapper {
-        min-width: 375px;
+        min-width: 0;
+        width: 100%;
     }
 }
 
@@ -3608,6 +3617,12 @@ textarea.form-control {
 
 .recruit-flow-btn:hover {
     transform: translateY(-2px);
+    background-color: #8B1A1A;
+    color: #fff;
+}
+
+.recruit-flow-btn:hover .link_img {
+    filter: brightness(0) invert(1);
 }
 
 .external-icon {
@@ -3782,7 +3797,7 @@ textarea.form-control {
 
 /* Footer Nav */
 .interview-footer-nav {
-    padding: 40px 0 0;
+    padding: 40px 20px;
     border-top: 1px solid #EEEEEE;
     margin-top: 80px;
 }
@@ -3879,6 +3894,10 @@ h4,
     font-weight: 500;
     font-style: normal;
     font-size: 1.3rem;
+}
+
+.menu-label {
+    font-size: 0.6rem;
 }
 
 
@@ -4210,4 +4229,25 @@ html {
     .store-card-name {
         min-height: 5.8em;
     }
+}
+
+.funeral-examples {
+    overflow-x: hidden;
+}
+
+.funeral-examples-swiper {
+    overflow: hidden;
+    /* 既にswiperはhiddenが多いけど念のため */
+}
+
+.funeral-problems {
+    overflow-x: hidden;
+}
+
+a,
+p,
+span,
+li {
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }

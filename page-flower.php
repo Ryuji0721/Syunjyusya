@@ -6,7 +6,14 @@ get_header(); ?>
 
 <main class="flower-page-container">
     <div class="flower-hero-img-wrapper">
-                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top1.png" alt="お花について" class="flower-hero-img">
+        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top1.webp">
+                    <source type="image/png"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/top1.png">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/top1.png"
+                    alt="お花について"
+                    loading="lazy" decoding="async"
+                    class="flower-hero-img">
+                </picture>
                  <div class="flower-hero-overlay">
                      <h1 class="flower-hero-title">お花について</h1>
                  </div>
@@ -41,7 +48,13 @@ get_header(); ?>
                 <!-- Item 1 -->
                 <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/iwaibana.jpg" alt="祝い花（スタンド花）">
+                        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/iwaibana.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/iwaibana.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/iwaibana.jpg"
+                    alt="祝い花（スタンド花）"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">祝い花<br>(スタンド花)</span>
                         </div>
@@ -50,7 +63,13 @@ get_header(); ?>
                 <!-- Item 2 -->
                 <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Hanataba.jpg" alt="花束">
+                        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Hanataba.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Hanataba.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Hanataba.jpg"
+                    alt="花束"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">花束</span>
                         </div>
@@ -59,7 +78,13 @@ get_header(); ?>
                 <!-- Item 3 -->
                 <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flowerArenji.jpg" alt="フラワーアレンジメント">
+                         <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/flowerArenji.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/flowerArenji.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/flowerArenji.jpg"
+                    alt="フラワーアレンジメント"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">フラワー<br>アレンジメント</span>
                         </div>
@@ -68,7 +93,13 @@ get_header(); ?>
                 <!-- Item 4 -->
                 <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ArtificialFlowers.jpg" alt="造花">
+                        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/ArtificialFlowers.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/ArtificialFlowers.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ArtificialFlowers.jpg"
+                    alt="造花"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">造花</span>
                         </div>
@@ -77,7 +108,13 @@ get_header(); ?>
                 <!-- Item 5 -->
                 <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Doraiflower.jpg" alt="ドライフラワー・リース">
+                        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Doraiflower.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Doraiflower.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Doraiflower.jpg"
+                    alt="ドライフラワー・リース"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">ドライフラワー /<br>リース</span>
                         </div>
@@ -86,7 +123,13 @@ get_header(); ?>
                 <!-- Item 6 -->
                 <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Kanyousyokubutu.jpg" alt="観葉植物">
+                        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Kanyousyokubutu.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Kanyousyokubutu.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Kanyousyokubutu.jpg"
+                    alt="観葉植物"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">観葉植物</span>
                         </div>
@@ -95,7 +138,13 @@ get_header(); ?>
                 <!-- Item 7 -->
                 <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Ha-barium.jpg" alt="ハーバリウム / ソープフラワー">
+                         <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Ha-barium.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Ha-barium.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Ha-barium.jpg"
+                    alt="ハーバリウム / ソープフラワー"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">ハーバリウム /<br>ソープフラワー</span>
                         </div>
@@ -104,7 +153,13 @@ get_header(); ?>
                 <!-- Item 8 -->
                 <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Anteak.jpg" alt="アンティーク雑貨">
+                         <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Anteak.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Anteak.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Anteak.jpg"
+                    alt="アンティーク雑貨"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">アンティーク雑貨</span>
                         </div>
@@ -113,7 +168,13 @@ get_header(); ?>
                 <!-- Item 9 -->
                 <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Kisetu.jpg" alt="季節商品">
+                         <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Kisetu.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Kisetu.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Kisetu.jpg"
+                    alt="季節商品"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">季節商品</span>
                         </div>
@@ -132,7 +193,13 @@ get_header(); ?>
                  <!-- Item 1 -->
                  <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Kisetsugyouji.jpg" alt="季節行事">
+                         <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Kisetsugyouji.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Kisetsugyouji.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Kisetsugyouji.jpg"
+                    alt="季節行事"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">季節行事</span>
                         </div>
@@ -141,7 +208,13 @@ get_header(); ?>
                  <!-- Item 2 -->
                  <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Oiwai.jpg" alt="お祝い・お見舞い（出産・引越しなど）">
+                         <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Oiwai.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Oiwai.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Oiwai.jpg"
+                    alt="お祝い・お見舞い（出産・引越しなど）"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">お祝い・お見舞い<br>(出産・引越し<br>など)</span>
                         </div>
@@ -150,6 +223,13 @@ get_header(); ?>
                  <!-- Item 3 -->
                  <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
+                        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Tanjyoubi.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Tanjyoubi.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Tanjyoubi.jpg"
+                    alt="お誕生日"
+                    loading="lazy" decoding="async">
+                </picture>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Tanjyoubi.jpg" alt="お誕生日">
                         <div class="grid-overlay">
                             <span class="grid-label">お誕生日</span>
@@ -159,6 +239,13 @@ get_header(); ?>
                  <!-- Item 4 -->
                  <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
+                        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Kekkon.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Kekkon.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Kekkon.jpg"
+                    alt="結婚記念日・還暦"
+                    loading="lazy" decoding="async">
+                </picture>
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Kekkon.jpg" alt="結婚記念日・還暦">
                         <div class="grid-overlay">
                             <span class="grid-label">結婚記念日・還暦</span>
@@ -168,7 +255,13 @@ get_header(); ?>
                  <!-- Item 5 -->
                  <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Osonae.jpg" alt="お悔やみ・お供え">
+                        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Osonae.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Osonae.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Osonae.jpg"
+                    alt="お悔やみ・お供え"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">お悔やみ・お供え</span>
                         </div>
@@ -177,7 +270,13 @@ get_header(); ?>
                  <!-- Item 6 -->
                  <a href="#" class="grid-item">
                     <div class="grid-img-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Kaiteniwai.jpg" alt="開店祝い・ご講演祝い">
+                         <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Kaiteniwai.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Kaiteniwai.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Kaiteniwai.jpg"
+                    alt="開店祝い・ご講演祝い"
+                    loading="lazy" decoding="async">
+                </picture>
                         <div class="grid-overlay">
                             <span class="grid-label">開店祝い・<br>ご講演祝い</span>
                         </div>

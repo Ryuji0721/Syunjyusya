@@ -6,7 +6,14 @@ get_header(); ?>
 
 <main class="recruit-page-container">
     <div class="recruit-hero-img-wrapper">
-                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kyujin.jpg" alt="求人情報" class="recruit-hero-img">
+        <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/kyujin.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/kyujin.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kyujin.jpg"
+                    alt="求人情報"
+                    loading="lazy" decoding="async"
+                    class="recruit-hero-img">
+                </picture>
                  <div class="recruit-hero-overlay">
                      <h1 class="recruit-hero-title">求人情報</h1>
                  </div>
@@ -63,7 +70,14 @@ get_header(); ?>
                     <div class="swiper-slide">
                         <a href="<?php echo home_url('/interview-01'); ?>" class="interview-card">
                             <div class="interview-img-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_1.jpg" alt="Interview 1">
+                                <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_1.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_1.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_1.jpg"
+                    alt="Interview 1"
+                    loading="lazy" decoding="async"
+                    class="Interview 1">
+                </picture>
                             <span class="interview-number">01</span>
                     </div>
                     <p class="interview-title">01 お客さんの喜ぶ顔がやりがい</p>
@@ -77,6 +91,14 @@ get_header(); ?>
                 <div class="swiper-slide">
                     <a href="<?php echo home_url('/interview-02'); ?>" class="interview-card">
                         <div class="interview-img-wrapper">
+                            <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg"
+                    alt="Interview 2"
+                    loading="lazy" decoding="async"
+                    class="Interview 2">
+                </picture>
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_2.jpg" alt="Interview 2">
                             <span class="interview-number">02</span>
                         </div>
@@ -91,6 +113,14 @@ get_header(); ?>
                 <div class="swiper-slide">
                     <a href="<?php echo home_url('/interview-03'); ?>" class="interview-card">
                         <div class="interview-img-wrapper">
+                            <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_3.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_3.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_3.jpg"
+                    alt="Interview 3"
+                    loading="lazy" decoding="async"
+                    class="Interview 3">
+                </picture>
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_3.jpg" alt="Interview 3">
                             <span class="interview-number">03</span>
                         </div>
@@ -105,7 +135,14 @@ get_header(); ?>
                 <div class="swiper-slide">
                     <a href="<?php echo home_url('/interview-04'); ?>" class="interview-card">
                         <div class="interview-img-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_4.jpg" alt="Interview 2">
+                            <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_4.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_4.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_4.jpg"
+                    alt="Interview 4"
+                    loading="lazy" decoding="async"
+                    class="Interview 4">
+                </picture>
                             <span class="interview-number">04</span>
                         </div>
                         <p class="interview-title">04 嬉しかった記憶を自分も提供したい</p>
@@ -119,7 +156,14 @@ get_header(); ?>
                 <div class="swiper-slide">
                     <a href="<?php echo home_url('/interview-05'); ?>" class="interview-card">
                         <div class="interview-img-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_5.jpg" alt="Interview 2">
+                            <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_5.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_5.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_5.jpg"
+                    alt="Interview 5"
+                    loading="lazy" decoding="async"
+                    class="Interview 5">
+                </picture>
                             <span class="interview-number">05</span>
                         </div>
                         <p class="interview-title">05 お客様の笑顔のために</p>
@@ -133,7 +177,14 @@ get_header(); ?>
                 <div class="swiper-slide">
                     <a href="<?php echo home_url('/interview-06'); ?>" class="interview-card">
                         <div class="interview-img-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_6.jpg" alt="Interview 6">
+                            <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_6.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_6.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_6.jpg"
+                    alt="Interview 6"
+                    loading="lazy" decoding="async"
+                    class="Interview 6">
+                </picture>
                             <span class="interview-number">06</span>
                         </div>
                         <p class="interview-title">06 お客様に幸せを届けられる仕事</p>
@@ -147,7 +198,14 @@ get_header(); ?>
                 <div class="swiper-slide">
                     <a href="<?php echo home_url('/interview-07'); ?>" class="interview-card">
                         <div class="interview-img-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_7.jpg" alt="Interview 7">
+                            <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_7.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_7.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_7.jpg"
+                    alt="Interview 7"
+                    loading="lazy" decoding="async"
+                    class="Interview 7">
+                </picture>
                             <span class="interview-number">07</span>
                         </div>
                         <p class="interview-title">07 お花に囲まれた仕事</p>
@@ -161,7 +219,14 @@ get_header(); ?>
                 <div class="swiper-slide">
                     <a href="<?php echo home_url('/interview-08'); ?>" class="interview-card">
                         <div class="interview-img-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_8.jpg" alt="Interview 8">
+                             <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_8.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_8.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_8.jpg"
+                    alt="Interview 8"
+                    loading="lazy" decoding="async"
+                    class="Interview 8">
+                </picture>
                             <span class="interview-number">08</span>
                         </div>
                         <p class="interview-title">08 作れるものが増えていくのがやりがい</p>
@@ -175,7 +240,14 @@ get_header(); ?>
                 <div class="swiper-slide">
                     <a href="<?php echo home_url('/interview-09'); ?>" class="interview-card">
                         <div class="interview-img-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_9.jpg" alt="Interview 9">
+                              <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_9.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_9.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_9.jpg"
+                    alt="Interview 9"
+                    loading="lazy" decoding="async"
+                    class="Interview 9">
+                </picture>
                             <span class="interview-number">09</span>
                         </div>
                         <p class="interview-title">09 感謝の気持ちが返ってきたときにやりがいを感じる</p>
@@ -189,7 +261,14 @@ get_header(); ?>
                 <div class="swiper-slide">
                     <a href="<?php echo home_url('/interview-10'); ?>" class="interview-card">
                         <div class="interview-img-wrapper">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_10.jpg" alt="Interview 10">
+                             <picture>
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_10.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/interview_10.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/interview_10.jpg"
+                    alt="Interview 10"
+                    loading="lazy" decoding="async"
+                    class="Interview 10">
+                </picture>
                             <span class="interview-number">10</span>
                         </div>
                         <p class="interview-title">10 私にとってぴったりな場所</p>
