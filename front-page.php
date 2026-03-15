@@ -95,7 +95,7 @@ Template Name: Top page
                 
                 <p class="service-text">
                     お誕生日・各種お祝いやプレゼントなどのお花の贈り物を心を込めて販売しています。<br>
-                    茨城県日立市を本店に10店舗の花屋を展開しています。<br>
+                    茨城県日立市を本店に9店舗の花屋を展開しています。<br>
                     お近くの店舗までぜひお立ち寄りください。
                 </p>
                 <div class="service-btn-wrapper right">
@@ -117,7 +117,7 @@ Template Name: Top page
                 </picture>
                 
                 <p class="service-text">
-                    最後のお別れの場にふさわしい空間をお花でデザイン<br>します。<br>
+                    最後のお別れの場にふさわしい空間をお花でデザインします。<br>
                     故人様のご冥福を祈り、ご当家のご要望に合わせ、気持ちを込めて制作いたします。
                 </p>
                 <div class="service-btn-wrapper right">
@@ -171,7 +171,6 @@ Template Name: Top page
                     loading="lazy" decoding="async"
                     class="deco-img bottom-right">
                 </picture>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/toplast.png" alt="Daisies" class="deco-img bottom-right">
         </section>
 
     </main>

@@ -7,6 +7,7 @@ $success_message = '';
 $error_message = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
     // Sanitize and validate inputs
     $inquiry_type = isset($_POST['inquiry_type']) ? sanitize_text_field($_POST['inquiry_type']) : '';
     $name = isset($_POST['your-name']) ? sanitize_text_field($_POST['your-name']) : '';
@@ -14,8 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = isset($_POST['phone-number']) ? sanitize_text_field($_POST['phone-number']) : '';
     $email = isset($_POST['your-email']) ? sanitize_email($_POST['your-email']) : '';
     $message_content = isset($_POST['your-message']) ? sanitize_textarea_field($_POST['your-message']) : '';
-    $response_method = isset($_POST['response_method']) ? sanitize_text_field($_POST['response_method']) : '';
-
+$response_method = isset($_POST['response_method']) ? sanitize_text_field($_POST['response_method']) : 'both';
     // Translation for response method
     $response_method_label = '';
     if ($response_method === 'both') $response_method_label = '電話、メールどちらでも構いません';
@@ -33,18 +33,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // お名前 - 必須、日本語またはアルファベットのみ
     if (empty($name)) {
         $validation_errors[] = '※お名前を入力してください。';
-    } elseif (!preg_match('/^[\p{Han}\p{Hiragana}\p{Katakana}ａ-ｚＡ-Ｚa-zA-Z\s\-\u3000]+$/u', $name)) {
+    } elseif (!preg_match('/^[\p{Han}\p{Hiragana}\p{Katakana}ａ-ｚＡ-Ｚa-zA-Z\s\-\x{3000}]+$/u', $name)) {
         $validation_errors[] = '※お名前は日本語またはアルファベットで入力してください。';
     }
 
     // お電話番号 - 必須、数字のみ
-    if (empty($phone)) {
-        $validation_errors[] = '※お電話番号を入力してください。';
-    } elseif (!preg_match('/^[0-9]+$/', $phone)) {
-        $validation_errors[] = '※お電話番号は数字で入力してください。';
-    } elseif (strlen($phone) < 10 || strlen($phone) > 11) {
-        $validation_errors[] = '※お電話番号は10〜11桁で入力してください。';
-    }
+    $phone_digits = preg_replace('/\D+/', '', $phone); // 数字以外を除去
+   if (empty($phone)) {
+    $validation_errors[] = '※お電話番号を入力してください。';
+} elseif ($phone_digits === '') {
+    $validation_errors[] = '※お電話番号は数字で入力してください。';
+} elseif (strlen($phone_digits) < 10 || strlen($phone_digits) > 11) {
+    $validation_errors[] = '※お電話番号は10〜11桁で入力してください。';
+}
 
     // メールアドレス - 必須、有効なメール形式
     if (empty($email)) {
@@ -62,23 +63,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error_message = implode('<br>', $validation_errors);
     } else {
         // Prepare Email
-        $to = '24aw0115@jec.ac.jp'; // Target email
+        $to = 'kosuk0430@gmail.com'; // Target email
         $subject = '【お問い合わせ】' . $name . '様より';
         
         $body  = "お問い合わせがありました。\n\n";
         $body .= "【お問い合わせ内容】: " . $inquiry_type . "\n";
         $body .= "【お名前】: " . $name . "\n";
         $body .= "【会社名・組織名】: " . $company . "\n";
-        $body .= "【お電話番号】: " . $phone . "\n";
+$body .= "【お電話番号】: " . $phone_digits . "\n";
         $body .= "【メールアドレス】: " . $email . "\n";
         $body .= "【返信方法】: " . $response_method_label . "\n";
         $body .= "【内容】:\n" . $message_content . "\n\n";
         $body .= "--------------------------------------------------\n";
         $body .= "送信日時: " . date_i18n('Y-m-d H:i:s') . "\n";
 
-        $headers = array('Content-Type: text/plain; charset=UTF-8');
-        $headers[] = 'From: ' . get_bloginfo('name') . ' <no-reply@' . $_SERVER['SERVER_NAME'] . '>';
-        $headers[] = 'Reply-To: ' . $email;
+    $site_host = wp_parse_url(home_url(), PHP_URL_HOST);
+if (empty($site_host)) {
+  $site_host = 'localhost';
+}
+$from_email = 'kosuk0430@gmail.com';
+
+$headers = array(
+  'Content-Type: text/plain; charset=UTF-8',
+  'From: 春秋舎 <' . $from_email . '>',
+  'Reply-To: ' . $email,
+);
 
         // Send Email
         $sent = wp_mail($to, $subject, $body, $headers);
@@ -434,6 +443,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <?php endif; ?>
 
         <form action="" method="post" class="contact-form">
+            <?php wp_nonce_field('contact_form_action', 'contact_form_nonce'); ?>
             
             <div class="form-group">
                 <label class="form-label"><h3>お問い合わせ内容</h3> <span class="required">*必須です</span></label>

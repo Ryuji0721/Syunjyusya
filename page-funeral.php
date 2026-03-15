@@ -7,9 +7,9 @@ get_header(); ?>
 <main class="funeral-page-container">
     <div class="funeral-hero-img-wrapper">
         <picture>
-                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/sousaiFV.webp">
-                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/sousaiFV.jpg">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/sousaiFV.jpg"
+                    <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/SousaiFV.webp">
+                    <source type="image/jpg"  srcset="<?php echo get_template_directory_uri(); ?>/assets/images/SousaiFV.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/SousaiFV.jpg"
                     alt="葬祭部について"
                     loading="lazy" decoding="async"
                     class="funeral-hero-img">
@@ -27,8 +27,8 @@ get_header(); ?>
         <!-- Intro Text -->
         <section class="funeral-intro">
             <p class="funeral-intro-text">
-                故人様のご冥福を祈り、ご当家のご要望に合わせ、気持ちを<br>込めて制作いたします。<br>
-                生花祭壇の造形も、お客様のイメージに合ったお花で設営<br>いたします。
+                故人様のご冥福を祈り、ご当家のご要望に合わせ、気持ちを込めて制作いたします。<br>
+                生花祭壇の造形も、お客様のイメージに合ったお花で設営いたします。
             </p>
         </section>
 
@@ -50,8 +50,7 @@ get_header(); ?>
             <div class="problems-arrow">∨</div>
 
             <p class="problems-answer">
-                葬儀会社様の様々なお悩みを解決できるよう<br>
-                お手伝いいたします。<br>
+                葬儀会社様の様々なお悩みを解決できるようお手伝いいたします。<br>
                 お気軽にご相談ください。
             </p>
 
@@ -147,31 +146,52 @@ get_header(); ?>
         </section>
 
         <!-- Client List -->
-        <section class="funeral-clients" id="funeral-clients">
-            <h2 class="company-section-title">お取引葬儀社様一覧</h2>
-            <ul class="client-list">
-                <li class="list-note">(敬称略、順序不可/2022年現在)</li>
-                <li>茨城ひたちサービス</li>
-                <li>多賀農協協同組合</li>
-                <li>日立平和台霊園</li>
-                <li>神峰祭典</li>
-                <li>松光社</li>
-                <li>鈴木祭典</li>
-                <li>さくら葬祭</li>
-                <li>ワイズセレモニー式典</li>
-                <li>木村葬祭</li>
-                <li>セレモニー沙宝</li>
-                <li>しんあい祭典</li>
-                <li>三宝堂</li>
-                <li>天尚堂</li>
-                <li>陽光堂</li>
-                <li>聖和</li>
-                <li>里美斎場</li>
-                <li>なか葬祭</li>
-                <li>堀越葬儀社</li>
-                <li>栗田商店</li>
-            </ul>
-        </section>
+        <!-- Client List -->
+<section class="funeral-clients" id="funeral-clients">
+    <h2 class="company-section-title">お取引葬儀社様一覧</h2>
+
+    <?php
+    $clients_note = get_post_meta(get_the_ID(), '_funeral_clients_note', true);
+    $clients_raw  = get_post_meta(get_the_ID(), '_funeral_clients_list', true);
+
+    if (!is_string($clients_note) || $clients_note === '') {
+        $clients_note = '(敬称略、順不同/2022年現在)';
+    }
+
+    if (!is_string($clients_raw) || trim($clients_raw) === '') {
+        $clients = [
+            '茨城ひたちサービス',
+            '多賀農協協同組合',
+            '日立平和台霊園',
+            '神峰祭典',
+            '松光社',
+            '鈴木祭典',
+            'さくら葬祭',
+            'ワイズセレモニー式典',
+            '木村葬祭',
+            'セレモニー沙宝',
+            'しんあい祭典',
+            '三宝堂',
+            '天尚堂',
+            '陽光堂',
+            '聖和',
+            '里美斎場',
+            'なか葬祭',
+            '堀越葬儀社',
+            '栗田商店',
+        ];
+    } else {
+        $clients = array_filter(array_map('trim', preg_split('/\r\n|\r|\n/', $clients_raw)));
+    }
+    ?>
+
+    <ul class="client-list">
+        <li class="list-note"><?php echo esc_html($clients_note); ?></li>
+        <?php foreach ($clients as $client) : ?>
+            <li><?php echo esc_html($client); ?></li>
+        <?php endforeach; ?>
+    </ul>
+</section>
     </div>
 </main>
 

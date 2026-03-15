@@ -21,7 +21,7 @@ get_header(); ?>
                 </div>
                 <div class="company-intro-para">
                     <p>
-                        茨城県日立市を本店に10店舗の花屋を展開しております。<br>
+                        茨城県日立市を本店に9店舗の花屋を展開しております。<br>
                         また、会社様向けに生花祭壇の造形も行っております。
                     </p>
                 </div>
@@ -144,7 +144,7 @@ get_header(); ?>
                         foreach ( $history_data as $item ) :
                     ?>
                     <div class="history-item">
-                        <div class="history-year"><p><?php echo esc_html( $item['year'] ); ?>年</p></div>
+                        <div class="history-year"><p><?php echo esc_html( $item['year'] ); ?></p></div>
                         <div class="history-content">
                             <?php 
                             $main_lines = explode( "\n", $item['main'] );
@@ -168,6 +168,5 @@ get_header(); ?>
         </div>
     </main>
 
-</main>
 
 <?php get_footer(); ?>

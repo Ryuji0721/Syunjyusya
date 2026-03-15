@@ -50,9 +50,9 @@
                             <li><a href="<?php echo home_url('/store'); ?>#store-map-section">MAPから探す</a></li>
                              <li><a href="<?php echo home_url('/store'); ?>#store-list-section">店舗名から探す</a></li>
 
-                            <li><a href="https://shunjusha.hanatown.net/" target="_blank">花キューピット<span class="link_img"></span></a></li>
+                            <li><a href="https://shunjusha.hanatown.net/" target="_blank" rel="noopener noreferrer">花キューピット<span class="link_img"></span></a></li>
                             <li><a href="https://www.instagram.com/shunjusha/" target="_blank"  rel="noopener noreferrer">公式Instagram<span class="link_img"></span></a></li>
-                            <li><a href="https://bloemen87.thebase.in/" target="_blank">オンラインショップ<br>bloemen<span class="link_img"></span></a></li>
+                            <li><a href="https://bloemen87.thebase.in/" target="_blank" rel="noopener noreferrer">オンラインショップ<br>bloemen<span class="link_img"></span></a></li>
                         </ul>
                     </div>
                     <!-- Col 4 -->
@@ -80,7 +80,7 @@
                             <li><a href="<?php echo home_url('/recruit'); ?>#interviews">社員インタビュー</a></li>
                             <li><a href="<?php echo home_url('/recruit'); ?>#guidelines">募集要項</a></li>
                             <li><a href="<?php echo home_url('/recruit'); ?>#flow">選考の流れ</a></li>
-                            <li><a href="https://job-gear.net/shunjusha/" target="_blank">採用サイト<span class="link_img"></span></a></li>
+                            <li><a href="https://job-gear.net/shunjusha/" target="_blank" rel="noopener noreferrer">採用サイト<span class="link_img"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -116,6 +116,13 @@
                     <a href="<?php echo home_url('/privacy'); ?>">プライバシーポリシー</a>
                 </div>
 
+                <p class="recaptcha-note">
+  このサイトは reCAPTCHA によって保護されており、<br>
+  Google の
+  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a> と
+  <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">利用規約</a>
+  が適用されます。
+</p>
                 <p class="copyright">Copyright © 春秋舎</p>
             </div>
         </div>
@@ -126,7 +133,11 @@
     <!-- Right Column: Decoration (Vine & Flowers) -->
     <div class="global-pc-right">
         <div class="vine-decoration-area">
-            <?php if ( ! is_page(['contact', 'privacy', 'legal']) && ! is_page_template(['page-contact.php', 'page-privacy.php', 'page-legal.php']) ) : ?>
+<?php if (
+  ! is_page(['contact', 'privacy', 'legal'])
+  && ! is_page_template(['page-contact.php', 'page-privacy.php', 'page-legal.php'])
+  && ! is_singular('flower_product')  // お花商品 詳細ページでは右の装飾を出さない
+) : ?>
                 <div class="vine-line"></div>
                 <?php 
                 // Array of flower photos to display along the vine

@@ -30,18 +30,11 @@ get_header(); ?>
             <div class="message-content">
                 <p>
                     私たちはお客様に“ありがとう”を届ける会社です。<br><br>
-                    葬祭部では、人生の最後をその方らしいお花で<br>
-                    飾り、故人様を偲ぶご遺族の心に寄り添いながら、<br>
+                    葬祭部では、人生の最後をその方らしいお花で飾り、故人様を偲ぶご遺族の心に寄り添いながら、
                     癒しと安心をお届けすることを使命としています。<br><br>
-                    そして、生花部門では、日々の暮らしの中で大切な<br>
-                    人への想いや季節の移ろいを花に込めて届ける<br>
-                    こと。<br>
-                    お祝いの席や、何気ない日常の贈り物にも、<br>
-                    一つひとつのお花に心を込め、<br>
-                    花の力で人の心を動かす仕事に取り組んでいます。<br><br>
-                    “ありがとう”のかたちを、花を通して届けたい。<br>
-                    そんな想いに共感していただける方を、私たちは<br>
-                    お待ちしています。
+                    そして、生花部門では、日々の暮らしの中で大切な人への想いや季節の移ろいを花に込めて届けること。<br>
+                    お祝いの席や、何気ない日常の贈り物にも、一つひとつのお花に心を込め、花の力で人の心を動かす仕事に取り組んでいます。<br><br>
+                    “ありがとう”のかたちを、花を通して届けたい。そんな想いに共感していただける方を、私たちはお待ちしています。
                 </p>
             </div>
         </section>
@@ -288,15 +281,15 @@ get_header(); ?>
             <div class="department-guidelines">
                 <h4 class="department-title">生花部</h4>
                 <div class="guideline-buttons">
-                    <a href="<?php echo home_url('/recruit-seika-part'); ?>" class="guideline-btn">パート ➜</a>
-                    <a href="<?php echo home_url('/recruit-seika-full-page'); ?>" class="guideline-btn">正社員 ➜</a>
+                   <a href="<?php echo home_url('/recruit/recruit-flower-part'); ?>" class="guideline-btn">パート ➜</a>
+<a href="<?php echo home_url('/recruit/recruit-flower-full'); ?>" class="guideline-btn">正社員 ➜</a>
                 </div>
             </div>
             <div class="department-guidelines">
                 <h4 class="department-title">葬祭部</h4>
                 <div class="guideline-buttons">
-                    <a href="<?php echo home_url('/recruit-sousai-part'); ?>" class="guideline-btn">パート ➜</a>
-                    <a href="<?php echo home_url('/recruit-sousai-full-page'); ?>" class="guideline-btn">正社員 ➜</a>
+                    <a href="<?php echo home_url('/recruit/recruit-funeral-part'); ?>" class="guideline-btn">パート ➜</a>
+<a href="<?php echo home_url('/recruit/recruit-funeral-full'); ?>" class="guideline-btn">正社員 ➜</a>
                 </div>
             </div>
         </section>
@@ -311,7 +304,7 @@ get_header(); ?>
                     <div class="recruit-flow-box">
                         <h4 class="recruit-flow-title">ご応募</h4>
                         <p class="recruit-flow-text">採用サイトよりご応募ください。<br>こちらより折り返しご連絡いたします。</p>
-                        <a href="<?php echo home_url('/contact'); ?>" class="recruit-flow-btn">採用サイトへ<span class="link_img"></span></a>
+                        <a href="https://job-gear.net/shunjusha/" target="_blank" rel="noopener noreferrer" class="recruit-flow-btn">採用サイトへ<span class="link_img"></span></a>
                     </div>
                     <div class="recruit-flow-arrow"></div>
                     <div class="recruit-flow-box">
@@ -333,7 +326,7 @@ get_header(); ?>
                     <div class="recruit-flow-box">
                         <h4 class="recruit-flow-title">ご応募</h4>
                         <p class="recruit-flow-text">採用サイトよりご応募ください。<br>こちらより折り返しご連絡いたします。</p>
-                        <a href="<?php echo home_url('/contact'); ?>" class="recruit-flow-btn">採用サイトへ<span class="link_img"></span></a>
+                        <a href="https://job-gear.net/shunjusha/" target="_blank" rel="noopener noreferrer" class="recruit-flow-btn">採用サイトへ<span class="link_img"></span></a>
                     </div>
                     <div class="recruit-flow-arrow"></div>
                     <div class="recruit-flow-box">
